@@ -3,117 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beck Lewis</title>
-  <!-- You can use Font Awesome for social icons -->
+  <title>Beck Lewis | About the Author</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-      background:
-        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
-        url('background.JPG') no-repeat center center fixed;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-
-      color: #ffffff;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
       display: flex;
       justify-content: center;
-      align-items: center;
+      padding: 40px 20px;
       min-height: 100vh;
-      text-align: center;
-      flex-direction: column;
-      padding: 20px;
     }
 
     .container {
-      max-width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      width: 100%;
+      align-items: center;
+      gap: 40px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    /* Left column: text */
+    .text-column {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      line-height: 1.5;
+    .text-column h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
+    .text-column hr {
+      border: 0;
+      border-top: 2px solid #000000;
+      width: 60px;
+      margin: 0 0 20px 0;
+    }
+
+    .text-column p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* Right column: image */
+    .image-column {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-column img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Social links under text */
     .social-links {
-      margin-bottom: 2rem;
+      margin-top: 30px;
     }
 
     .social-links a {
-      color: #ffffff;
-      margin: 0 12px;
-      font-size: 1.8rem;
-      transition: color 0.3s ease;
+      color: #000000;
+      margin: 0 10px;
+      font-size: 1.6rem;
+      transition: color 0.3s;
     }
 
     .social-links a:hover {
-      color: #ffd700; /* optional highlight on hover */
+      color: #555555;
     }
 
-    .nav {
-      margin-top: 2rem;
-    }
-
-    .nav a {
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border: 1px solid #ffffff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .nav a:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
-      p {
+
+      .text-column, .image-column {
+        flex: unset;
+        width: 100%;
+      }
+
+      .text-column h2 {
+        font-size: 1.8rem;
+      }
+
+      .text-column p {
         font-size: 1.1rem;
       }
+
       .social-links a {
-        font-size: 1.5rem;
-        margin: 0 8px;
+        font-size: 1.4rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Beck Lewis</h1>
+    <!-- Left column: About text -->
+    <div class="text-column">
+      <h2>About the Author</h2>
+      <hr>
     <p>’m Beck Lewis, a writer who has spent most of my adult life immersed in stories, conversations about stories, and the communities that grow around them. Writing is the way I make sense of the world. I believe deeply that stories exist to connect people, to help us see the world through perspectives that are not our own, and to give us a space to think, feel, and imagine.
 </p><p>I’ve spent years in writing groups, workshops, conventions, and creative spaces, learning both from established voices and from those taking their first steps. Just as importantly, I spend time around readers. Readers are at the heart of everything I do, because no writer exists in isolation. The relationship between writer and reader is a partnership built on trust, curiosity, and the shared love of storytelling.
 Creativity doesn’t start or stop with writing for me. It spills over into short films, social media videos and collaborative projects. I love experimenting, meeting people, and finding unexpected ways to bring stories off the page and into the room. If you see me at an event, there’s a good chance something fun or unusual is happening.
 I’m fortunate to call writing my full-time work, though my life before that took me through a variety of jobs and experiences that shaped the way I see people, conflict, and connection. I’ve written many books under other identities—some bestselling, some optioned for adaptation. I have a genuine desire to share stories that matter.
 </p>
-
-    <div class="social-links">
-      <!-- Replace # with your URLs -->
+      <div class="social-links">
       <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank"><i class="fab fa-youtube"></i></a>
       <a href="https://www.instagram.com/becklewiswrites/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.tiktok.com/@becklewis5" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
     </div>
 
-    <div class="nav">
-      <a href="books.html">Books ?</a>
+    <!-- Right column: image -->
+    <div class="image-column">
+      <img src="background.JPG" alt="Beck Lewis">
     </div>
   </div>
 </body>
