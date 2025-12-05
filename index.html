@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beck Lewis | Coming Soon</title>
+  <title>Beck Lewis</title>
+  <!-- You can use Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Full-screen body */
     body {
       margin: 0;
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-      /* Background image with dark overlay */
       background:
         linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
         url('background.JPG') no-repeat center center fixed;
@@ -25,30 +25,62 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Full viewport height */
+      min-height: 100vh;
       text-align: center;
+      flex-direction: column;
+      padding: 20px;
     }
 
     .container {
-      padding: 20px 40px;
       max-width: 800px;
     }
 
     h1 {
       font-size: 3rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
       margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.4rem;
-      letter-spacing: 0.015em;
-      opacity: 0.9;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
       line-height: 1.5;
     }
 
-    /* Responsive adjustments */
+    .social-links {
+      margin-bottom: 2rem;
+    }
+
+    .social-links a {
+      color: #ffffff;
+      margin: 0 12px;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ffd700; /* optional highlight on hover */
+    }
+
+    .nav {
+      margin-top: 2rem;
+    }
+
+    .nav a {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border: 1px solid #ffffff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav a:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
@@ -56,13 +88,33 @@
       p {
         font-size: 1.1rem;
       }
+      .social-links a {
+        font-size: 1.5rem;
+        margin: 0 8px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Beck Lewis</h1>
-    <p>Stories that grip you from the first page...</p>
+    <p>’m Beck Lewis, a writer who has spent most of my adult life immersed in stories, conversations about stories, and the communities that grow around them. Writing is the way I make sense of the world. I believe deeply that stories exist to connect people, to help us see the world through perspectives that are not our own, and to give us a space to think, feel, and imagine.
+</p><p>I’ve spent years in writing groups, workshops, conventions, and creative spaces, learning both from established voices and from those taking their first steps. Just as importantly, I spend time around readers. Readers are at the heart of everything I do, because no writer exists in isolation. The relationship between writer and reader is a partnership built on trust, curiosity, and the shared love of storytelling.
+Creativity doesn’t start or stop with writing for me. It spills over into short films, social media videos and collaborative projects. I love experimenting, meeting people, and finding unexpected ways to bring stories off the page and into the room. If you see me at an event, there’s a good chance something fun or unusual is happening.
+I’m fortunate to call writing my full-time work, though my life before that took me through a variety of jobs and experiences that shaped the way I see people, conflict, and connection. I’ve written many books under other identities—some bestselling, some optioned for adaptation. I have a genuine desire to share stories that matter.
+</p>
+
+    <div class="social-links">
+      <!-- Replace # with your URLs -->
+      <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/becklewiswrites/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@becklewis5" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="nav">
+      <a href="books.html">Books ?</a>
+    </div>
   </div>
 </body>
 </html>
