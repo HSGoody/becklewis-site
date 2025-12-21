@@ -78,6 +78,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
+      justify-items: center; /* helps avoid fractional sizing weirdness */
     }
 
     .card {
@@ -87,14 +88,18 @@
       background: #ffffff;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      max-width: 320px; /* helps keep covers crisp */
     }
 
+    /* Cover image: avoid 'cover' cropping/resampling */
     .cover {
       width: 100%;
-      aspect-ratio: 2 / 3; /* keeps all covers consistent */
-      object-fit: cover;
+      height: auto;
       display: block;
-      background: #f2f2f2;
+      object-fit: contain;
+      background: #ffffff;
+      image-rendering: auto;
     }
 
     .card-body {
@@ -192,6 +197,10 @@
       .grid {
         grid-template-columns: 1fr;
       }
+
+      .card {
+        max-width: 380px;
+      }
     }
   </style>
 </head>
@@ -213,7 +222,7 @@
       A series of gripping crime stories — more details soon. In the meantime, here’s what’s coming.
     </p>
 
-    <!-- BOOK GRID (add as many cards as you like) -->
+    <!-- BOOK GRID -->
     <section class="grid">
 
       <!-- Book 1 -->
