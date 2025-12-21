@@ -126,10 +126,38 @@
       white-space: nowrap;
     }
 
+    /* Blurb */
     .blurb {
-      margin: 0;
       font-size: 0.95rem;
       line-height: 1.5;
+    }
+
+    .blurb p {
+      margin: 0 0 10px 0;
+    }
+
+    .blurb p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blurb-more {
+      display: none;
+    }
+
+    .blurb-toggle {
+      margin-top: 6px;
+      padding: 0;
+      border: none;
+      background: none;
+      color: #000000;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .blurb-toggle:hover {
+      color: #555555;
     }
 
     /* Social icons */
@@ -194,25 +222,29 @@
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Double Take</h2>
-       <span class="tag">Dead End Duncans 1</span>
-    </div>
+            <span class="tag">Dead End Duncans 1</span>
+          </div>
 
-    <div class="blurb">
-      <p>When what you saw was impossible, is honesty always the best option?</p>
+          <div class="blurb">
+            <p>When what you saw was impossible, is honesty always the best option?</p>
 
-      <p>When Esther Butler sees a man with a gun following a woman in the dark city streets, she doesn’t hesitate to call the police.</p>
+            <div class="blurb-more">
+              <p>When Esther Butler sees a man with a gun following a woman in the dark city streets, she doesn’t hesitate to call the police.</p>
 
-      <p>Minutes later in an empty building site, the man is dead. The police fired the shot. But when the smoke clears, there’s no weapon to be found.</p>
+              <p>Minutes later in an empty building site, the man is dead. The police fired the shot. But when the smoke clears, there’s no weapon to be found.</p>
 
-      <p>Esther knows what she saw. Yet as her story begins to unravel, she’s forced to question not just her memory, but her own safety.</p>
+              <p>Esther knows what she saw. Yet as her story begins to unravel, she’s forced to question not just her memory, but her own safety.</p>
 
-      <p>DC Josie Kaminski – assigned to the police team with the worst reputation in Leicester – is put on the case. But the deeper they dig, the more they find evidence linking Esther to the dead man and compelling reasons why she would want him dead.</p>
+              <p>DC Josie Kaminski – assigned to the police team with the worst reputation in Leicester – is put on the case. But the deeper they dig, the more they find evidence linking Esther to the dead man and compelling reasons why she would want him dead.</p>
 
-      <p>As truth and lies blur, the team must decide who to believe.<br>
-      And Esther stands to lose more than she ever bargained for.</p>
-    </div>
-  </div>
-</article>
+              <p>As truth and lies blur, the team must decide who to believe.<br>
+              And Esther stands to lose more than she ever bargained for.</p>
+            </div>
+
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+        </div>
+      </article>
 
       <!-- Book 2 -->
       <article class="card">
@@ -220,22 +252,26 @@
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Open Wound</h2>
-       <span class="tag">Dead End Duncans 2</span>
-    </div>
+            <span class="tag">Dead End Duncans 2</span>
+          </div>
 
-    <div class="blurb">
-      <p>Can saving someone be the biggest mistake of your life?</p>
+          <div class="blurb">
+            <p>Can saving someone be the biggest mistake of your life?</p>
 
-      <p>PR consultant Hannah Douglas-Jones makes her living managing other people’s reputations. But she finds herself involved in a story like no other when she stops at the scene of a house fire and pulls a young woman from the flames.</p>
+            <div class="blurb-more">
+              <p>PR consultant Hannah Douglas-Jones makes her living managing other people’s reputations. But she finds herself involved in a story like no other when she stops at the scene of a house fire and pulls a young woman from the flames.</p>
 
-      <p>Fire victim Natasha – calm, capable and self-assured – is now homeless. Hannah offers her a place to stay and a job. Natasha is exactly the person Hannah needs to rebuild her struggling business and help with a hectic home life. But as Hannah’s fortunes rise, she starts to doubt who this woman really is – and what she wants.</p>
+              <p>Fire victim Natasha – calm, capable and self-assured – is now homeless. Hannah offers her a place to stay and a job. Natasha is exactly the person Hannah needs to rebuild her struggling business and help with a hectic home life. But as Hannah’s fortunes rise, she starts to doubt who this woman really is – and what she wants.</p>
 
-      <p>DC ‘Walker’ Smith is part of the investigation into the fire. Six people died, locked in the cellar. As the investigation grows, Walker realises that this crime has links to shameful secrets in his own past – and that Natasha is the key to unlocking everything.</p>
+              <p>DC ‘Walker’ Smith is part of the investigation into the fire. Six people died, locked in the cellar. As the investigation grows, Walker realises that this crime has links to shameful secrets in his own past – and that Natasha is the key to unlocking everything.</p>
 
-      <p>One fire. No accident. Everyone’s playing with fire.</p>
-    </div>
-  </div>
-</article>
+              <p>One fire. No accident. Everyone’s playing with fire.</p>
+            </div>
+
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+        </div>
+      </article>
 
       <!-- Book 3 -->
       <article class="card">
@@ -243,26 +279,28 @@
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Safe Space</h2>
-      <span class="tag">Dead End Duncans 3</span>
-    </div>
+            <span class="tag">Dead End Duncans 3</span>
+          </div>
 
-    <div class="blurb">
-      <p>When your memories are missing, how do you know you’re not the one to blame?</p>
+          <div class="blurb">
+            <p>When your memories are missing, how do you know you’re not the one to blame?</p>
 
-      <p>A year after a carbon monoxide accident left five people dead, Cassie O’Donnell wakes from a coma to find her life erased. She’s homeless, unemployed, and her mind is filled with shadowy memories she can’t trust.</p>
+            <div class="blurb-more">
+              <p>A year after a carbon monoxide accident left five people dead, Cassie O’Donnell wakes from a coma to find her life erased. She’s homeless, unemployed, and her mind is filled with shadowy memories she can’t trust.</p>
 
-      <p>Desperate for answers, Cassie joins a support group run by the survivors - a safe space where they can grieve and heal together. But then one member of the group dies of an apparent drugs overdose…</p>
+              <p>Desperate for answers, Cassie joins a support group run by the survivors - a safe space where they can grieve and heal together. But then one member of the group dies of an apparent drugs overdose…</p>
 
-      <p>An ex-girlfriend begs DS Rob Joseph to investigate this latest death and he secretly joins the support group. But he soon discovers that the survivors are all carrying secrets.</p>
+              <p>An ex-girlfriend begs DS Rob Joseph to investigate this latest death and he secretly joins the support group. But he soon discovers that the survivors are all carrying secrets.</p>
 
-      <p>Both Cassie and Rob begin to suspect that someone inside the group knows what really happened in that house on the night of the accident - and is willing to kill to keep the truth buried.</p>
+              <p>Both Cassie and Rob begin to suspect that someone inside the group knows what really happened in that house on the night of the accident - and is willing to kill to keep the truth buried.</p>
 
-      <p>One tragedy. Five survivors. No one is safe.</p>
-    </div>
-  </div>
-</article>
+              <p>One tragedy. Five survivors. No one is safe.</p>
+            </div>
 
-
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+        </div>
+      </article>
 
     </section>
 
@@ -274,5 +312,17 @@
     </div>
 
   </div>
+
+  <script>
+    document.querySelectorAll('.blurb-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const more = button.previousElementSibling;
+        const expanded = more.style.display === 'block';
+
+        more.style.display = expanded ? 'none' : 'block';
+        button.textContent = expanded ? 'Read more' : 'Read less';
+      });
+    });
+  </script>
 </body>
 </html>
