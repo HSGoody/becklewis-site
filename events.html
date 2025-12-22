@@ -1,56 +1,237 @@
-<div class="events-content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beck Lewis | Events</title>
 
-  <h3>Murder Mystery</h3>
-  <p>
-    A live, interactive murder mystery for groups who want something engaging rather than passive.
-    The audience works through clues, suspects and motives, with plenty of space for wrong turns
-    and dark humour. It’s structured, but flexible enough to suit libraries, schools or community
-    groups.
-  </p>
-  <p>
-    NB: this event uses actors, so costs would need to be covered.
-  </p>
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
-  <h3>Drop Dead Funny</h3>
-  <p>
-    A darkly comic live show blending crime, storytelling and props. It works best with smaller
-    audiences, where the atmosphere can stay informal and responsive. Think less “stand-up”,
-    more shared mischief.
-  </p>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
 
-  <h3>Author Talk</h3>
-  <p>
-    An honest, conversational talk about writing crime fiction — where ideas come from and how
-    characters are built. This can be adapted for in-person or online audiences, and works well
-    with Q&amp;A.
-  </p>
+    .page {
+      width: 100%;
+      max-width: 1000px;
+    }
 
-  <h3>Panel Appearances</h3>
-  <p>
-    Beck Lewis can contribute to panels on crime fiction, psychological suspense, collaboration,
-    tone, humour in dark writing, and the realities of indie publishing.
-  </p>
+    /* Top navigation */
+    .top-nav {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
 
-  <h3>Chairing / interviewing others</h3>
-  <p>
-    Beck Lewis brings structure, warmth and curiosity to author interviews and chairing panel
-    discussions. The focus is on helping writers talk well about their work, keeping conversations
-    moving, and making sure everyone feels included.
-  </p>
+    .top-nav a {
+      text-decoration: none;
+      color: #000000;
+      border: 1px solid #000000;
+      padding: 8px 18px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-  <h3>Talking to your writers group</h3>
-  <p>
-    A relaxed, practical session with a writers’ group, tailored to their interests — whether
-    that’s crime, process, collaboration, or staying motivated. There’s space for questions,
-    discussion, and talking honestly.
-  </p>
+    .top-nav a:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
 
-  <h3>Immersive reading session</h3>
-  <p>
-    A slower, deeper reading experience designed for groups who want to really engage with a
-    short story text. This is a guided session that mixes reading, discussion and reflection over
-    a couple of hours. Ideal for reading groups or conferences that want something more
-    participatory and thoughtful.
-  </p>
+    /* Main layout */
+    .container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
 
-</div>
+    /* Text column */
+    .text-column {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .text-column h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    .text-column hr {
+      border: none;
+      border-top: 2px solid #000000;
+      width: 65%;
+      margin: 0 0 20px 0;
+    }
+
+    .text-column p {
+      font-size: 1rem;
+      line-height: 1.55;
+      margin: 0 0 16px 0;
+    }
+
+    /* Events content */
+    .events-content {
+      margin-top: 20px;
+    }
+
+    .events-content h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 26px 0 8px 0;
+    }
+
+    /* Social links */
+    .social-links {
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      color: #000000;
+      margin-right: 15px;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #555555;
+    }
+
+    /* Image column */
+    .image-column {
+      flex: 1;
+      min-width: 260px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-column img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .text-column hr {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <a href="index.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="events.html">Events</a>
+    </nav>
+
+    <div class="container">
+
+      <div class="text-column">
+        <h2>Beck Lewis — Events</h2>
+        <hr>
+
+        <p>
+          Here's a list of events that I can offer. I'm based in the Midlands, so if you're within
+          reach and any of these sound appealing then please get in touch.
+        </p>
+
+        <div class="events-content">
+
+          <h3>Murder Mystery</h3>
+          <p>
+            A live, interactive murder mystery for groups who want something engaging rather than
+            passive. The audience works through clues, suspects and motives, with plenty of space
+            for wrong turns and dark humour. It’s structured, but flexible enough to suit libraries,
+            schools or community groups.
+          </p>
+          <p>
+            NB: this event uses actors, so costs would need to be covered.
+          </p>
+
+          <h3>Drop Dead Funny</h3>
+          <p>
+            A darkly comic live show blending crime, storytelling and props. It works best with
+            smaller audiences, where the atmosphere can stay informal and responsive. Think less
+            “stand-up”, more shared mischief.
+          </p>
+
+          <h3>Author Talk</h3>
+          <p>
+            An honest, conversational talk about writing crime fiction — where ideas come from and
+            how characters are built. This can be adapted for in-person or online audiences, and
+            works well with Q&amp;A.
+          </p>
+
+          <h3>Panel Appearances</h3>
+          <p>
+            Beck Lewis can contribute to panels on crime fiction, psychological suspense,
+            collaboration, tone, humour in dark writing, and the realities of indie publishing.
+          </p>
+
+          <h3>Chairing / interviewing others</h3>
+          <p>
+            Beck Lewis brings structure, warmth and curiosity to author interviews and chairing
+            panel discussions. The focus is on helping writers talk well about their work, keeping
+            conversations moving, and making sure everyone feels included.
+          </p>
+
+          <h3>Talking to your writers group</h3>
+          <p>
+            A relaxed, practical session with a writers’ group, tailored to their interests —
+            whether that’s crime, process, collaboration, or staying motivated. There’s space for
+            questions, discussion, and talking honestly.
+          </p>
+
+          <h3>Immersive reading session</h3>
+          <p>
+            A slower, deeper reading experience designed for groups who want to really engage with
+            a short story text. This is a guided session that mixes reading, discussion and
+            reflection over a couple of hours. Ideal for reading groups or conferences that want
+            something more participatory and thoughtful.
+          </p>
+
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="image-column">
+        <img src="background.JPG" alt="Beck Lewis">
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
