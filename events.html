@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="Beck Lewis is a British crime writer. The Dead End Duncans series is set in Leicester and features psychological thrillers with a police team to follow.">
+  <meta name="description" content="Beck Lewis offers author talks, panels, workshops, immersive reading sessions, and live murder mystery events for libraries, festivals, and community groups.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beck Lewis | Home</title>
-<link rel="icon" type="image/png" href="/favicon.png">
+  <title>Beck Lewis | Author Events, Talks & Panels</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+
   <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -15,13 +16,14 @@
   <style>
     :root{
       /* Beck Lewis palette */
-      --bl-midnight: #0B1C2D;     /* primary background */
-      --bl-midnight-2: #132A3A;   /* panels / sections */
-      --bl-ink: #05080C;          /* near-black */
-      --bl-offwhite: #EDEFF2;     /* primary text */
-      --bl-concrete: #6E7B85;     /* secondary text */
-      --bl-orange: #E85C0D;       /* primary accent */
-      --bl-gold: #F2B705;         /* supporting glow (use sparingly) */
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
+
       --bl-border: rgba(110,123,133,0.22);
       --bl-shadow: rgba(0,0,0,0.40);
     }
@@ -34,12 +36,22 @@
       color: var(--bl-offwhite);
       min-height: 100vh;
 
-      /* “inside the cover” background */
       background:
         radial-gradient(1100px 700px at 50% -10%, var(--bl-midnight-2), var(--bl-midnight));
       display: flex;
       justify-content: center;
       padding: 40px 20px;
+    }
+
+    a{
+      color: rgba(237,239,242,0.95);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    a:hover{
+      color: var(--bl-orange);
+      border-bottom-color: rgba(232, 92, 13, 0.55);
     }
 
     .page {
@@ -52,13 +64,13 @@
       display: flex;
       gap: 12px;
       margin-bottom: 32px;
+      flex-wrap: wrap;
       padding: 10px 10px;
       border: 1px solid var(--bl-border);
       border-radius: 12px;
       background: rgba(5, 8, 12, 0.35);
       backdrop-filter: blur(10px);
       box-shadow: 0 16px 40px var(--bl-shadow);
-      flex-wrap: wrap;
     }
 
     .top-nav a {
@@ -84,7 +96,7 @@
       transform: translateY(1px);
     }
 
-    /* Active nav item (Home on index.html) */
+    /* Active nav item (Events on events.html) */
     .top-nav a[aria-current="page"]{
       border-color: rgba(232, 92, 13, 0.70);
       background: rgba(232, 92, 13, 0.10);
@@ -107,7 +119,7 @@
     .container {
       display: flex;
       gap: 40px;
-      align-items: center;
+      align-items: flex-start;
 
       padding: 26px;
       border: 1px solid var(--bl-border);
@@ -123,7 +135,7 @@
     }
 
     .text-column h2 {
-      font-size: 2.0rem;
+      font-size: 1.95rem;
       font-weight: 850;
       margin: 0 0 10px 0;
       letter-spacing: 0.2px;
@@ -133,29 +145,86 @@
       border: none;
       border-top: 2px solid rgba(232, 92, 13, 0.85);
       width: 65%;
-      margin: 0 0 20px 0;
+      margin: 0 0 18px 0;
     }
 
     .text-column p {
       font-size: 1rem;
       line-height: 1.65;
-      margin-bottom: 16px;
+      margin: 0 0 16px 0;
       color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
+    }
+
+    /* Events content */
+    .events-content {
+      margin-top: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .event-block{
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(5, 8, 12, 0.22);
+      padding: 14px 14px 12px 14px;
+    }
+
+    .events-content h3 {
+      font-size: 1.05rem;
+      font-weight: 850;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.2px;
+      color: rgba(237,239,242,0.96);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .events-content h3::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(232, 92, 13, 0.85);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.12);
+      flex: 0 0 auto;
+    }
+
+    .event-block p{
+      margin: 0 0 10px 0;
+    }
+    .event-block p:last-child{ margin-bottom: 0; }
+
+    /* Contact callout */
+    .contact-callout{
+      border: 1px solid rgba(232, 92, 13, 0.35);
+      background: rgba(232, 92, 13, 0.08);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .contact-callout strong{
+      color: rgba(237,239,242,0.98);
     }
 
     /* Social links */
     .social-links {
-      margin-top: 22px;
+      margin-top: 16px;
       display: flex;
       gap: 14px;
       align-items: center;
       flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.25);
+      box-shadow: 0 16px 40px var(--bl-shadow);
     }
 
     .social-links a {
       color: rgba(237,239,242,0.90);
       font-size: 1.35rem;
       transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -163,8 +232,7 @@
       height: 40px;
       border-radius: 10px;
       border: 1px solid rgba(237,239,242,0.14);
-      background: rgba(5,8,12,0.25);
-      text-decoration: none;
+      background: rgba(19, 42, 58, 0.25);
     }
 
     .social-links a:hover {
@@ -191,8 +259,6 @@
       border-radius: 14px;
       border: 1px solid rgba(110,123,133,0.25);
       box-shadow: 0 18px 50px rgba(0,0,0,0.55);
-
-      /* Cool the image slightly so it sits in the brand world */
       filter: saturate(0.92) contrast(1.06) brightness(0.92);
     }
 
@@ -224,46 +290,108 @@
 
     <!-- Navigation -->
     <nav class="top-nav">
-      <a href="index.html" aria-current="page">Home</a>
+      <a href="index.html">Home</a>
       <a href="books.html">Books</a>
-      <a href="events.html">Events</a>
+      <a href="events.html" aria-current="page">Events</a>
     </nav>
 
-    <!-- Main content -->
     <div class="container">
 
       <div class="text-column">
-        <h2>Beck Lewis — Crime Writer</h2>
+        <h2>Beck Lewis — Events</h2>
         <hr>
 
         <p>
-          I’m Beck Lewis, a writer who has spent most of my adult life immersed in stories.
-          Writing is the way I make sense of the world. I believe deeply that stories exist
-          to connect people, to help us see the world through perspectives that are not our own.
+          Beck Lewis — author of the <a href="books.html">Dead End Duncans crime series</a>.
         </p>
 
         <p>
-          I’ve spent years in writing groups, workshops, conventions, and creative spaces,
-          learning both from established voices and from those taking their first steps.
-          Readers are at the heart of everything I do.
+          Here's a list of events that I can offer. I'm based in the Midlands, so if you're within
+          reach and any of these sound appealing then please get in touch.
         </p>
 
-        <p>
-          Creativity doesn’t start or stop with writing for me. It spills into short films,
-          social media videos, and collaborative projects. If you see me at an event,
-          there’s a good chance something fun or unusual is happening.
-        </p>
+        <div class="events-content">
 
-        <p>
-          Writing is now my full-time work. I’ve written many books—some bestselling,
-          some optioned—and I care deeply about telling stories that matter.
-        </p>
+          <div class="event-block">
+            <h3>Murder Mystery</h3>
+            <p>
+              A live, interactive murder mystery for groups who want something engaging rather than
+              passive. The audience works through clues, suspects and motives, with plenty of space
+              for wrong turns and dark humour. It’s structured, but flexible enough to suit libraries,
+              schools or community groups.
+            </p>
+            <p><strong>NB:</strong> this event uses actors, so costs would need to be covered.</p>
+          </div>
+
+          <div class="event-block">
+            <h3>Drop Dead Funny</h3>
+            <p>
+              A darkly comic live show blending crime, storytelling and props. It works best with
+              smaller audiences, where the atmosphere can stay informal and responsive. Think less
+              “stand-up”, more shared mischief.
+            </p>
+          </div>
+
+          <div class="event-block">
+            <h3>Author Talk</h3>
+            <p>
+              An honest, conversational talk about writing crime fiction — where ideas come from and
+              how characters are built. This can be adapted for in-person or online audiences, and
+              works well with Q&amp;A.
+            </p>
+          </div>
+
+          <div class="event-block">
+            <h3>Panel Appearances</h3>
+            <p>
+              Beck Lewis can contribute to panels on crime fiction, psychological suspense,
+              collaboration, tone, humour in dark writing, and the realities of indie publishing.
+            </p>
+          </div>
+
+          <div class="event-block">
+            <h3>Chairing / interviewing others</h3>
+            <p>
+              Beck Lewis brings structure, warmth and curiosity to author interviews and chairing
+              panel discussions. The focus is on helping writers talk well about their work, keeping
+              conversations moving, and making sure everyone feels included.
+            </p>
+          </div>
+
+          <div class="event-block">
+            <h3>Talking to your writers group</h3>
+            <p>
+              A relaxed, practical session with a writers’ group, tailored to their interests —
+              whether that’s crime, process, collaboration, or staying motivated. There’s space for
+              questions, discussion, and talking honestly.
+            </p>
+          </div>
+
+          <div class="event-block">
+            <h3>Immersive reading session</h3>
+            <p>
+              A slower, deeper reading experience designed for groups who want to really engage with
+              a short story text. This is a guided session that mixes reading, discussion and
+              reflection over a couple of hours. Ideal for reading groups or conferences that want
+              something more participatory and thoughtful.
+            </p>
+          </div>
+
+          <div class="contact-callout">
+            <p style="margin:0;">
+              <strong>Bookings:</strong> To discuss availability or suitability for your group, email
+              <a href="mailto:becklewiswrites@gmail.com">becklewiswrites@gmail.com</a>.
+              Please include the type of event, audience size, and preferred dates.
+            </p>
+          </div>
+
+        </div>
 
         <div class="social-links">
-          <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.instagram.com/becklewiswrites/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@becklewis5" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
 
