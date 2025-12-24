@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Beck Lewis is a British crime writer. The Dead End Duncans series is set in Leicester and features psychological thrillers with a police team to follow.">
+<meta name="description" content="Beck Lewis is a British crime writer. The Dead End Duncans series is set in Leicester and features psychological thrillers with a police team to follow.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beck Lewis | About the Author</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
-
+  <title>Beck Lewis | Home</title>
+<link rel="icon" type="image/png" href="/favicon.png">
   <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -52,13 +51,14 @@
     .top-nav {
       display: flex;
       gap: 12px;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       padding: 10px 10px;
       border: 1px solid var(--bl-border);
       border-radius: 12px;
       background: rgba(5, 8, 12, 0.35);
       backdrop-filter: blur(10px);
       box-shadow: 0 16px 40px var(--bl-shadow);
+      flex-wrap: wrap;
     }
 
     .top-nav a {
@@ -67,10 +67,11 @@
       border: 1px solid rgba(237,239,242,0.18);
       padding: 9px 16px;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 10px;
       transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
       background: rgba(19, 42, 58, 0.35);
+      position: relative;
     }
 
     .top-nav a:hover {
@@ -83,11 +84,31 @@
       transform: translateY(1px);
     }
 
+    /* Active nav item (Home on index.html) */
+    .top-nav a[aria-current="page"]{
+      border-color: rgba(232, 92, 13, 0.70);
+      background: rgba(232, 92, 13, 0.10);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.10);
+    }
+
+    .top-nav a[aria-current="page"]::after{
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: -8px;
+      height: 2px;
+      background: rgba(232, 92, 13, 0.85);
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(232, 92, 13, 0.18);
+    }
+
     /* Main layout */
     .container {
       display: flex;
       gap: 40px;
       align-items: center;
+
       padding: 26px;
       border: 1px solid var(--bl-border);
       border-radius: 14px;
@@ -102,8 +123,8 @@
     }
 
     .text-column h2 {
-      font-size: 1.95rem;
-      font-weight: 700;
+      font-size: 2.0rem;
+      font-weight: 850;
       margin: 0 0 10px 0;
       letter-spacing: 0.2px;
     }
@@ -143,6 +164,7 @@
       border-radius: 10px;
       border: 1px solid rgba(237,239,242,0.14);
       background: rgba(5,8,12,0.25);
+      text-decoration: none;
     }
 
     .social-links a:hover {
@@ -174,7 +196,6 @@
       filter: saturate(0.92) contrast(1.06) brightness(0.92);
     }
 
-    /* Optional: subtle “brand glow” around the image on hover */
     .image-column img:hover{
       box-shadow:
         0 22px 60px rgba(0,0,0,0.65),
@@ -191,11 +212,6 @@
         padding: 18px;
       }
 
-      .top-nav {
-        flex-wrap: wrap;
-        margin-bottom: 22px;
-      }
-
       .text-column hr {
         width: 100%;
       }
@@ -208,7 +224,7 @@
 
     <!-- Navigation -->
     <nav class="top-nav">
-      <a href="index.html">About</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="books.html">Books</a>
       <a href="events.html">Events</a>
     </nav>
