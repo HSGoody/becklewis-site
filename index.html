@@ -54,4 +54,208 @@
       gap: 12px;
       margin-bottom: 40px;
       padding: 10px 10px;
-      border: 1px solid var(--bl-bor
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.35);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(19, 42, 58, 0.35);
+    }
+
+    .top-nav a:hover {
+      background-color: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: var(--bl-offwhite);
+    }
+
+    .top-nav a:active{
+      transform: translateY(1px);
+    }
+
+    /* Main layout */
+    .container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      padding: 26px;
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(19, 42, 58, 0.38);
+      box-shadow: 0 18px 48px var(--bl-shadow);
+    }
+
+    /* Text column */
+    .text-column {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .text-column h2 {
+      font-size: 1.95rem;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      letter-spacing: 0.2px;
+    }
+
+    .text-column hr {
+      border: none;
+      border-top: 2px solid rgba(232, 92, 13, 0.85);
+      width: 65%;
+      margin: 0 0 20px 0;
+    }
+
+    .text-column p {
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
+    }
+
+    /* Social links */
+    .social-links {
+      margin-top: 22px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(5,8,12,0.25);
+    }
+
+    .social-links a:hover {
+      color: var(--bl-orange);
+      border-color: rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.08);
+    }
+
+    .social-links a:active{
+      transform: translateY(1px);
+    }
+
+    /* Image column */
+    .image-column {
+      flex: 1;
+      min-width: 260px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-column img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(110,123,133,0.25);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+
+      /* Cool the image slightly so it sits in the brand world */
+      filter: saturate(0.92) contrast(1.06) brightness(0.92);
+    }
+
+    /* Optional: subtle “brand glow” around the image on hover */
+    .image-column img:hover{
+      box-shadow:
+        0 22px 60px rgba(0,0,0,0.65),
+        0 0 0 1px rgba(232, 92, 13, 0.18);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { padding: 24px 14px; }
+
+      .container {
+        flex-direction: column;
+        gap: 26px;
+        padding: 18px;
+      }
+
+      .top-nav {
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+      }
+
+      .text-column hr {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <a href="index.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="events.html">Events</a>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container">
+
+      <div class="text-column">
+        <h2>Beck Lewis — Crime Writer</h2>
+        <hr>
+
+        <p>
+          I’m Beck Lewis, a writer who has spent most of my adult life immersed in stories.
+          Writing is the way I make sense of the world. I believe deeply that stories exist
+          to connect people, to help us see the world through perspectives that are not our own.
+        </p>
+
+        <p>
+          I’ve spent years in writing groups, workshops, conventions, and creative spaces,
+          learning both from established voices and from those taking their first steps.
+          Readers are at the heart of everything I do.
+        </p>
+
+        <p>
+          Creativity doesn’t start or stop with writing for me. It spills into short films,
+          social media videos, and collaborative projects. If you see me at an event,
+          there’s a good chance something fun or unusual is happening.
+        </p>
+
+        <p>
+          Writing is now my full-time work. I’ve written many books—some bestselling,
+          some optioned—and I care deeply about telling stories that matter.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/becklewiswrites/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@becklewis5" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="image-column">
+        <img src="background.JPG" alt="Beck Lewis">
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
