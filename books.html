@@ -1,11 +1,52 @@
+<!-- =========================
+     FILE: books.html
+     ========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Beck Lewis is a British crime writer. The Dead End Duncans series are psychological thrillers with dark humour, exploring modern soclal and ethical questions.">
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beck Lewis | Crime Books – Dead End Duncans Series</title>
+  <title>Beck Lewis | Psychological Thriller Books – Dead End Duncans Series</title>
+
+  <meta name="description" content="Beck Lewis is a British psychological thriller author. The Dead End Duncans series is dark, character-driven crime fiction with dark humour, exploring modern social and ethical questions.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://becklewis.com/books.html">
+
   <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beck Lewis | Psychological Thriller Books – Dead End Duncans Series">
+  <meta property="og:description" content="Dark, character-driven psychological thrillers with crime, moral tension, and dark humour.">
+  <meta property="og:url" content="https://becklewis.com/books.html">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beck Lewis | Psychological Thriller Books – Dead End Duncans Series">
+  <meta name="twitter:description" content="Dark, character-driven psychological thrillers with crime, moral tension, and dark humour.">
+
+  <!-- Schema: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://becklewis.com/#beck-lewis",
+    "name": "Beck Lewis",
+    "url": "https://becklewis.com/index.html",
+    "nationality": "British",
+    "jobTitle": "Author",
+    "description": "British psychological thriller author. Writes dark, character-driven crime fiction.",
+    "genre": ["Psychological Thriller", "Crime Fiction"],
+    "sameAs": [
+      "https://www.instagram.com/becklewiswrites/",
+      "https://www.youtube.com/@BeckLewisWrites",
+      "https://www.tiktok.com/@becklewis5",
+      "https://www.facebook.com/profile.php?id=61576679982271"
+    ]
+  }
+  </script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -187,6 +228,13 @@
       color: var(--bl-offwhite);
     }
 
+    .byline{
+      margin: 2px 0 0 0;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: color-mix(in srgb, var(--bl-offwhite) 86%, var(--bl-concrete));
+    }
+
     .tag {
       border: 1px solid rgba(232, 92, 13, 0.55);
       background: rgba(232, 92, 13, 0.10);
@@ -315,7 +363,7 @@
     <hr>
 
     <p class="intro">
-      A series of gripping crime stories — more details soon. In the meantime, here’s what’s coming.
+      Psychological thrillers and crime fiction with dark humour — more details soon. In the meantime, here’s what’s coming.
     </p>
 
     <!-- BOOK GRID -->
@@ -323,12 +371,13 @@
 
       <!-- Book 1 -->
       <article class="card">
-        <img class="cover" src="DOUBLETAKE.jpg" alt="Double Take cover">
+        <img class="cover" src="DOUBLETAKE.jpg" alt="Cover of Double Take by Beck Lewis">
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Double Take</h2>
             <span class="tag">Dead End Duncans 1</span>
           </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
 
           <div class="blurb">
             <p>When what you saw was impossible, is honesty always the best option?</p>
@@ -353,12 +402,13 @@
 
       <!-- Book 2 -->
       <article class="card">
-        <img class="cover" src="OPENWOUND.jpg" alt="Open Wound cover">
+        <img class="cover" src="OPENWOUND.jpg" alt="Cover of Open Wound by Beck Lewis">
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Open Wound</h2>
             <span class="tag">Dead End Duncans 2</span>
           </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
 
           <div class="blurb">
             <p>Can saving someone be the biggest mistake of your life?</p>
@@ -380,12 +430,13 @@
 
       <!-- Book 3 -->
       <article class="card">
-        <img class="cover" src="SAFESPACE.jpg" alt="Safe Space cover">
+        <img class="cover" src="SAFESPACE.jpg" alt="Cover of Safe Space by Beck Lewis">
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Safe Space</h2>
             <span class="tag">Dead End Duncans 3</span>
           </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
 
           <div class="blurb">
             <p>When your memories are missing, how do you know you’re not the one to blame?</p>
