@@ -332,6 +332,17 @@
       transform: translateY(1px);
     }
 
+
+    /* Free book button variant */
+    .buy-button--free{
+      border-color: rgba(232, 92, 13, 0.65);
+      background: rgba(232, 92, 13, 0.12);
+    }
+    .buy-button--free:hover{
+      background: rgba(242, 183, 5, 0.12);
+      border-color: rgba(242, 183, 5, 0.55);
+    }
+
     /* Social icons */
     .social-links {
       margin-top: 34px;
@@ -399,13 +410,52 @@
     <hr>
 
     <p class="intro">
-      Psychological thrillers and crime fiction with dark humour — more details soon. In the meantime, here’s what’s coming.
+      Start with a free short thriller — then dive into the Dead Ends series.
     </p>
 
     <!-- BOOK GRID -->
     <section class="grid">
 
-      <!-- Book 1 -->
+      
+
+      <!-- Reader Magnet -->
+      <article class="card">
+        <img class="cover" src="ManBear.jpg" alt="Cover of Man or Bear by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Man or Bear</h2>
+            <span class="tag">Free short</span>
+          </div>
+          <p class="byline">A free short psychological thriller by Beck Lewis</p>
+
+          <div class="blurb">
+            <p><strong>When politeness becomes a trap, how do you know when it’s time to run?</strong></p>
+
+            <div class="blurb-more">
+              <p>On a rainy night in rural Leicestershire, Nina breaks down on her way to support her sister at a women’s twilight safety walk.</p>
+              <p>When a man from a nearby house offers shelter, tea, and help, Nina accepts. He’s polite, educated, and appears invested in women’s safety. But as the evening drags on, an unsettling conversation begins — centred on the viral question: would a woman rather meet a man or a bear alone in the woods?</p>
+              <p>What starts as debate becomes control. And Nina realises she may no longer be free to leave.</p>
+              <p><strong>One question. No safe choice.</strong></p>
+            </div>
+
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+
+          <div class="buy-row">
+            <a class="buy-button buy-button--free"
+               href="https://dl.bookfunnel.com/4dwgjdi3c1"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Get Man or Bear free via BookFunnel (opens in a new tab)">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i>
+              Get it free
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+<!-- Book 1 -->
       <article class="card">
         <img class="cover" src="DOUBLETAKE.jpg" alt="Cover of Double Take by Beck Lewis">
         <div class="card-body">
