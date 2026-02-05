@@ -1,0 +1,237 @@
+<!-- =========================
+     FILE: man-or-bear.html
+     ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Man or Bear | Beck Lewis</title>
+
+  <meta name="description" content="Man or Bear is a standalone crime short story by Beck Lewis, designed for immersive reading and discussion.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://becklewis.com/man-or-bear.html">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Man or Bear | Beck Lewis">
+  <meta property="og:description" content="A standalone crime short story by Beck Lewis, designed for immersive reading and discussion.">
+  <meta property="og:url" content="https://becklewis.com/man-or-bear.html">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Man or Bear | Beck Lewis">
+  <meta name="twitter:description" content="A standalone crime short story by Beck Lewis, designed for immersive reading and discussion.">
+
+  <!-- Schema: CreativeWork -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ShortStory",
+    "@id": "https://becklewis.com/man-or-bear.html#work",
+    "name": "Man or Bear",
+    "author": {
+      "@type": "Person",
+      "@id": "https://becklewis.com/#beck-lewis",
+      "name": "Beck Lewis"
+    },
+    "inLanguage": "en-GB",
+    "genre": ["Crime Fiction", "Psychological Thriller"],
+    "url": "https://becklewis.com/man-or-bear.html",
+    "description": "A standalone crime short story by Beck Lewis, designed for immersive reading and discussion.",
+    "isAccessibleForFree": true
+  }
+  </script>
+
+  <!-- Schema: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://becklewis.com/#beck-lewis",
+    "name": "Beck Lewis",
+    "url": "https://becklewis.com/index.html",
+    "nationality": "British",
+    "jobTitle": "Author",
+    "description": "British psychological thriller author. Writes dark, character-driven crime fiction.",
+    "genre": ["Psychological Thriller", "Crime Fiction"],
+    "sameAs": [
+      "https://www.instagram.com/becklewiswrites/",
+      "https://www.youtube.com/@BeckLewisWrites",
+      "https://www.tiktok.com/@becklewis5",
+      "https://www.facebook.com/profile.php?id=61576679982271"
+    ]
+  }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      /* Beck Lewis palette */
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
+
+      --bl-border: rgba(110,123,133,0.22);
+      --bl-shadow: rgba(0,0,0,0.40);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--bl-offwhite);
+      min-height: 100vh;
+
+      background:
+        radial-gradient(1100px 700px at 50% -10%, var(--bl-midnight-2), var(--bl-midnight));
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    /* Top navigation */
+    .top-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      padding: 10px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.35);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(19, 42, 58, 0.35);
+      position: relative;
+    }
+
+    .top-nav a:hover {
+      background-color: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: var(--bl-offwhite);
+    }
+
+    .top-nav a:active{
+      transform: translateY(1px);
+    }
+
+    /* Active nav item */
+    .top-nav a[aria-current="page"]{
+      border-color: rgba(232, 92, 13, 0.70);
+      background: rgba(232, 92, 13, 0.10);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.10);
+    }
+
+    .top-nav a[aria-current="page"]::after{
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: -8px;
+      height: 2px;
+      background: rgba(232, 92, 13, 0.85);
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(232, 92, 13, 0.18);
+    }
+
+    /* Hero */
+    .hero {
+      border: 1px solid var(--bl-border);
+      border-radius: 16px;
+      background: rgba(19, 42, 58, 0.38);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.50);
+      overflow: hidden;
+      margin-bottom: 26px;
+    }
+
+    .hero-inner{
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 18px;
+      padding: 18px;
+      align-items: start;
+    }
+
+    .cover{
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(110,123,133,0.22);
+      background: rgba(5,8,12,0.25);
+      display: block;
+    }
+
+    h1{
+      margin: 0;
+      font-size: 2.1rem;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      line-height: 1.1;
+    }
+
+    .subtitle{
+      margin: 10px 0 0 0;
+      font-size: 1.02rem;
+      font-weight: 750;
+      color: color-mix(in srgb, var(--bl-offwhite) 86%, var(--bl-concrete));
+      line-height: 1.5;
+      max-width: 70ch;
+    }
+
+    .meta-row{
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill{
+      border: 1px solid rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.10);
+      color: var(--bl-offwhite);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .pill--gold{
+      border-color: rgba(242, 183, 5, 0.55);
+      background: rgba(242, 183, 5, 0.10);
+    }
+
+    .cta-row{
+      margin-top: 16px
