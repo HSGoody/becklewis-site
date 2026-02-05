@@ -1,5 +1,6 @@
 <!-- =========================
      FILE: books.html
+     (Man or Bear removed)
      ========================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +55,335 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
 
-  <!-- styles unchanged -->
+  <style>
+    :root{
+      /* Beck Lewis palette */
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
+
+      --bl-border: rgba(110,123,133,0.22);
+      --bl-shadow: rgba(0,0,0,0.40);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--bl-offwhite);
+      min-height: 100vh;
+
+      background:
+        radial-gradient(1100px 700px at 50% -10%, var(--bl-midnight-2), var(--bl-midnight));
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Top navigation */
+    .top-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      padding: 10px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.35);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(19, 42, 58, 0.35);
+      position: relative;
+    }
+
+    .top-nav a:hover {
+      background-color: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: var(--bl-offwhite);
+    }
+
+    .top-nav a:active{
+      transform: translateY(1px);
+    }
+
+    /* Active nav item (Books on books.html) */
+    .top-nav a[aria-current="page"]{
+      border-color: rgba(232, 92, 13, 0.70);
+      background: rgba(232, 92, 13, 0.10);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.10);
+    }
+
+    .top-nav a[aria-current="page"]::after{
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: -8px;
+      height: 2px;
+      background: rgba(232, 92, 13, 0.85);
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(232, 92, 13, 0.18);
+    }
+
+    /* Page heading */
+    h1 {
+      font-size: 1.95rem;
+      font-weight: 800;
+      margin: 0 0 10px 0;
+      letter-spacing: 0.2px;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid rgba(232, 92, 13, 0.85);
+      width: 65%;
+      margin: 0 0 18px 0;
+    }
+
+    .intro {
+      font-size: 1rem;
+      line-height: 1.65;
+      margin: 0 0 26px 0;
+      max-width: 70ch;
+      color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
+    }
+
+    /* Books grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      justify-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(19, 42, 58, 0.38);
+      box-shadow: 0 18px 48px var(--bl-shadow);
+    }
+
+    .card:hover{
+      border-color: rgba(232, 92, 13, 0.25);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.55);
+    }
+
+    /* Cover image */
+    .cover {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background: rgba(5,8,12,0.25);
+      border-bottom: 1px solid rgba(110,123,133,0.22);
+      image-rendering: auto;
+    }
+
+    .card-body {
+      padding: 14px 14px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .book-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: var(--bl-offwhite);
+    }
+
+    .byline{
+      margin: 2px 0 0 0;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: color-mix(in srgb, var(--bl-offwhite) 86%, var(--bl-concrete));
+    }
+
+    .tag {
+      border: 1px solid rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.10);
+      color: var(--bl-offwhite);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    /* Blurb */
+    .blurb {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: color-mix(in srgb, var(--bl-offwhite) 84%, var(--bl-concrete));
+    }
+
+    .blurb p { margin: 0 0 10px 0; }
+    .blurb p:last-child { margin-bottom: 0; }
+
+    .blurb-more {
+      display: none;
+      margin-top: 6px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(110,123,133,0.22);
+    }
+
+    .blurb-toggle {
+      margin-top: 8px;
+      padding: 0;
+      border: none;
+      background: none;
+      color: rgba(237,239,242,0.92);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+    }
+
+    .blurb-toggle::after{
+      content: "›";
+      font-size: 1.2rem;
+      line-height: 1;
+      transform: translateY(-1px);
+      opacity: 0.9;
+      transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+
+    .blurb-toggle:hover {
+      color: var(--bl-orange);
+    }
+
+    .blurb-toggle:hover::after{
+      transform: translate(2px,-1px);
+      opacity: 1;
+    }
+
+    /* Amazon button */
+    .buy-row{
+      margin-top: 10px;
+    }
+
+    .buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      width: 100%;
+      padding: 10px 12px;
+
+      border-radius: 12px;
+      border: 1px solid rgba(242, 183, 5, 0.55);
+      background: rgba(242, 183, 5, 0.12);
+      color: rgba(237,239,242,0.96);
+      text-decoration: none;
+
+      font-size: 0.95rem;
+      font-weight: 800;
+
+      transition: transform 0.08s, background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .buy-button:hover{
+      background: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: rgba(237,239,242,0.98);
+    }
+
+    .buy-button:active{
+      transform: translateY(1px);
+    }
+
+    /* Social icons */
+    .social-links {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.25);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(19, 42, 58, 0.25);
+    }
+
+    .social-links a:hover {
+      color: var(--bl-orange);
+      border-color: rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.08);
+    }
+
+    .social-links a:active{
+      transform: translateY(1px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      hr { width: 100%; }
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 24px 14px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { max-width: 420px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -92,10 +421,15 @@
 
             <div class="blurb-more">
               <p>When Esther Butler sees a man with a gun following a woman in the dark city streets, she doesn’t hesitate to call the police.</p>
+
               <p>Minutes later in an empty building site, the man is dead. The police fired the shot. But when the smoke clears, there’s no weapon to be found.</p>
+
               <p>Esther knows what she saw. Yet as her story begins to unravel, she’s forced to question not just her memory, but her own safety.</p>
-              <p>DC Josie Kaminski – assigned to the police team with the worst reputation in Leicester – is put on the case.</p>
-              <p>As truth and lies blur, the team must decide who to believe.</p>
+
+              <p>DC Josie Kaminski – assigned to the police team with the worst reputation in Leicester – is put on the case. But the deeper they dig, the more they find evidence linking Esther to the dead man and compelling reasons why she would want him dead.</p>
+
+              <p>As truth and lies blur, the team must decide who to believe.<br>
+              And Esther stands to lose more than she ever bargained for.</p>
             </div>
 
             <button class="blurb-toggle" type="button">Read more</button>
@@ -111,6 +445,7 @@
               Buy on Amazon
             </a>
           </div>
+
         </div>
       </article>
 
@@ -128,10 +463,13 @@
             <p>Can saving someone be the biggest mistake of your life?</p>
 
             <div class="blurb-more">
-              <p>PR consultant Hannah Douglas-Jones stops at the scene of a house fire and pulls a young woman from the flames.</p>
-              <p>Natasha – calm, capable and self-assured – is now homeless. Hannah offers her a place to stay and a job.</p>
-              <p>As Hannah’s fortunes rise, she starts to doubt who this woman really is – and what she wants.</p>
-              <p>Six people died in the fire. It was no accident.</p>
+              <p>PR consultant Hannah Douglas-Jones makes her living managing other people’s reputations. But she finds herself involved in a story like no other when she stops at the scene of a house fire and pulls a young woman from the flames.</p>
+
+              <p>Fire victim Natasha – calm, capable and self-assured – is now homeless. Hannah offers her a place to stay and a job. Natasha is exactly the person Hannah needs to rebuild her struggling business and help with a hectic home life. But as Hannah’s fortunes rise, she starts to doubt who this woman really is – and what she wants.</p>
+
+              <p>DC ‘Walker’ Smith is part of the investigation into the fire. Six people died, locked in the cellar. As the investigation grows, Walker realises that this crime has links to shameful secrets in his own past – and that Natasha is the key to unlocking everything.</p>
+
+              <p>One fire. No accident. Everyone’s playing with fire.</p>
             </div>
 
             <button class="blurb-toggle" type="button">Read more</button>
@@ -147,6 +485,7 @@
               Buy on Amazon
             </a>
           </div>
+
         </div>
       </article>
 
@@ -164,10 +503,15 @@
             <p>When your memories are missing, how do you know you’re not the one to blame?</p>
 
             <div class="blurb-more">
-              <p>A year after a carbon monoxide accident, Cassie O’Donnell wakes from a coma to find her life erased.</p>
-              <p>She joins a survivors’ support group – a safe space where secrets fester.</p>
-              <p>When one member dies, suspicion turns inward.</p>
-              <p>No one is safe.</p>
+              <p>A year after a carbon monoxide accident left five people dead, Cassie O’Donnell wakes from a coma to find her life erased. She’s homeless, unemployed, and her mind is filled with shadowy memories she can’t trust.</p>
+
+              <p>Desperate for answers, Cassie joins a support group run by the survivors - a safe space where they can grieve and heal together. But then one member of the group dies of an apparent drugs overdose…</p>
+
+              <p>An ex-girlfriend begs DS Rob Joseph to investigate this latest death and he secretly joins the support group. But he soon discovers that the survivors are all carrying secrets.</p>
+
+              <p>Both Cassie and Rob begin to suspect that someone inside the group knows what really happened in that house on the night of the accident - and is willing to kill to keep the truth buried.</p>
+
+              <p>One tragedy. Five survivors. No one is safe.</p>
             </div>
 
             <button class="blurb-toggle" type="button">Read more</button>
@@ -183,6 +527,7 @@
               Buy on Amazon
             </a>
           </div>
+
         </div>
       </article>
 
