@@ -76,7 +76,6 @@
 
   <style>
     :root{
-      /* Beck Lewis palette */
       --bl-midnight: #0B1C2D;
       --bl-midnight-2: #132A3A;
       --bl-ink: #05080C;
@@ -146,7 +145,6 @@
       transform: translateY(1px);
     }
 
-    /* Active nav item */
     .top-nav a[aria-current="page"]{
       border-color: rgba(232, 92, 13, 0.70);
       background: rgba(232, 92, 13, 0.10);
@@ -165,7 +163,6 @@
       box-shadow: 0 6px 18px rgba(232, 92, 13, 0.18);
     }
 
-    /* Hero */
     .hero {
       border: 1px solid var(--bl-border);
       border-radius: 16px;
@@ -234,4 +231,222 @@
     }
 
     .cta-row{
-      margin-top: 16px
+      margin-top: 16px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(242, 183, 5, 0.55);
+      background: rgba(242, 183, 5, 0.12);
+      color: rgba(237,239,242,0.96);
+      text-decoration: none;
+
+      font-size: 0.98rem;
+      font-weight: 850;
+
+      transition: transform 0.08s, background 0.2s, border-color 0.2s, color 0.2s;
+      width: fit-content;
+    }
+
+    .button:hover{
+      background: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: rgba(237,239,242,0.98);
+    }
+
+    .button:active{ transform: translateY(1px); }
+
+    .button--primary{
+      border-color: rgba(232, 92, 13, 0.65);
+      background: rgba(232, 92, 13, 0.12);
+    }
+
+    .button--primary:hover{
+      background: rgba(242, 183, 5, 0.12);
+      border-color: rgba(242, 183, 5, 0.55);
+    }
+
+    .section{
+      margin: 18px 0;
+      padding: 18px;
+      border: 1px solid var(--bl-border);
+      border-radius: 16px;
+      background: rgba(5, 8, 12, 0.22);
+      box-shadow: 0 16px 42px rgba(0,0,0,0.45);
+    }
+
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 0.15px;
+    }
+
+    p{
+      margin: 0 0 10px 0;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--bl-offwhite) 84%, var(--bl-concrete));
+      max-width: 75ch;
+    }
+
+    p:last-child{ margin-bottom: 0; }
+
+    .bullets{
+      margin: 10px 0 0 0;
+      padding-left: 18px;
+      color: color-mix(in srgb, var(--bl-offwhite) 84%, var(--bl-concrete));
+      line-height: 1.65;
+      max-width: 78ch;
+    }
+
+    .bullets li{ margin: 6px 0; }
+
+    .social-links {
+      margin-top: 28px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.25);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(19, 42, 58, 0.25);
+    }
+
+    .social-links a:hover {
+      color: var(--bl-orange);
+      border-color: rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.08);
+    }
+
+    .social-links a:active{ transform: translateY(1px); }
+
+    @media (max-width: 760px) {
+      .hero-inner{ grid-template-columns: 1fr; }
+      .cover{ max-width: 260px; }
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 24px 14px; }
+      h1 { font-size: 1.9rem; }
+      .section { padding: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="man-or-bear.html" aria-current="page">Man or Bear</a>
+      <a href="events.html">Events</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <img class="cover" src="ManBear.jpg" alt="Cover of Man or Bear by Beck Lewis">
+        <div>
+          <h1>Man or Bear</h1>
+          <p class="subtitle">A standalone crime short story by Beck Lewis — designed for immersive reading and discussion.</p>
+
+          <div class="meta-row">
+            <span class="pill pill--gold">Free</span>
+            <span class="pill">Crime short story</span>
+            <span class="pill">Immersive reading</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="button button--primary"
+               href="https://dl.bookfunnel.com/4dwgjdi3c1"
+               target="_blank"
+               rel="noopener noreferrer">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i>
+              Get it free
+            </a>
+            <a class="button" href="events.html">
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              Events
+            </a>
+          </div>
+
+          <p style="margin-top:12px; font-size:0.92rem; color: color-mix(in srgb, var(--bl-offwhite) 70%, var(--bl-concrete));">
+            If you run a reading group or library session, you can use this story for a 90–120 minute immersive reading event.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>What is <em>Man or Bear</em>?</h2>
+      <p>
+        <em>Man or Bear</em> is a standalone crime short story that explores how women assess risk in ordinary, everyday situations —
+        and how quickly politeness can become a trap.
+      </p>
+      <p>
+        The story draws on the widely shared “man or bear” thought experiment: if a woman were alone in the woods, would she rather
+        encounter an unknown man or a bear? <em>Man or Bear</em> uses that question as a narrative engine to prompt discussion about threat,
+        trust, and interpretation.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Why this story works especially well aloud</h2>
+      <p>
+        Immersive reading is a two-hour group session where the story is read aloud (around 45–60 minutes) and followed by a structured discussion.
+        Because everyone has experienced the text together, the conversation is immediate and often surprisingly intense.
+      </p>
+      <ul class="bullets">
+        <li>Suspense lands in real time — listeners feel the pressure of moments as they unfold.</li>
+        <li>Interpretation becomes visible — different readers notice different details and assumptions.</li>
+        <li>Discussion stays grounded in the text — the story is fresh, not half-remembered.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Questions readers often debate</h2>
+      <ul class="bullets">
+        <li>Where does discomfort become danger — and who gets to decide?</li>
+        <li>What role does politeness play in keeping someone safe (or trapping them)?</li>
+        <li>How do we read intent when someone is being “nice”?</li>
+        <li>What changes when risk is discussed as theory — versus lived experience?</li>
+      </ul>
+    </section>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>
