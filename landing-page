@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Man or Bear – Free Thriller</title>
 
-  <!-- Meta Pixel Base Code (replace YOUR_PIXEL_ID) -->
+  <!-- Meta Pixel Base Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,584 +18,260 @@
     fbq('init', '873656708818220');
     fbq('track', 'PageView');
   </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=873656708818220&ev=PageView&noscript=1" />
+  </noscript>
 
   <style>
-    body {
-      margin: 0;
+    :root{
+      --bg:#0d0d0d;
+      --panel:#1a1a1a;
+      --text:#f5f5f5;
+      --muted:#bbbbbb;
+      --muted2:#888888;
+      --accent:#c0392b;
+      --accentHover:#e74c3c;
+      --field:#141414;
+      --border:#2a2a2a;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      line-height: 1.6;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
 
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 20px;
+    .container{
+      max-width:720px;
+      margin:0 auto;
+      padding:24px 20px 60px;
     }
 
-    h1 {
-      font-size: 2.2em;
-      line-height: 1.3;
+    h1{
+      font-size:2.2em;
+      line-height:1.25;
+      margin: 8px 0 12px;
+      letter-spacing:0.2px;
     }
 
-    p {
-      margin-bottom: 1.2em;
+    h2{
+      margin:0 0 12px;
+      font-size:1.2em;
     }
 
-    .cover {
-      width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: 20px auto;
+    p{margin:0 0 1.1em;}
+
+    .lead{
+      margin-bottom:18px;
+      color:var(--text);
     }
 
-    .cta-box {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 30px 0;
+    .cover{
+      width:100%;
+      max-width:320px;
+      display:block;
+      margin:18px auto 10px;
+      border-radius:6px;
+      border:1px solid var(--border);
     }
 
-    input[type="email"] {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 10px;
-      border-radius: 4px;
-      border: none;
-      font-size: 1em;
+    .cta-box{
+      background:var(--panel);
+      padding:22px;
+      border-radius:10px;
+      margin:26px 0;
+      border:1px solid var(--border);
     }
 
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #c0392b;
-      color: white;
-      border: none;
-      font-size: 1em;
-      border-radius: 4px;
-      cursor: pointer;
+    .small{font-size:0.95em;color:var(--muted);margin-top:10px;}
+
+    .footer{margin-top:34px;font-size:0.95em;color:var(--muted2);}
+
+    /* AWeber form: override their default look without importing their CSS */
+    #af-form-270684674{
+      width:100%;
+      margin:0;
+      padding:0;
+      border:0;
+      background:transparent;
+      color:inherit;
+      font-family:inherit;
     }
 
-    button:hover {
-      background: #e74c3c;
+    #af-form-270684674 .af-header,
+    #af-form-270684674 .af-footer{display:none !important;}
+
+    #af-form-270684674 .af-body{padding:0 !important;background:transparent !important;}
+
+    #af-form-270684674 .af-element{padding:0 !important;margin:0 0 10px;}
+
+    #af-form-270684674 label.previewLabel{
+      display:block;
+      margin:0 0 6px;
+      font-size:0.95em;
+      color:var(--muted);
+      font-weight:700;
+      width:auto !important;
+      float:none !important;
     }
 
-    .small {
-      font-size: 0.9em;
-      color: #bbbbbb;
+    #af-form-270684674 .af-textWrap{
+      width:100% !important;
+      float:none !important;
     }
 
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #888;
+    #af-form-270684674 input.text,
+    #af-form-270684674 input[type="email"],
+    #af-form-270684674 input[type="text"]{
+      width:100% !important;
+      padding:12px 12px !important;
+      border-radius:6px !important;
+      border:1px solid var(--border) !important;
+      background:var(--field) !important;
+      color:var(--text) !important;
+      font-size:1em !important;
+      outline:none;
     }
+
+    #af-form-270684674 input.text:focus,
+    #af-form-270684674 input[type="email"]:focus,
+    #af-form-270684674 input[type="text"]:focus{
+      border-color:#555 !important;
+    }
+
+    #af-form-270684674 .buttonContainer{padding:0 !important;text-align:left !important;}
+
+    #af-form-270684674 input.submit{
+      width:100% !important;
+      padding:12px !important;
+      background:var(--accent) !important;
+      color:#fff !important;
+      border:none !important;
+      border-radius:6px !important;
+      font-size:1em !important;
+      cursor:pointer;
+      font-weight:700;
+    }
+
+    #af-form-270684674 input.submit:hover{background:var(--accentHover) !important;}
+
+    /* Hide Aweber's default footer links (you already have your own footer) */
+    #af-form-270684674 .privacyPolicy,
+    #af-form-270684674 .poweredBy{display:none !important;}
+
+    /* Secondary CTA button as a link */
+    .button-link{
+      display:block;
+      width:100%;
+      text-align:center;
+      padding:12px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:700;
+    }
+    .button-link:hover{background:var(--accentHover);}
+
+    .hr{height:1px;background:var(--border);margin:22px 0;}
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <h1>She has two options.<br>Neither ends well.</h1>
 
-  <h1>She has two options.<br>Neither ends well.</h1>
+    <p class="lead"><strong>A short, unsettling thriller you can read in one sitting.</strong><br>
+    Free when you join the Beck Lewis reader list.</p>
 
-  <p><strong>A short, unsettling thriller you can read in one sitting.</strong><br>
-  Free when you join the Beck Lewis reader list.</p>
+    <img src="ManBear.jpg" alt="Man or Bear cover" class="cover" />
 
-  <img src="ManBear.jpg" alt="Man or Bear cover" class="cover">
+    <p>Nina’s car breaks down on a remote lane.</p>
+    <p>No signal. No passing traffic.</p>
+    <p>Just one house. One man.</p>
+    <p>And a question she can’t shake:</p>
+    <p><strong>Which would be worse?</strong></p>
 
-  <p>Nina’s car breaks down on a remote lane.</p>
+    <div id="signup" class="cta-box">
+      <h2>Get the story free</h2>
 
-  <p>No signal. No passing traffic.</p>
+      <!-- AWeber form (CSS stripped; styled by this page) -->
+      <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" class="af-form-wrapper">
+        <div style="display:none;">
+          <input type="hidden" name="meta_web_form_id" value="270684674" />
+          <input type="hidden" name="meta_split_id" value="" />
+          <input type="hidden" name="listname" value="awlist6936435" />
+          <input type="hidden" name="redirect" value="https://becklewis.com/thank-you.html" />
+          <input type="hidden" name="meta_redirect_onlist" value="https://www.aweber.com/thankyou-coi.htm?m=text" />
+          <input type="hidden" name="meta_adtracking" value="My_Web_Form" />
+          <input type="hidden" name="meta_message" value="1" />
+          <!-- Make only email required (name optional). If you want name required, change to name,email -->
+          <input type="hidden" name="meta_required" value="email" />
+          <input type="hidden" name="meta_tooltip" value="" />
+        </div>
 
-  <p>Just one house. One man.</p>
+        <div id="af-form-270684674" class="af-form">
+          <div id="af-body-270684674" class="af-body af-standards">
 
-  <p>And a question she can’t shake:</p>
+            <div class="af-element">
+              <label class="previewLabel" for="awf_field-118557671">Name (optional)</label>
+              <div class="af-textWrap">
+                <input id="awf_field-118557671" type="text" name="name" class="text" value="" tabindex="500" autocomplete="name" />
+              </div>
+              <div class="af-clear"></div>
+            </div>
 
-  <p><strong>Which would be worse?</strong></p>
+            <div class="af-element">
+              <label class="previewLabel" for="awf_field-118557672">Email</label>
+              <div class="af-textWrap">
+                <input class="text" id="awf_field-118557672" type="email" name="email" value="" tabindex="501" autocomplete="email" required />
+              </div>
+              <div class="af-clear"></div>
+            </div>
 
-  <div class="cta-box">
+            <div class="af-element buttonContainer">
+              <input name="submit" class="submit" type="submit" value="Send me the story" tabindex="502" />
+              <div class="af-clear"></div>
+            </div>
 
-    <h2>Get the story free</h2>
+            <div class="af-element tag" style="display:none;">
+              <input id="awf_tag-118557676" type="hidden" name="tag_118557676" value="#manorbear" />
+            </div>
 
-    <!-- Replace with your Aweber form action -->
-	
-<!-- AWeber Web Form Generator 3.0.1 -->
-<style type="text/css">
-#af-form-270684674 .af-body{font-family:Verdana, sans-serif;font-size:11px;color:#000000;background-image:none;background-position:inherit;background-repeat:no-repeat;padding-top:15px;padding-bottom:15px;}
-#af-form-270684674 .af-body .privacyPolicy{font-family:Verdana, sans-serif;font-size:11px;color:#000000;}
-#af-form-270684674 {border-style:solid;border-width:1px;border-color:#8C8C8C;background-color:#FFFFFF;}
-#af-form-270684674 .af-standards .af-element{padding-left:15px;padding-right:15px;}
-#af-form-270684674 .af-quirksMode{padding-left:15px;padding-right:15px;}
-#af-form-270684674 .af-header{font-family:Verdana, sans-serif;font-size:16px;color:#FFFFFF;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;border-width:1px;background-image:url("https://forms.aweber.com/images/auto/body/888/888/222/222");background-position:top left;background-repeat:repeat-x;background-color:#222222;padding-left:10px;padding-right:10px;padding-top:9px;padding-bottom:9px;}
-#af-form-270684674 .af-footer{font-family:Verdana, sans-serif;font-size:12px;color:#000000;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;border-width:1px;background-image:none;background-color:transparent;padding-left:15px;padding-right:15px;padding-top:0px;padding-bottom:0px;}
-#af-form-270684674 .af-body input.text, #af-form-270684674 .af-body textarea{border-color:#000000;border-width:1px;border-style:solid;font-family:Verdana, sans-serif;font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF;}
-#af-form-270684674 .af-body input.text:focus, #af-form-270684674 .af-body textarea:focus{border-style:solid;border-width:1px;border-color:#5E5E5E;background-color:#FFFAD6;}
-#af-form-270684674 .af-body label.previewLabel{font-family:Verdana, sans-serif;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;color:#4D4D4D;display:block;float:left;text-align:left;width:25%;}
-#af-form-270684674 .af-body .af-textWrap{width:70%;display:block;float:right;}
-#af-form-270684674 .buttonContainer input.submit{font-family:Verdana, sans-serif;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;background-color:#5E5E5E;background-image:none;}
-#af-form-270684674 .buttonContainer{text-align:right;}
-#af-form-270684674 .af-body label.choice{font-family:inherit;font-size:inherit;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;}
-#af-form-270684674 .af-body a{font-weight:normal;font-style:normal;text-decoration:underline;color:#000000;}
-#af-form-270684674, #af-form-270684674 .quirksMode{width:100%;max-width:225.0px;}
-#af-form-270684674.af-quirksMode{overflow-x:hidden;}
-#af-form-270684674 .af-quirksMode .bodyText{padding-top:2px;padding-bottom:2px;}
-#af-form-270684674{overflow:hidden;}
-#af-form-270684674 button,#af-form-270684674 input,#af-form-270684674 submit,#af-form-270684674 textarea,#af-form-270684674 select,#af-form-270684674 label,#af-form-270684674 optgroup,#af-form-270684674 option {float:none;margin:0;position:static;}
-#af-form-270684674 select,#af-form-270684674 label,#af-form-270684674 optgroup,#af-form-270684674 option {padding:0;}
-#af-form-270684674 input,#af-form-270684674 button,#af-form-270684674 textarea,#af-form-270684674 select {font-size:100%;}
-#af-form-270684674 .buttonContainer input.submit {width:auto;}
-#af-form-270684674 form,#af-form-270684674 textarea,.af-form-wrapper,.af-form-close-button,#af-form-270684674 img {float:none;color:inherit;margin:0;padding:0;position:static;background-color:none;border:none;}
-#af-form-270684674 div {margin:0;}
-#af-form-270684674 {display:block;}
-#af-form-270684674 body,#af-form-270684674 dl,#af-form-270684674 dt,#af-form-270684674 dd,#af-form-270684674 h1,#af-form-270684674 h2,#af-form-270684674 h3,#af-form-270684674 h4,#af-form-270684674 h5,#af-form-270684674 h6,#af-form-270684674 pre,#af-form-270684674 code,#af-form-270684674 fieldset,#af-form-270684674 legend,#af-form-270684674 blockquote,#af-form-270684674 th,#af-form-270684674 td { float:none;color:inherit;margin:0;padding:0;position:static;}
-#af-form-270684674 p { color:inherit;}
-#af-form-270684674 ul,#af-form-270684674 ol {list-style-image:none;list-style-position:outside;list-style-type:disc;padding-left:40px;}
-#af-form-270684674 .bodyText p {margin:1em 0;}
-#af-form-270684674 table {border-collapse:collapse;border-spacing:0;}
-#af-form-270684674 fieldset {border:0;}
-.af-clear{clear:both;}
-.af-form{box-sizing:border-box; margin:auto; text-align:left;}
-.af-element{padding-bottom:5px; padding-top:5px;}
-.af-form-wrapper{text-indent: 0;}
-.af-body input.submit, .af-body input.image, .af-form .af-element input.button{float:none!important;}
-.af-body input.submit{white-space: inherit;}
-.af-body input.text{width:100%; padding:2px!important;}
-.af-body .af-textWrap{text-align:left;}
-.af-element label{float:left; text-align:left;}
-.lbl-right .af-element label{text-align:right;}
-.af-quirksMode .af-element{padding-left: 0!important; padding-right: 0!important;}
-.af-body.af-standards input.submit{padding:4px 12px;}
-.af-body input.image{border:none!important;}
-.af-body input.text{float:none;}
-.af-element label{display:block; float:left;}
-.af-header,.af-footer { margin-bottom:0; margin-top:0; padding:10px; }
-body {
-}
+          </div>
+        </div>
 
-#af-form-270684674 .bodyText p {
-  margin: 0 0 1em !important;
-}
+        <div style="display:none;">
+          <img src="https://forms.aweber.com/form/displays.htm?id=TOwMbBwsbOws" alt="" />
+        </div>
+      </form>
 
-#af-form-270684674 .af-body {
-  padding-top:
-}
+      <p class="small">Check your email and confirm — otherwise I can’t send you the story.</p>
+    </div>
 
-#af-form-270684674 .af-body .af-textWrap {
-  width: 100% !important;
-}
+    <div class="hr"></div>
 
-#af-form-270684674 .af-body .af-element {
-  padding-top: 0px!important;
-  padding-bottom: 0px!important;
-}
-#af-form-270684674 .af-body .af-element:first-child {
-  margin-top: 0 !important;
-}
-#af-form-270684674 .af-body label.previewLabel {
-  font-weight: 700 !important;
-  margin-top: 0.25rem !important;
-  margin-bottom: .25rem !important;
-}
-#af-form-270684674 .af-body input.text,
-#af-form-270684674 .af-body textarea {
-  border-radius: 3px !important;
-  box-sizing: border-box !important;
-  color: #444444;
-  font-size: 1rem;
-  margin-bottom: 0.75rem !important;
-  padding: 8px 12px !important;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
+    <p><strong>This is for readers who enjoy dark, twisty psychological thrillers.</strong><br>
+    Not cosy. Not comfortable.</p>
 
-#af-form-270684674 .af-body select {
-  width: 100%;
-}
-#af-form-270684674 .af-body .af-dateWrap select {
-  width: 33%;
-}
-#af-form-270684674 .choiceList-radio-stacked {
-  margin-bottom: 1rem !important;
-  width: 100% !important;
-}
-#af-form-270684674 .af-element-radio {
-  margin: 0 !important;
-}
-#af-form-270684674 .af-element-radio input.radio {
-  display: inline;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  width: 0;
-}
-#af-form-270684674 .af-element-radio input.radio:checked ~ label {
-  font-weight: 700 !important;
-}
-#af-form-270684674 .af-element-radio input.radio:focus ~ label {
-  box-shadow: inset 0 0 0 2px rgba(25,35,70,.25);
-}
-#af-form-270684674 .af-element-radio input.radio:checked ~ label:before {
-  background-color: #777777;
-  border-color: #d6dee3;
-}
-#af-form-270684674 .af-element-radio label.choice {
-  border: 1px solid #d6dee3;
-  border-radius: 3px !important;
-  display: block !important;
-  font-weight: 300 !important;
-  margin: 0.5rem 0 !important;
-  padding: 1rem 1rem 1rem 2rem !important;
-  position: relative;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-#af-form-270684674 .af-element-radio label.choice:before {
-  background-color: #FFF;
-  border: 1px solid #d6dee3;
-  border-radius: 50%;
-  content: '';
-  height: 0.75rem;
-  margin-left: -1.3rem;
-  position: absolute;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  width: 0.75rem;
-}
-#af-form-270684674 .buttonContainer {
-  box-sizing: border-box !important;
-}
-#af-form-270684674 .af-footer {
-  box-sizing: border-box !important;
-}
+    <p>Beck Lewis writes dark, character-driven thrillers where the real danger isn’t always obvious.</p>
 
-#af-form-270684674 .af-footer p {
-  margin: 0 !important;
-}
-#af-form-270684674 input.submit,
-#af-form-270684674 #webFormSubmitButton {
-  border: none;
-  border-radius: 3px !important;
-  font-weight: bold;
-  margin-top: 0.5rem !important;
-  margin-bottom: 1rem !Important;
-  padding: 0.6rem 1.5rem !important;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  }
-#af-form-270684674 input.submit:hover,
-#af-form-270684674 #webFormSubmitButton:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
+    <div class="cta-box">
+      <h2>Ready?</h2>
+      <a class="button-link" href="#signup">Get the story free</a>
+      <p class="small" style="margin-top:10px;">Already signed up? Search your inbox for the confirmation email.</p>
+    </div>
 
-#af-form-270684674 input.text:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.poweredBy a,
-.privacyPolicy p {
-  color: #000000 !important;
-  font-size: 0.65rem !important;
-}
-
-</style>
-<form method="post" class="af-form-wrapper" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl"  >
-<div style="display: none;">
-<input type="hidden" name="meta_web_form_id" value="270684674" />
-<input type="hidden" name="meta_split_id" value="" />
-<input type="hidden" name="listname" value="awlist6936435" />
-<input type="hidden" name="redirect" value="https://becklewis.com/thank-you.html" id="redirect_36bb0b65cda11cbb56514d678004e0f0" />
-<input type="hidden" name="meta_redirect_onlist" value="https://www.aweber.com/thankyou-coi.htm?m=text" />
-<input type="hidden" name="meta_adtracking" value="My_Web_Form" />
-<input type="hidden" name="meta_message" value="1" />
-<input type="hidden" name="meta_required" value="name,email" />
-
-<input type="hidden" name="meta_tooltip" value="" />
-</div>
-<div id="af-form-270684674" class="af-form"><div id="af-header-270684674" class="af-header"><div class="bodyText"><p>&nbsp;</p></div></div>
-<div id="af-body-270684674" class="af-body af-standards">
-<div class="af-element">
-<label class="previewLabel" for="awf_field-118557671">Name:</label>
-<div class="af-textWrap">
-<input id="awf_field-118557671" type="text" name="name" class="text" value="" onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';} " tabindex="500" />
-</div>
-<div class="af-clear"></div>
-</div>
-<div class="af-element">
-<label class="previewLabel" for="awf_field-118557672">Email:</label>
-<div class="af-textWrap"><input class="text" id="awf_field-118557672" type="email" name="email" value="" tabindex="501" onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';}" />
-</div><div class="af-clear"></div>
-</div>
-<div class="af-element buttonContainer">
-<input name="submit" class="submit" type="submit" value="Submit" tabindex="502" />
-<div class="af-clear"></div>
-</div>
-<div class="af-element privacyPolicy" style="text-align: center"><p>We respect your <a title="Privacy Policy" href="https://www.aweber.com/permission.htm" target="_blank" rel="nofollow">email privacy</a></p>
-<div class="af-clear"></div>
-</div>
-<div class="af-element poweredBy" style="text-align: center; font-size: 9px;"><p><a href="https://www.aweber.com" title="AWeber Email Marketing" target="_blank" rel="nofollow">Powered by AWeber Email Marketing</a></p>
-<div class="af-clear"></div>
-</div>
-<div class="af-element tag" style="display:none;"><input id="awf_tag-118557676" type="hidden" name="tag_118557676" value="#manorbear" /></div>
-
-</div>
-<div id="af-footer-270684674" class="af-footer"><div class="bodyText"><p>&nbsp;</p></div></div>
-</div>
-<div style="display: none;"><img src="https://forms.aweber.com/form/displays.htm?id=TOwMbBwsbOws" alt="" /></div>
-</form>
-
-
-<!-- /AWeber Web Form Generator 3.0.1 -->
-
-    <p class="small">Check your email and confirm — otherwise I can’t send you the story.</p>
+    <div class="footer">
+      <p>You can unsubscribe at any time.</p>
+    </div>
 
   </div>
-
-  <p><strong>This is for readers who enjoy dark, twisty psychological thrillers.</strong><br>
-  Not cosy. Not comfortable.</p>
-
-  <p>Beck Lewis writes dark, character-driven thrillers where the real danger isn’t always obvious.</p>
-
-  <div class="cta-box">
-    <h2>Get the story free</h2>
-<!-- AWeber Web Form Generator 3.0.1 -->
-<style type="text/css">
-#af-form-270684674 .af-body{font-family:Verdana, sans-serif;font-size:11px;color:#000000;background-image:none;background-position:inherit;background-repeat:no-repeat;padding-top:15px;padding-bottom:15px;}
-#af-form-270684674 .af-body .privacyPolicy{font-family:Verdana, sans-serif;font-size:11px;color:#000000;}
-#af-form-270684674 {border-style:solid;border-width:1px;border-color:#8C8C8C;background-color:#FFFFFF;}
-#af-form-270684674 .af-standards .af-element{padding-left:15px;padding-right:15px;}
-#af-form-270684674 .af-quirksMode{padding-left:15px;padding-right:15px;}
-#af-form-270684674 .af-header{font-family:Verdana, sans-serif;font-size:16px;color:#FFFFFF;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;border-width:1px;background-image:url("https://forms.aweber.com/images/auto/body/888/888/222/222");background-position:top left;background-repeat:repeat-x;background-color:#222222;padding-left:10px;padding-right:10px;padding-top:9px;padding-bottom:9px;}
-#af-form-270684674 .af-footer{font-family:Verdana, sans-serif;font-size:12px;color:#000000;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;border-width:1px;background-image:none;background-color:transparent;padding-left:15px;padding-right:15px;padding-top:0px;padding-bottom:0px;}
-#af-form-270684674 .af-body input.text, #af-form-270684674 .af-body textarea{border-color:#000000;border-width:1px;border-style:solid;font-family:Verdana, sans-serif;font-size:16px;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF;}
-#af-form-270684674 .af-body input.text:focus, #af-form-270684674 .af-body textarea:focus{border-style:solid;border-width:1px;border-color:#5E5E5E;background-color:#FFFAD6;}
-#af-form-270684674 .af-body label.previewLabel{font-family:Verdana, sans-serif;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;color:#4D4D4D;display:block;float:left;text-align:left;width:25%;}
-#af-form-270684674 .af-body .af-textWrap{width:70%;display:block;float:right;}
-#af-form-270684674 .buttonContainer input.submit{font-family:Verdana, sans-serif;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;background-color:#5E5E5E;background-image:none;}
-#af-form-270684674 .buttonContainer{text-align:right;}
-#af-form-270684674 .af-body label.choice{font-family:inherit;font-size:inherit;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;}
-#af-form-270684674 .af-body a{font-weight:normal;font-style:normal;text-decoration:underline;color:#000000;}
-#af-form-270684674, #af-form-270684674 .quirksMode{width:100%;max-width:225.0px;}
-#af-form-270684674.af-quirksMode{overflow-x:hidden;}
-#af-form-270684674 .af-quirksMode .bodyText{padding-top:2px;padding-bottom:2px;}
-#af-form-270684674{overflow:hidden;}
-#af-form-270684674 button,#af-form-270684674 input,#af-form-270684674 submit,#af-form-270684674 textarea,#af-form-270684674 select,#af-form-270684674 label,#af-form-270684674 optgroup,#af-form-270684674 option {float:none;margin:0;position:static;}
-#af-form-270684674 select,#af-form-270684674 label,#af-form-270684674 optgroup,#af-form-270684674 option {padding:0;}
-#af-form-270684674 input,#af-form-270684674 button,#af-form-270684674 textarea,#af-form-270684674 select {font-size:100%;}
-#af-form-270684674 .buttonContainer input.submit {width:auto;}
-#af-form-270684674 form,#af-form-270684674 textarea,.af-form-wrapper,.af-form-close-button,#af-form-270684674 img {float:none;color:inherit;margin:0;padding:0;position:static;background-color:none;border:none;}
-#af-form-270684674 div {margin:0;}
-#af-form-270684674 {display:block;}
-#af-form-270684674 body,#af-form-270684674 dl,#af-form-270684674 dt,#af-form-270684674 dd,#af-form-270684674 h1,#af-form-270684674 h2,#af-form-270684674 h3,#af-form-270684674 h4,#af-form-270684674 h5,#af-form-270684674 h6,#af-form-270684674 pre,#af-form-270684674 code,#af-form-270684674 fieldset,#af-form-270684674 legend,#af-form-270684674 blockquote,#af-form-270684674 th,#af-form-270684674 td { float:none;color:inherit;margin:0;padding:0;position:static;}
-#af-form-270684674 p { color:inherit;}
-#af-form-270684674 ul,#af-form-270684674 ol {list-style-image:none;list-style-position:outside;list-style-type:disc;padding-left:40px;}
-#af-form-270684674 .bodyText p {margin:1em 0;}
-#af-form-270684674 table {border-collapse:collapse;border-spacing:0;}
-#af-form-270684674 fieldset {border:0;}
-.af-clear{clear:both;}
-.af-form{box-sizing:border-box; margin:auto; text-align:left;}
-.af-element{padding-bottom:5px; padding-top:5px;}
-.af-form-wrapper{text-indent: 0;}
-.af-body input.submit, .af-body input.image, .af-form .af-element input.button{float:none!important;}
-.af-body input.submit{white-space: inherit;}
-.af-body input.text{width:100%; padding:2px!important;}
-.af-body .af-textWrap{text-align:left;}
-.af-element label{float:left; text-align:left;}
-.lbl-right .af-element label{text-align:right;}
-.af-quirksMode .af-element{padding-left: 0!important; padding-right: 0!important;}
-.af-body.af-standards input.submit{padding:4px 12px;}
-.af-body input.image{border:none!important;}
-.af-body input.text{float:none;}
-.af-element label{display:block; float:left;}
-.af-header,.af-footer { margin-bottom:0; margin-top:0; padding:10px; }
-body {
-}
-
-#af-form-270684674 .bodyText p {
-  margin: 0 0 1em !important;
-}
-
-#af-form-270684674 .af-body {
-  padding-top:
-}
-
-#af-form-270684674 .af-body .af-textWrap {
-  width: 100% !important;
-}
-
-#af-form-270684674 .af-body .af-element {
-  padding-top: 0px!important;
-  padding-bottom: 0px!important;
-}
-#af-form-270684674 .af-body .af-element:first-child {
-  margin-top: 0 !important;
-}
-#af-form-270684674 .af-body label.previewLabel {
-  font-weight: 700 !important;
-  margin-top: 0.25rem !important;
-  margin-bottom: .25rem !important;
-}
-#af-form-270684674 .af-body input.text,
-#af-form-270684674 .af-body textarea {
-  border-radius: 3px !important;
-  box-sizing: border-box !important;
-  color: #444444;
-  font-size: 1rem;
-  margin-bottom: 0.75rem !important;
-  padding: 8px 12px !important;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-#af-form-270684674 .af-body select {
-  width: 100%;
-}
-#af-form-270684674 .af-body .af-dateWrap select {
-  width: 33%;
-}
-#af-form-270684674 .choiceList-radio-stacked {
-  margin-bottom: 1rem !important;
-  width: 100% !important;
-}
-#af-form-270684674 .af-element-radio {
-  margin: 0 !important;
-}
-#af-form-270684674 .af-element-radio input.radio {
-  display: inline;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  width: 0;
-}
-#af-form-270684674 .af-element-radio input.radio:checked ~ label {
-  font-weight: 700 !important;
-}
-#af-form-270684674 .af-element-radio input.radio:focus ~ label {
-  box-shadow: inset 0 0 0 2px rgba(25,35,70,.25);
-}
-#af-form-270684674 .af-element-radio input.radio:checked ~ label:before {
-  background-color: #777777;
-  border-color: #d6dee3;
-}
-#af-form-270684674 .af-element-radio label.choice {
-  border: 1px solid #d6dee3;
-  border-radius: 3px !important;
-  display: block !important;
-  font-weight: 300 !important;
-  margin: 0.5rem 0 !important;
-  padding: 1rem 1rem 1rem 2rem !important;
-  position: relative;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-#af-form-270684674 .af-element-radio label.choice:before {
-  background-color: #FFF;
-  border: 1px solid #d6dee3;
-  border-radius: 50%;
-  content: '';
-  height: 0.75rem;
-  margin-left: -1.3rem;
-  position: absolute;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  width: 0.75rem;
-}
-#af-form-270684674 .buttonContainer {
-  box-sizing: border-box !important;
-}
-#af-form-270684674 .af-footer {
-  box-sizing: border-box !important;
-}
-
-#af-form-270684674 .af-footer p {
-  margin: 0 !important;
-}
-#af-form-270684674 input.submit,
-#af-form-270684674 #webFormSubmitButton {
-  border: none;
-  border-radius: 3px !important;
-  font-weight: bold;
-  margin-top: 0.5rem !important;
-  margin-bottom: 1rem !Important;
-  padding: 0.6rem 1.5rem !important;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  }
-#af-form-270684674 input.submit:hover,
-#af-form-270684674 #webFormSubmitButton:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-#af-form-270684674 input.text:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.poweredBy a,
-.privacyPolicy p {
-  color: #000000 !important;
-  font-size: 0.65rem !important;
-}
-
-</style>
-<form method="post" class="af-form-wrapper" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl"  >
-<div style="display: none;">
-<input type="hidden" name="meta_web_form_id" value="270684674" />
-<input type="hidden" name="meta_split_id" value="" />
-<input type="hidden" name="listname" value="awlist6936435" />
-<input type="hidden" name="redirect" value="https://becklewis.com/thank-you.html" id="redirect_36bb0b65cda11cbb56514d678004e0f0" />
-<input type="hidden" name="meta_redirect_onlist" value="https://www.aweber.com/thankyou-coi.htm?m=text" />
-<input type="hidden" name="meta_adtracking" value="My_Web_Form" />
-<input type="hidden" name="meta_message" value="1" />
-<input type="hidden" name="meta_required" value="name,email" />
-
-<input type="hidden" name="meta_tooltip" value="" />
-</div>
-<div id="af-form-270684674" class="af-form"><div id="af-header-270684674" class="af-header"><div class="bodyText"><p>&nbsp;</p></div></div>
-<div id="af-body-270684674" class="af-body af-standards">
-<div class="af-element">
-<label class="previewLabel" for="awf_field-118557671">Name:</label>
-<div class="af-textWrap">
-<input id="awf_field-118557671" type="text" name="name" class="text" value="" onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';} " tabindex="500" />
-</div>
-<div class="af-clear"></div>
-</div>
-<div class="af-element">
-<label class="previewLabel" for="awf_field-118557672">Email:</label>
-<div class="af-textWrap"><input class="text" id="awf_field-118557672" type="email" name="email" value="" tabindex="501" onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';}" />
-</div><div class="af-clear"></div>
-</div>
-<div class="af-element buttonContainer">
-<input name="submit" class="submit" type="submit" value="Submit" tabindex="502" />
-<div class="af-clear"></div>
-</div>
-<div class="af-element privacyPolicy" style="text-align: center"><p>We respect your <a title="Privacy Policy" href="https://www.aweber.com/permission.htm" target="_blank" rel="nofollow">email privacy</a></p>
-<div class="af-clear"></div>
-</div>
-<div class="af-element poweredBy" style="text-align: center; font-size: 9px;"><p><a href="https://www.aweber.com" title="AWeber Email Marketing" target="_blank" rel="nofollow">Powered by AWeber Email Marketing</a></p>
-<div class="af-clear"></div>
-</div>
-<div class="af-element tag" style="display:none;"><input id="awf_tag-118557676" type="hidden" name="tag_118557676" value="#manorbear" /></div>
-
-</div>
-<div id="af-footer-270684674" class="af-footer"><div class="bodyText"><p>&nbsp;</p></div></div>
-</div>
-<div style="display: none;"><img src="https://forms.aweber.com/form/displays.htm?id=TOwMbBwsbOws" alt="" /></div>
-</form>
-
-
-<!-- /AWeber Web Form Generator 3.0.1 -->
-  </div>
-
-  <div class="footer">
-    <p>You can unsubscribe at any time.</p>
-  </div>
-
-</div>
-
 </body>
 </html>
