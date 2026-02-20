@@ -1,9 +1,24 @@
+<!-- =========================
+     FILE: privacy.html
+     ========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Beck Lewis</title>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beck Lewis | Privacy Policy</title>
+
+  <meta name="description" content="Privacy Policy for becklewis.com.">
+
+  <link rel="canonical" href="https://becklewis.com/privacy.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
   <!-- Meta Pixel (optional but consistent) -->
   <script>
@@ -21,134 +36,257 @@
 
   <style>
     :root{
-      --bg:#0b0b0b;
-      --panel:#141414;
-      --panel2:#101010;
-      --text:#f5f5f5;
-      --muted:#c9c9c9;
-      --muted2:#9a9a9a;
-      --border:#2d2d2d;
-      --accent:#c0392b;
-      --accentHover:#e74c3c;
-      --focus:#ffd166;
-      --maxw: 900px;
-    }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 0%, #121212 0%, var(--bg) 55%);
-      color:var(--text);
-      line-height:1.6;
-      font-size: 18px;
-    }
-    a{color:var(--text); text-underline-offset:3px;}
-    a:hover{color:var(--muted);}
-    a:focus-visible{outline:3px solid var(--focus); outline-offset:2px; border-radius:10px;}
-    .wrap{max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 60px;}
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:16px; margin-bottom: 18px;
-    }
-    .brand{
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .pill-row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:flex-end;}
-    .pill{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:999px;
-      background: var(--panel2); border: 1px solid var(--border);
-      text-decoration:none; font-weight:700; font-size:0.92rem; min-height:42px;
-    }
-    .pill:hover{border-color:#505050;}
-    .pill:focus-visible{outline:3px solid var(--focus); outline-offset:2px;}
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
 
-    .card{
-      background: linear-gradient(180deg, var(--panel) 0%, #101010 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
+      --bl-border: rgba(110,123,133,0.22);
+      --bl-shadow: rgba(0,0,0,0.40);
     }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--bl-offwhite);
+      min-height: 100vh;
+
+      background:
+        radial-gradient(1100px 700px at 50% -10%, var(--bl-midnight-2), var(--bl-midnight));
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    a{
+      color: rgba(237,239,242,0.95);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    a:hover{
+      color: var(--bl-orange);
+      border-bottom-color: rgba(232, 92, 13, 0.55);
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      padding: 10px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.35);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(19, 42, 58, 0.35);
+      position: relative;
+    }
+
+    .top-nav a:hover {
+      background-color: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: var(--bl-offwhite);
+    }
+
+    .container {
+      padding: 26px;
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(19, 42, 58, 0.38);
+      box-shadow: 0 18px 48px var(--bl-shadow);
+    }
+
     h1{
-      font-size: clamp(2.0rem, 3.8vw, 2.6rem);
-      line-height:1.15;
-      margin: 10px 0 10px;
+      margin: 0 0 10px 0;
+      font-size: 1.95rem;
+      font-weight: 850;
+      letter-spacing: 0.2px;
     }
-    h2{margin: 22px 0 8px; font-size: 1.1rem; color: var(--muted);}
-    p{margin:0 0 1.05em;}
-    ul{margin: 8px 0 14px 18px; padding:0;}
-    li{margin: 6px 0;}
-    footer{
-      margin-top: 28px; padding-top: 16px; border-top:1px solid var(--border);
-      color: var(--muted2); font-size:0.95rem;
-      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;
+
+    hr{
+      border: none;
+      border-top: 2px solid rgba(232, 92, 13, 0.85);
+      width: 65%;
+      margin: 0 0 18px 0;
+    }
+
+    p, li{
+      font-size: 1rem;
+      line-height: 1.65;
+      color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
+    }
+
+    ul{ margin: 10px 0 16px 22px; padding: 0; }
+    li{ margin: 6px 0; }
+
+    .section{
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(5, 8, 12, 0.22);
+      padding: 14px;
+      margin-top: 14px;
+    }
+
+    .section h2{
+      margin: 0 0 8px 0;
+      font-size: 1.05rem;
+      font-weight: 850;
+      letter-spacing: 0.2px;
+      color: rgba(237,239,242,0.96);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .section h2::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(232, 92, 13, 0.85);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.12);
+      flex: 0 0 auto;
+    }
+
+    .social-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.25);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(19, 42, 58, 0.25);
+    }
+
+    .social-links a:hover {
+      color: var(--bl-orange);
+      border-color: rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.08);
+    }
+
+    .social-links a:active{
+      transform: translateY(1px);
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header aria-label="Site header">
-      <div class="brand">Beck Lewis</div>
-      <nav class="pill-row" aria-label="Social links and policy">
-        <!-- Replace these URLs -->
-        <a class="pill" href="https://www.facebook.com/profile.php?id=61576580986744" target="_blank" rel="noopener">Facebook</a>
-        <a class="pill" href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill" href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener">TikTok</a>
-        <a class="pill" href="/privacy.html">Privacy</a>
-      </nav>
-    </header>
+  <div class="page">
 
-    <main class="card" aria-label="Privacy policy">
+    <!-- Navigation -->
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="man-or-bear.html">Man or Bear</a>
+      <a href="events.html">Events</a>
+    </nav>
+
+    <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: February 2026</p>
+      <hr>
 
-      <h2>What we collect</h2>
-      <p>When you sign up, we collect your email address and, if you choose to provide it, your name.</p>
+      <p>Last updated: February 2026</p>
 
-      <h2>How we use your information</h2>
-      <ul>
-        <li>To send you your free story</li>
-        <li>To send occasional emails about new books, updates, and offers</li>
-      </ul>
-      <p>You can unsubscribe at any time by clicking the link in any email.</p>
+      <div class="section">
+        <h2>What we collect</h2>
+        <p>When you sign up, we collect your email address and, if you choose to provide it, your name.</p>
+      </div>
 
-      <h2>Third-party services</h2>
-      <p>We use trusted services to operate this website and deliver content:</p>
-      <ul>
-        <li><strong>AWeber</strong> - email subscriptions and sending</li>
-        <li><strong>BookFunnel</strong> - digital book delivery</li>
-        <li><strong>Meta (Facebook/Instagram)</strong> - advertising and analytics (including the Meta Pixel)</li>
-      </ul>
-      <p>These services may process your data on our behalf.</p>
+      <div class="section">
+        <h2>How we use your information</h2>
+        <ul>
+          <li>To send you your free story</li>
+          <li>To send occasional emails about new books, updates, and offers</li>
+        </ul>
+        <p>You can unsubscribe at any time by clicking the link in any email.</p>
+      </div>
 
-      <h2>Cookies and tracking</h2>
-      <p>This site uses cookies and similar technologies to improve your experience and understand how visitors use the site.</p>
-      <p>We use the Meta Pixel to measure advertising effectiveness and to show relevant ads.</p>
+      <div class="section">
+        <h2>Third-party services</h2>
+        <p>We use trusted services to operate this website and deliver content:</p>
+        <ul>
+          <li><strong>AWeber</strong> - email subscriptions and sending</li>
+          <li><strong>BookFunnel</strong> - digital book delivery</li>
+          <li><strong>Meta (Facebook/Instagram)</strong> - advertising and analytics (including the Meta Pixel)</li>
+        </ul>
+      </div>
 
-      <h2>Your rights</h2>
-      <ul>
-        <li>Request access to your personal data</li>
-        <li>Request correction or deletion of your data</li>
-        <li>Withdraw consent or unsubscribe at any time</li>
-      </ul>
+      <div class="section">
+        <h2>Cookies and tracking</h2>
+        <p>This site uses cookies and similar technologies to improve your experience and understand how visitors use the site.</p>
+        <p>We use the Meta Pixel to measure advertising effectiveness and to show relevant ads.</p>
+      </div>
 
-      <h2>Data sharing</h2>
-      <p>We do not sell or share your personal data with third parties for their own marketing purposes.</p>
+      <div class="section">
+        <h2>Your rights</h2>
+        <ul>
+          <li>Request access to your personal data</li>
+          <li>Request correction or deletion of your data</li>
+          <li>Withdraw consent or unsubscribe at any time</li>
+        </ul>
+      </div>
 
-      <h2>Contact</h2>
-      <p>If you have questions about this policy or your data, contact:</p>
-      <p><strong>YOUR EMAIL ADDRESS HERE</strong></p>
-    </main>
+      <div class="section">
+        <h2>Data sharing</h2>
+        <p>We do not sell or share your personal data with third parties for their own marketing purposes.</p>
+      </div>
 
-    <footer aria-label="Page footer">
-      <span><a href="/">Back to site</a></span>
-      <span class="pill-row"><a class="pill" href="/privacy.html">Privacy</a></span>
-    </footer>
+      <div class="section">
+        <h2>Contact</h2>
+        <p>If you have any questions about this policy or your data, contact:</p>
+        <p><strong>YOUR EMAIL ADDRESS HERE</strong></p>
+      </div>
+
+      <!-- Social row + Privacy -->
+      <div class="social-links" aria-label="Social links and privacy policy">
+        <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="privacy.html" aria-label="Privacy Policy"><i class="fa-solid fa-shield-halved"></i></a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
