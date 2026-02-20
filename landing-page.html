@@ -1,10 +1,35 @@
+<!-- =========================
+     FILE: man-or-bear.html
+     ========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Man or Bear - Free Thriller | Beck Lewis</title>
-  <meta name="description" content="A short, unsettling thriller you can read in one sitting. Free when you join the Beck Lewis reader list." />
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beck Lewis | Man or Bear - Free Thriller</title>
+
+  <meta name="description" content="A short, unsettling thriller you can read in one sitting. Free when you join the Beck Lewis reader list.">
+
+  <link rel="canonical" href="https://becklewis.com/man-or-bear.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beck Lewis | Man or Bear - Free Thriller">
+  <meta property="og:description" content="She has two options. Neither ends well. Get the short thriller free when you join the Beck Lewis reader list.">
+  <meta property="og:url" content="https://becklewis.com/man-or-bear.html">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beck Lewis | Man or Bear - Free Thriller">
+  <meta name="twitter:description" content="She has two options. Neither ends well.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
   <!-- Meta Pixel Base Code -->
   <script>
@@ -26,310 +51,421 @@
 
   <style>
     :root{
-      --bg:#0b0b0b;
-      --panel:#141414;
-      --panel2:#101010;
-      --text:#f5f5f5;
-      --muted:#c9c9c9;
-      --muted2:#9a9a9a;
-      --border:#2d2d2d;
+      /* Beck Lewis palette */
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
 
-      --accent:#c0392b;
-      --accentHover:#e74c3c;
-      --accentSoft: rgba(192,57,43,0.15);
-
-      --field:#0f0f0f;
-      --fieldBorder:#3a3a3a;
-
-      --focus: #ffd166;
-      --maxw: 820px;
+      --bl-border: rgba(110,123,133,0.22);
+      --bl-shadow: rgba(0,0,0,0.40);
+      --bl-focus: rgba(242,183,5,0.95);
     }
 
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 0%, #121212 0%, var(--bg) 55%);
-      color:var(--text);
-      line-height:1.6;
-      font-size: 18px;
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--bl-offwhite);
+      min-height: 100vh;
+
+      background:
+        radial-gradient(1100px 700px at 50% -10%, var(--bl-midnight-2), var(--bl-midnight));
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
     }
 
-    a{color:var(--text); text-underline-offset: 3px;}
-    a:hover{color: var(--muted);}
+    a{
+      color: rgba(237,239,242,0.95);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    a:hover{
+      color: var(--bl-orange);
+      border-bottom-color: rgba(232, 92, 13, 0.55);
+    }
 
+    /* Skip link for keyboard users */
     .skip-link{
-      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
     }
     .skip-link:focus{
-      left:16px; top:16px; width:auto; height:auto; padding:10px 12px;
-      background:var(--focus); color:#000; border-radius:10px; z-index:9999;
+      left: 14px; top: 14px; width:auto; height:auto; overflow: visible;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(242,183,5,0.95);
+      color: #05080C;
+      z-index: 9999;
+      border: 1px solid rgba(0,0,0,0.25);
     }
 
-    .wrap{max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 60px;}
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:16px; margin-bottom: 18px;
-    }
-    .brand{
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      color: var(--muted);
+    .page {
+      width: 100%;
+      max-width: 1000px;
     }
 
-    .pill-row{
-      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:flex-end;
+    /* Top navigation */
+    .top-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      padding: 10px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.35);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
     }
-    .pill{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius: 999px;
-      background: var(--panel2);
-      border: 1px solid var(--border);
-      text-decoration:none;
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
       font-weight: 700;
-      font-size: 0.92rem;
-      min-height: 42px;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(19, 42, 58, 0.35);
+      position: relative;
     }
-    .pill:hover{border-color: #505050;}
-    .pill:focus-visible{
-      outline: 3px solid var(--focus);
-      outline-offset: 2px;
-    }
-    .pill--accent{
-      background: var(--accent);
-      border-color: transparent;
-    }
-    .pill--accent:hover{background: var(--accentHover);}
 
-    main{margin-top: 10px;}
-    h1{
-      font-size: clamp(2.0rem, 3.8vw, 2.6rem);
-      line-height: 1.15;
-      margin: 10px 0 10px;
+    .top-nav a:hover {
+      background-color: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: var(--bl-offwhite);
+    }
+
+    .top-nav a:active{
+      transform: translateY(1px);
+    }
+
+    .top-nav a[aria-current="page"]{
+      border-color: rgba(232, 92, 13, 0.70);
+      background: rgba(232, 92, 13, 0.10);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.10);
+    }
+
+    .top-nav a[aria-current="page"]::after{
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: -8px;
+      height: 2px;
+      background: rgba(232, 92, 13, 0.85);
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(232, 92, 13, 0.18);
+    }
+
+    /* Main layout */
+    .container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+
+      padding: 26px;
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(19, 42, 58, 0.38);
+      box-shadow: 0 18px 48px var(--bl-shadow);
+    }
+
+    .text-column {
+      flex: 2;
+      min-width: 320px;
+    }
+
+    .text-column h1 {
+      font-size: 1.95rem;
+      font-weight: 850;
+      margin: 0 0 10px 0;
       letter-spacing: 0.2px;
     }
-    .subhead{
-      margin: 0 0 18px;
-      color: var(--muted);
-      max-width: 56ch;
+
+    .text-column hr {
+      border: none;
+      border-top: 2px solid rgba(232, 92, 13, 0.85);
+      width: 65%;
+      margin: 0 0 18px 0;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
-    }
-    @media (min-width: 860px){
-      .grid{grid-template-columns: 1.05fr 0.95fr; align-items:start;}
+    .text-column p {
+      font-size: 1rem;
+      line-height: 1.65;
+      margin: 0 0 16px 0;
+      color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
     }
 
-    .card{
-      background: linear-gradient(180deg, var(--panel) 0%, #101010 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-    }
-
-    .cover{
-      width:100%;
-      max-width: 340px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      display:block;
-      margin: 0 auto 14px;
-    }
-
-    .beats p{margin: 0 0 12px;}
-    .beats p:last-child{margin-bottom:0;}
-
-    .question{
-      padding: 14px 16px;
+    .callout {
+      border: 1px solid rgba(232, 92, 13, 0.35);
+      background: rgba(232, 92, 13, 0.08);
       border-radius: 14px;
-      background: var(--accentSoft);
-      border: 1px solid rgba(192,57,43,0.35);
-      font-weight: 800;
-      margin-top: 12px;
+      padding: 14px;
+      margin-top: 18px;
     }
 
-    .form-title{margin: 0 0 10px; font-size: 1.15rem;}
-    .form-note{color: var(--muted); margin: 0 0 14px;}
+    .callout strong { color: rgba(237,239,242,0.98); }
 
-    /* AWeber form wrapper */
-    form.af-form-wrapper{margin:0;}
+    /* Form card - accessibility + visibility */
+    .form-card{
+      border: 1px solid rgba(232, 92, 13, 0.35);
+      background: rgba(5, 8, 12, 0.38);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    }
+
+    .form-card h2{
+      margin: 0 0 8px 0;
+      font-size: 1.15rem;
+      font-weight: 850;
+      letter-spacing: 0.2px;
+      color: rgba(237,239,242,0.96);
+    }
+
+    .form-help{
+      margin: 0 0 12px 0;
+      color: color-mix(in srgb, var(--bl-offwhite) 80%, var(--bl-concrete));
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
     .field{
-      margin-bottom: 12px;
+      margin: 0 0 12px 0;
     }
+
     label{
       display:block;
       font-weight: 800;
-      font-size: 0.95rem;
-      margin: 0 0 6px;
-      color: var(--muted);
+      margin: 0 0 6px 0;
+      color: rgba(237,239,242,0.92);
+      font-size: 0.98rem;
     }
+
     input[type="text"], input[type="email"]{
-      width:100%;
-      padding: 14px 14px;
+      width: 100%;
+      padding: 12px 12px;
       border-radius: 12px;
-      border: 1px solid var(--fieldBorder);
-      background: var(--field);
-      color: var(--text);
-      font-size: 1rem;
+      border: 1px solid rgba(237,239,242,0.22);
+      background: rgba(19, 42, 58, 0.30);
+      color: rgba(237,239,242,0.96);
+      font-size: 1.05rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
     }
-    input::placeholder{color: #9d9d9d;}
-    input:focus-visible{
-      outline: 3px solid var(--focus);
-      outline-offset: 2px;
+    input::placeholder{ color: rgba(237,239,242,0.55); }
+
+    input:focus{
+      border-color: rgba(242,183,5,0.75);
+      box-shadow: 0 0 0 3px rgba(242,183,5,0.18);
+      background: rgba(19, 42, 58, 0.38);
     }
 
-    .btn{
-      width:100%;
-      padding: 14px 16px;
+    .submit-btn{
+      width: 100%;
+      padding: 12px 14px;
       border-radius: 12px;
-      border: none;
-      background: var(--accent);
-      color: #fff;
+      border: 1px solid rgba(232, 92, 13, 0.65);
+      background: rgba(232, 92, 13, 0.12);
+      color: rgba(237,239,242,0.98);
       font-weight: 900;
-      font-size: 1rem;
+      font-size: 1.05rem;
       cursor: pointer;
-      min-height: 48px;
+      transition: background 0.2s, transform 0.08s, border-color 0.2s;
     }
-    .btn:hover{background: var(--accentHover);}
-    .btn:focus-visible{
-      outline: 3px solid var(--focus);
-      outline-offset: 2px;
+    .submit-btn:hover{
+      background: rgba(232, 92, 13, 0.18);
+      border-color: rgba(232, 92, 13, 0.85);
+    }
+    .submit-btn:active{ transform: translateY(1px); }
+    .submit-btn:focus{
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(242,183,5,0.22);
+      border-color: rgba(242,183,5,0.65);
     }
 
-    .tiny{
+    .smallprint{
+      margin: 10px 0 0 0;
       font-size: 0.95rem;
-      color: var(--muted);
-      margin-top: 12px;
-    }
-    .tiny a{color: var(--text);}
-
-    .divider{
-      height:1px; background: var(--border); margin: 18px 0;
+      color: color-mix(in srgb, var(--bl-offwhite) 78%, var(--bl-concrete));
+      line-height: 1.55;
     }
 
-    .filter{
+    /* Social links row (with Privacy) */
+    .social-links {
       margin-top: 14px;
-      padding: 14px 16px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.25);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.2rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(19, 42, 58, 0.25);
+    }
+
+    .social-links a:hover {
+      color: var(--bl-orange);
+      border-color: rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.08);
+    }
+
+    .social-links a:active{
+      transform: translateY(1px);
+    }
+
+    .social-links a:focus{
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(242,183,5,0.20);
+      border-color: rgba(242,183,5,0.60);
+    }
+
+    /* Image column */
+    .image-column {
+      flex: 1;
+      min-width: 260px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-column img {
+      max-width: 100%;
+      height: auto;
       border-radius: 14px;
-      background: #0f0f0f;
-      border: 1px solid var(--border);
-      color: var(--muted);
+      border: 1px solid rgba(110,123,133,0.25);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+      filter: saturate(0.92) contrast(1.06) brightness(0.92);
     }
-    .filter strong{color: var(--text);}
 
-    footer{
-      margin-top: 28px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      color: var(--muted2);
-      font-size: 0.95rem;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { padding: 24px 14px; }
+
+      .container {
+        flex-direction: column;
+        gap: 22px;
+        padding: 18px;
+      }
+
+      .text-column hr {
+        width: 100%;
+      }
     }
-    footer a{color: var(--muted);}
-
-    /* AWeber hidden fields should remain hidden */
-    .hidden{display:none!important;}
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="wrap">
-    <header aria-label="Site header">
-      <div class="brand">Beck Lewis</div>
-      <nav class="pill-row" aria-label="Social links and policy">
-        
-        <a class="pill" href="https://www.facebook.com/profile.php?id=61576580986744" target="_blank" rel="noopener">Facebook</a>
-        <a class="pill" href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill" href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener">TikTok</a>
-        <a class="pill" href="/privacy.html">Privacy</a>
-      </nav>
-    </header>
+  <div class="page">
 
-    <main id="content" class="grid" aria-label="Man or Bear landing page">
-      <section class="card" aria-label="Story pitch">
-        <h1>She has two options.<br>Neither ends well.</h1>
-        <p class="subhead"><strong>A short, unsettling thriller you can read in one sitting.</strong> Free when you join the Beck Lewis reader list.</p>
+    <!-- Navigation -->
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="man-or-bear.html" aria-current="page">Man or Bear</a>
+      <a href="events.html">Events</a>
+    </nav>
 
-        <img src="ManBear.jpg" alt="Cover of Man or Bear by Beck Lewis" class="cover" />
+    <div class="container" id="main">
 
-        <div class="beats" aria-label="Story beats">
-          <p>Nina's car breaks down on a remote lane.</p>
-          <p>No signal. No passing traffic.</p>
-          <p>Just one house. One man.</p>
-          <p>And a question she cannot shake:</p>
-          <div class="question">Which would be worse?</div>
+      <div class="text-column">
+        <h1>She has two options. Neither ends well.</h1>
+        <hr>
+
+        <p><strong>A short, unsettling thriller you can read in one sitting.</strong> Free when you join the Beck Lewis reader list.</p>
+
+        <p>Nina's car breaks down on a remote lane. No signal. No passing traffic. Just one house. One man.</p>
+
+        <div class="callout">
+          <p style="margin:0;"><strong>And a question she cannot shake:</strong> Which would be worse?</p>
         </div>
 
-        <div class="filter" aria-label="Reader suitability">
-          <strong>This is for readers who enjoy dark, twisty psychological thrillers.</strong><br>
-          Not cosy. Not comfortable.
+        <div class="form-card" aria-label="Signup form">
+          <h2>Get the story free</h2>
+          <p class="form-help">Enter your email. Then confirm via the email you receive to unlock the download.</p>
+
+          <!-- AWeber form (clean: no AWeber CSS dump; name optional; email required) -->
+          <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
+            <div style="display:none;">
+              <input type="hidden" name="meta_web_form_id" value="270684674" />
+              <input type="hidden" name="meta_split_id" value="" />
+              <input type="hidden" name="listname" value="awlist6936435" />
+              <input type="hidden" name="redirect" value="https://becklewis.com/thank-you.html" />
+              <input type="hidden" name="meta_redirect_onlist" value="https://www.aweber.com/thankyou-coi.htm?m=text" />
+              <input type="hidden" name="meta_adtracking" value="My_Web_Form" />
+              <input type="hidden" name="meta_message" value="1" />
+              <input type="hidden" name="meta_required" value="email" />
+              <input type="hidden" name="meta_tooltip" value="" />
+              <input type="hidden" name="tag_118557676" value="#manorbear" />
+            </div>
+
+            <div class="field">
+              <label for="awf_name">Name (optional)</label>
+              <input id="awf_name" type="text" name="name" autocomplete="name" placeholder="Name (optional)">
+            </div>
+
+            <div class="field">
+              <label for="awf_email">Email</label>
+              <input id="awf_email" type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
+
+            <button class="submit-btn" type="submit">Send me the story</button>
+
+            <p class="smallprint">
+              Check your email and confirm - otherwise I cannot send you the story.<br>
+              We use your email to send the story and occasional updates. <a href="privacy.html">Privacy Policy</a>.
+            </p>
+          </form>
         </div>
-      </section>
 
-      <aside class="card" aria-label="Signup form">
-        <h2 class="form-title">Get the story free</h2>
-        <p class="form-note">Enter your email. Then confirm via the email you receive to unlock the download.</p>
+        <!-- Social row + Privacy (as requested) -->
+        <div class="social-links" aria-label="Social links and privacy policy">
+          <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
 
-        <!-- AWeber form (tidy + accessible; name optional; email required) -->
-        <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" class="af-form-wrapper" aria-label="Email signup form">
-          <div class="hidden" aria-hidden="true">
-            <input type="hidden" name="meta_web_form_id" value="270684674" />
-            <input type="hidden" name="meta_split_id" value="" />
-            <input type="hidden" name="listname" value="awlist6936435" />
-            <input type="hidden" name="redirect" value="https://becklewis.com/thank-you.html" />
-            <input type="hidden" name="meta_redirect_onlist" value="https://www.aweber.com/thankyou-coi.htm?m=text" />
-            <input type="hidden" name="meta_adtracking" value="My_Web_Form" />
-            <input type="hidden" name="meta_message" value="1" />
-            <input type="hidden" name="meta_required" value="email" />
-            <input type="hidden" name="meta_tooltip" value="" />
-            <input type="hidden" name="tag_118557676" value="#manorbear" />
-          </div>
+          <!-- Privacy link in the same row -->
+          <a href="privacy.html" aria-label="Privacy Policy"><i class="fa-solid fa-shield-halved"></i></a>
+        </div>
+      </div>
 
-          <div class="field">
-            <label for="awf_name">Name (optional)</label>
-            <input id="awf_name" type="text" name="name" autocomplete="name" />
-          </div>
+      <div class="image-column">
+        <!-- Use your existing cover. Keep it in the same folder as this HTML -->
+        <img src="ManBear.jpg" alt="Man or Bear cover">
+        <!-- Optional: keep the author image if you want visual continuity -->
+        <!-- <img src="background.JPG" alt="Beck Lewis, psychological thriller author"> -->
+      </div>
 
-          <div class="field">
-            <label for="awf_email">Email</label>
-            <input id="awf_email" type="email" name="email" autocomplete="email" required />
-          </div>
-
-          <button class="btn" type="submit">Send me the story</button>
-
-          <p class="tiny">
-            Check your inbox and confirm - otherwise I cannot send you the story.<br>
-            We use your email to send the story and occasional updates. <a href="/privacy.html">Privacy Policy</a>.
-          </p>
-        </form>
-
-        <div class="divider" role="separator" aria-hidden="true"></div>
-
-        <p class="tiny">
-          Already signed up? Search your inbox for "AWeber" or "Beck Lewis", and check spam/junk.
-        </p>
-      </aside>
-    </main>
-
-    <footer aria-label="Page footer">
-      <span>You can unsubscribe at any time.</span>
-      <span class="pill-row" aria-label="Footer links">
-        <a class="pill" href="/privacy.html">Privacy</a>
-      </span>
-    </footer>
+    </div>
   </div>
 </body>
 </html>
