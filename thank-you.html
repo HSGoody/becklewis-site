@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Almost there - Confirm your email</title>
+  <title>Almost there - Confirm your email | Beck Lewis</title>
+  <meta name="description" content="Confirm your email to unlock your download of Man or Bear." />
 
-  <!-- Meta Pixel Base Code -->
+  <!-- Meta Pixel Base Code + Lead -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,7 +18,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '873656708818220');
     fbq('track', 'PageView');
-    fbq('track', 'Lead');   // ? Conversion signal
+    fbq('track', 'Lead');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
@@ -26,142 +27,142 @@
 
   <style>
     :root{
-      --bg:#0d0d0d;
-      --panel:#1a1a1a;
+      --bg:#0b0b0b;
+      --panel:#141414;
+      --panel2:#101010;
       --text:#f5f5f5;
-      --muted:#bbbbbb;
-      --muted2:#888888;
+      --muted:#c9c9c9;
+      --muted2:#9a9a9a;
+      --border:#2d2d2d;
       --accent:#c0392b;
       --accentHover:#e74c3c;
-      --border:#2a2a2a;
-      --field:#141414;
+      --focus:#ffd166;
+      --maxw: 820px;
     }
     *{box-sizing:border-box;}
     body{
       margin:0;
       font-family: Arial, sans-serif;
-      background:var(--bg);
+      background: radial-gradient(1200px 800px at 20% 0%, #121212 0%, var(--bg) 55%);
       color:var(--text);
       line-height:1.6;
+      font-size: 18px;
     }
-    .container{
-      max-width:720px;
-      margin:0 auto;
-      padding:28px 20px 60px;
+    a{color:var(--text); text-underline-offset:3px;}
+    a:focus-visible{outline:3px solid var(--focus); outline-offset:2px; border-radius:10px;}
+    .wrap{max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 60px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; margin-bottom: 18px;
+    }
+    .brand{
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:flex-end;}
+    .pill{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:999px;
+      background: var(--panel2); border: 1px solid var(--border);
+      text-decoration:none; font-weight:700; font-size:0.92rem; min-height:42px;
+    }
+    .pill:hover{border-color:#505050;}
+    .pill:focus-visible{outline:3px solid var(--focus); outline-offset:2px;}
+    .card{
+      background: linear-gradient(180deg, var(--panel) 0%, #101010 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
     }
     h1{
-      font-size:2.0em;
-      line-height:1.25;
-      margin: 8px 0 10px;
-      letter-spacing:0.2px;
+      font-size: clamp(2.0rem, 3.8vw, 2.6rem);
+      line-height:1.15;
+      margin: 10px 0 10px;
     }
-    p{margin:0 0 1.1em;}
-    .panel{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:10px;
-      padding:22px;
-      margin:18px 0;
-    }
-    .step{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      margin:14px 0;
-    }
-    .num{
-      flex:0 0 auto;
-      width:28px;
-      height:28px;
-      border-radius:50%;
-      background:var(--accent);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-    }
-    .small{color:var(--muted); font-size:0.95em;}
     .muted{color:var(--muted);}
-    .hr{height:1px;background:var(--border);margin:18px 0;}
-    .button-link{
-      display:inline-block;
-      padding:12px 16px;
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      border-radius:6px;
-      font-weight:700;
+    .steps{margin-top: 14px;}
+    .step{
+      display:flex; gap:12px; align-items:flex-start;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
     }
-    .button-link:hover{background:var(--accentHover);}
-    .footer{
-      margin-top:30px;
-      color:var(--muted2);
-      font-size:0.95em;
+    .step:first-child{border-top:none; padding-top:0;}
+    .num{
+      flex:0 0 auto; width:30px; height:30px; border-radius:999px;
+      background: var(--accent); display:flex; align-items:center; justify-content:center;
+      font-weight: 900;
     }
-    ul{margin:8px 0 0 18px; padding:0;}
-    li{margin:6px 0;}
     code{
-      background:var(--field);
-      border:1px solid var(--border);
-      padding:2px 6px;
-      border-radius:6px;
-      color:var(--text);
+      background:#0f0f0f; border:1px solid var(--border);
+      padding:2px 6px; border-radius: 8px; color:var(--text);
+    }
+    footer{
+      margin-top: 28px; padding-top: 16px; border-top:1px solid var(--border);
+      color: var(--muted2); font-size:0.95rem;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="wrap">
+    <header aria-label="Site header">
+      <div class="brand">Beck Lewis</div>
+      <nav class="pill-row" aria-label="Social links and policy">
+        <!-- Replace these URLs -->
+        <a class="pill" href="https://www.facebook.com/profile.php?id=61576580986744" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill" href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener">Instagram</a>
+        <a class="pill" href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener">TikTok</a>
+        <a class="pill" href="/privacy.html">Privacy</a>
+      </nav>
+    </header>
 
-    <h1>Almost there.</h1>
-    <p class="muted">To get <strong>Man or Bear</strong>, you need to confirm your email address.</p>
+    <main class="card" aria-label="Thank you instructions">
+      <h1>Almost there.</h1>
+      <p class="muted">To get <strong>Man or Bear</strong>, confirm your email address.</p>
 
-    <div class="panel">
-      <div class="step">
-        <div class="num">1</div>
-        <div>
-          <p><strong>Open your inbox</strong> and look for an email from AWeber / Beck Lewis.</p>
-          <p class="small">It usually arrives within a minute or two.</p>
+      <div class="steps" aria-label="Steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <p><strong>Open your inbox</strong> and look for an email from AWeber / Beck Lewis.</p>
+            <p class="muted">It usually arrives within a minute or two.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <p><strong>Click the confirmation link</strong> inside that email.</p>
+            <p class="muted">This step unlocks the download.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <p><strong>Then check your inbox again</strong> for the download email.</p>
+            <p class="muted">If you do not see it, wait 2 minutes and check spam/junk.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">?</div>
+          <div>
+            <p><strong>Cannot find the confirmation email?</strong></p>
+            <p class="muted">Search for <code>aweber</code> or <code>beck lewis</code>, and check Promotions/Other as well as spam/junk.</p>
+          </div>
         </div>
       </div>
+    </main>
 
-      <div class="step">
-        <div class="num">2</div>
-        <div>
-          <p><strong>Click the confirmation link</strong> inside that email.</p>
-          <p class="small">That is the step that unlocks the download.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="num">3</div>
-        <div>
-          <p><strong>Then check your inbox again</strong> for the download email.</p>
-          <p class="small">If you do not see it, give it another minute.</p>
-        </div>
-      </div>
-
-      <div class="hr"></div>
-
-      <p><strong>Cannot find the confirmation email?</strong></p>
-      <ul class="small">
-        <li>Check your spam/junk folder.</li>
-        <li>Check Promotions (Gmail) or Other/Clutter (some mail apps).</li>
-        <li>Search your inbox for <code>aweber</code> or <code>beck lewis</code>.</li>
-      </ul>
-    </div>
-
-    <div class="panel">
-      <p><strong>Already confirmed?</strong></p>
-      <p class="small">If you have confirmed and still have not received the download email, wait 2 minutes and check spam/junk again.</p>
-      <!-- Optional: put a contact email here -->
-      <!-- <p class="small">Still stuck? Email us at <a href="mailto:you@becklewis.com">you@becklewis.com</a>.</p> -->
-    </div>
-
-    <div class="footer">
-      <p>You can unsubscribe at any time.</p>
-    </div>
-
+    <footer aria-label="Page footer">
+      <span>You can unsubscribe at any time.</span>
+      <span><a class="pill" href="/privacy.html">Privacy</a></span>
+    </footer>
   </div>
 </body>
 </html>
