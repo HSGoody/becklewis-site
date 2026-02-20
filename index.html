@@ -1,6 +1,5 @@
 <!-- =========================
      FILE: index.html
-     (Updated to cross-reference man-or-bear.html)
      ========================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +55,7 @@
     ]
   }
   </script>
+
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -194,77 +194,6 @@
       color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
     }
 
-    /* Highlight panel */
-    .feature {
-      margin-top: 18px;
-      padding: 14px 14px;
-      border: 1px solid rgba(242, 183, 5, 0.28);
-      border-radius: 14px;
-      background: rgba(242, 183, 5, 0.06);
-      box-shadow: 0 16px 42px rgba(0,0,0,0.40);
-    }
-
-    .feature h2 {
-      margin: 0 0 8px 0;
-      font-size: 1.05rem;
-      font-weight: 900;
-      letter-spacing: 0.15px;
-      color: rgba(237,239,242,0.98);
-    }
-
-    .feature p{
-      margin: 0 0 10px 0;
-      font-size: 0.98rem;
-      line-height: 1.6;
-      color: color-mix(in srgb, var(--bl-offwhite) 86%, var(--bl-concrete));
-    }
-
-    .feature-row{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .button{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(242, 183, 5, 0.55);
-      background: rgba(242, 183, 5, 0.12);
-      color: rgba(237,239,242,0.96);
-      text-decoration: none;
-
-      font-size: 0.95rem;
-      font-weight: 850;
-
-      transition: transform 0.08s, background 0.2s, border-color 0.2s, color 0.2s;
-      width: fit-content;
-    }
-
-    .button:hover{
-      background: rgba(232, 92, 13, 0.12);
-      border-color: rgba(232, 92, 13, 0.65);
-      color: rgba(237,239,242,0.98);
-    }
-
-    .button:active{ transform: translateY(1px); }
-
-    .button--primary{
-      border-color: rgba(232, 92, 13, 0.65);
-      background: rgba(232, 92, 13, 0.12);
-    }
-
-    .button--primary:hover{
-      background: rgba(242, 183, 5, 0.12);
-      border-color: rgba(242, 183, 5, 0.55);
-    }
-
     /* Social links */
     .social-links {
       margin-top: 22px;
@@ -334,8 +263,27 @@
         padding: 18px;
       }
 
-      .text-column hr { width: 100%; }
+      .text-column hr {
+        width: 100%;
+      }
     }
+	<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '873656708818220');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=873656708818220&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
   </style>
 </head>
 
@@ -346,7 +294,6 @@
     <nav class="top-nav">
       <a href="index.html" aria-current="page">Home</a>
       <a href="books.html">Books</a>
-      <a href="man-or-bear.html">Man or Bear</a>
       <a href="events.html">Events</a>
     </nav>
 
@@ -354,41 +301,31 @@
     <div class="container">
 
       <div class="text-column">
-        <h1>Beck Lewis — Psychological Thriller Author</h1>
+        <h1>Beck Lewis - Psychological Thriller Author</h1>
         <hr>
 
         <p>
-          I'm Beck Lewis, a British psychological thriller author. The Dead Ends series is dark, character-driven crime fiction set in Leicester,
-          following a troubled police team through moral pressure, fractured loyalties, and cases nobody else wants.
+          I'm Beck Lewis, a British psychological thriller author who has spent most of my adult life immersed in stories.
+          Writing is the way I make sense of the world. I believe deeply that stories exist
+          to connect people, to help us see the world through perspectives that are not our own.
         </p>
 
         <p>
-          I’m interested in the quiet questions — what we assume, what we ignore, and what we do when certainty falls apart.
-          My stories sit in the gap between “nice” and “safe”.
+          I've spent years in writing groups, workshops, conventions, and creative spaces,
+          learning both from established voices and from those taking their first steps.
+          Readers are at the heart of everything I do.
         </p>
 
         <p>
-          If you’re new here, start with <em>Man or Bear</em> — a standalone short crime story designed to be experienced aloud and discussed.
+          Creativity doesn't start or stop with writing for me. It spills into short films,
+          social media videos, and collaborative projects. If you see me at an event,
+          there's a good chance something fun or unusual is happening.
         </p>
 
-        <!-- Featured callout -->
-        <div class="feature" aria-label="Featured: Man or Bear">
-          <h2>Featured: <em>Man or Bear</em> (free)</h2>
-          <p>
-            A standalone crime short story designed for immersive reading and group discussion.
-            When politeness becomes a trap, how do you know when it’s time to run?
-          </p>
-          <div class="feature-row">
-            <a class="button button--primary" href="man-or-bear.html" aria-label="Read more about Man or Bear">
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              Visit the Man or Bear page
-            </a>
-            <a class="button" href="books.html" aria-label="See the Dead Ends series books">
-              <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
-              Browse the books
-            </a>
-          </div>
-        </div>
+        <p>
+          Writing is now my full-time work. I've written many books-some bestselling,
+          some optioned-and I care deeply about telling stories that matter.
+        </p>
 
         <div class="social-links">
           <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
