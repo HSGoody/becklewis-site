@@ -127,11 +127,21 @@
     <a
       class="button"
       href="https://www.amazon.co.uk/gp/product/B0GFXYC8H3"
-      onclick="fbq('trackCustom', 'DoubleTakeAmazonClick');"
+      onclick="trackAmazonClick(event)"
     >
       Read on Amazon
     </a>
+<script>
+function trackAmazonClick(event) {
+  event.preventDefault();
 
+  fbq('trackCustom', 'DoubleTakeAmazonClick');
+
+   setTimeout(function () {
+    window.location.href = "https://www.amazon.co.uk/gp/product/B0GFXYC8H3";
+  }, 300);
+}
+</script>
     <p class="small">Available for Kindle and paperback on Amazon.</p>
   </main>
 </body>
