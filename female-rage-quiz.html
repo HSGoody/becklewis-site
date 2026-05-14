@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Female Rage Thriller Title Are You? | Beck Lewis</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;
+n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '941033298595755');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=941033298595755&ev=PageView&noscript=1"
+/></noscript>
+
+<style>
+:root{
+  --hot-pink:#EC008C; --purple:#B600B9; --yellow:#FFE600;
+  --coral:#F24D55; --ink:#1F1D1F; --white:#FFF7F0; --muted:#F4C8D8;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--white);
+  background:radial-gradient(900px 700px at 90% 10%, rgba(255,230,0,0.22), transparent 55%),
+  linear-gradient(135deg, var(--hot-pink), var(--purple) 55%, var(--ink));
+  min-height:100vh;
+}
+a{color:var(--yellow);}
+.page{max-width:1100px; margin:0 auto; padding:28px 18px 50px;}
+.hero{display:grid; grid-template-columns:1.1fr 0.9fr; gap:28px; align-items:center; min-height:80vh;}
+.badge{display:inline-block; background:var(--yellow); color:var(--ink); font-weight:900; letter-spacing:.08em; text-transform:uppercase; padding:8px 12px; border-radius:999px; margin-bottom:16px;}
+h1{font-size:clamp(2.8rem, 8vw, 6.2rem); line-height:.92; letter-spacing:-.055em; margin:0 0 18px; text-transform:uppercase;}
+h2{font-size:clamp(1.8rem, 4vw, 3rem); line-height:1; margin:0 0 16px;}
+p{font-size:1.1rem; line-height:1.45;}
+.lede{font-size:1.28rem; max-width:650px;}
+.cover-stack{display:flex; justify-content:center; gap:16px; align-items:center;}
+.cover-stack img{width:45%; max-width:250px; border-radius:10px; box-shadow:0 20px 55px rgba(0,0,0,.38); transform:rotate(-3deg);}
+.cover-stack img:nth-child(2){transform:rotate(4deg) translateY(22px);}
+.card{background:rgba(31,29,31,.78); border:2px solid rgba(255,230,0,.32); border-radius:24px; padding:26px; box-shadow:0 24px 70px rgba(0,0,0,.28);}
+.quiz,.result,.signup{display:none; max-width:760px; margin:0 auto;}
+.quiz.active,.result.active,.signup.active{display:block;}
+.progress{height:10px; background:rgba(255,255,255,.18); border-radius:999px; overflow:hidden; margin-bottom:24px;}
+.progress-bar{height:100%; width:0%; background:var(--yellow); transition:width .25s ease;}
+.question{font-size:clamp(1.7rem, 4vw, 2.6rem); line-height:1.05; margin-bottom:24px; font-weight:900;}
+.answers{display:grid; gap:12px;}
+.answer,.button{width:100%; border:0; border-radius:14px; padding:16px 18px; font-weight:900; font-size:1rem; text-align:left; cursor:pointer; color:var(--ink); background:var(--yellow); box-shadow:0 8px 0 rgba(0,0,0,.28);}
+.answer:hover,.button:hover{transform:translateY(2px); box-shadow:0 5px 0 rgba(0,0,0,.32);}
+.button{text-align:center; text-transform:uppercase; letter-spacing:.03em;}
+.secondary-button{background:var(--white); margin-top:10px;}
+.result-title{color:var(--yellow); text-transform:uppercase; font-size:clamp(2.1rem, 6vw, 4.2rem); line-height:.95; letter-spacing:-.04em; margin:8px 0 16px;}
+.result-copy{font-size:1.2rem;}
+.signup-grid{display:grid; grid-template-columns:170px 1fr; gap:20px; align-items:center;}
+.signup img{width:100%; border-radius:10px; box-shadow:0 12px 36px rgba(0,0,0,.35);}
+input{width:100%; padding:14px; margin-bottom:10px; border-radius:10px; border:2px solid transparent; font-size:1rem;}
+.small{font-size:.9rem; color:var(--muted);}
+@media (max-width:800px){
+  .hero{grid-template-columns:1fr; min-height:auto;}
+  .cover-stack{margin:22px 0 10px;}
+  .signup-grid{grid-template-columns:1fr;}
+  .signup img{max-width:220px;}
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<section class="hero" id="start-screen">
+  <div>
+    <span class="badge">Beck Lewis quiz</span>
+    <h1>Which Female Rage Thriller Title Are You?</h1>
+    <p class="lede">You’ve survived terrible meetings, awkward social expectations, manipulative men and people who say “let’s circle back” without irony.</p>
+    <p class="lede">Answer a few deeply scientific questions and we’ll reveal which darkly funny thriller title matches your energy.</p>
+    <p class="small">At the end, you’ll be invited to join the Beck Lewis reader list and get the free short story <strong>Me and My Big Mouth</strong>. No surprise signup. No nonsense.</p>
+    <button class="button" id="start-button">Start the quiz</button>
+  </div>
+  <div class="cover-stack">
+    <img src="if-i-dont-kill-them-cover.jpg" alt="If I Don't Kill Them... Who Will? cover">
+    <img src="me-and-my-big-mouth-cover.jpg" alt="Me and My Big Mouth cover">
+  </div>
+</section>
+
+<section class="quiz card" id="quiz-screen">
+  <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+  <div class="question" id="question-text"></div>
+  <div class="answers" id="answers"></div>
+</section>
+
+<section class="result card" id="result-screen">
+  <p class="badge">Your result</p>
+  <div class="result-title" id="result-title"></div>
+  <p class="result-copy" id="result-copy"></p>
+  <button class="button" id="go-signup">Get the free story</button>
+  <button class="button secondary-button" id="restart">Retake the quiz</button>
+</section>
+
+<section class="signup card" id="signup-screen">
+  <div class="signup-grid">
+    <img src="me-and-my-big-mouth-cover.jpg" alt="Me and My Big Mouth cover">
+    <div>
+      <h2>Get <em>Me and My Big Mouth</em> free</h2>
+      <p>I only meant to eavesdrop. Then the worst first date I’d ever seen turned into something much darker.</p>
+      <p>Join the Beck Lewis reader list and we’ll send you the free story link. You’ll also be taken straight to BookFunnel to download it now.</p>
+      <form id="aweber-form" method="post" action="https://www.aweber.com/scripts/addlead.pl">
+        <input type="hidden" name="listname" value="awlist6936435">
+        <input type="hidden" name="redirect" value="https://dl.bookfunnel.com/47lvue7xk0">
+        <input type="hidden" name="meta_required" value="email">
+        <input type="hidden" name="meta_tags" value="meandmybigmouth">
+        <input type="text" name="name" placeholder="Name (optional)">
+        <input type="email" name="email" placeholder="Email" required>
+        <button class="button" type="submit">Send me the story</button>
+        <p class="small">You’ll be joining the Beck Lewis reader list. Unsubscribe any time.<br><a href="privacy.html">Privacy Policy</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+const archetypes = {
+  "Too Many Men, Not Enough Bullets": "You began life as a patient and reasonable person. Unfortunately, society kept sending emails. You are now powered almost entirely by caffeine, administrative competence and the phrase: “I’ll do it myself then.” People mistake your calm expression for emotional stability. They are wrong.",
+  "Am I the Only One Killing Them?": "You have carried group projects, emotional labour and badly organised holidays for so long that you’ve started to suspect nobody else is actually capable of solving problems. At some point, your brain quietly muttered: “Fine. I’ll sort this out too.”",
+  "I’ve Killed Them All. Now What?": "You are frighteningly efficient. You make lists. You complete tasks. You delete inboxes. You achieved total victory several weeks ago and are now staring into the abyss wondering why being right doesn’t feel more satisfying.",
+  "Do I Have to Kill Them All Myself?": "You are exhausted by incompetence. Deep in your soul is the weary energy of somebody who has restarted the router, found the missing keys and explained the same thing seventeen times already. You didn’t want this responsibility. Yet here we are.",
+  "I Can’t Kill Them All. Actually, Maybe I Can": "You begin every week with good intentions and emotional restraint. Then somebody says something wildly irritating in a meeting and suddenly you’re drafting elaborate revenge fantasies while smiling politely. Your hidden superpower is endurance.",
+  "Why Aren’t You Dead Yet?": "You specialise in simmering irritation. Loud chewing. Pointless meetings. Men explaining your own opinions back to you. You may not explode dramatically, but your internal monologue has become alarmingly creative.",
+  "One Last Killing? Go On Then…": "You were trying to retire from all this. You genuinely were. But then somebody behaved appallingly in public and now you’re reluctantly putting your metaphorical combat boots back on. You possess strong tired-aunt-with-dangerous-opinions energy.",
+  "Killing Them Slowly? Who Has the Time?": "Efficiency matters to you. You appreciate direct communication, organised cupboards and swift justice. If you ever became a villain, it would only be because everyone else was wasting so much time."
+};
+const questions = [
+  {q:"A man interrupts you for the fourth time in a meeting. You:",a:[["Smile politely while mentally leaving your body.","Why Aren’t You Dead Yet?"],["Take over the meeting because apparently nobody else can run it.","Do I Have to Kill Them All Myself?"],["Wonder whether prison orange would suit you.","Too Many Men, Not Enough Bullets"],["Feel a strange sense of destiny awakening within you.","I Can’t Kill Them All. Actually, Maybe I Can"]]},
+  {q:"Your toxic ex starts posting inspirational quotes online. You:",a:[["Block him and immediately tell your friends.","One Last Killing? Go On Then…"],["Create a detailed mental spreadsheet of his crimes.","Am I the Only One Killing Them?"],["Feel briefly tempted to fake your own death.","Why Aren’t You Dead Yet?"],["Think: honestly, how is this man still functioning?","I’ve Killed Them All. Now What?"]]},
+  {q:"Someone says “not all men.” Your internal reaction is:",a:[["A thousand-yard stare.","Why Aren’t You Dead Yet?"],["Fine. I’ll handle this myself.","Do I Have to Kill Them All Myself?"],["Interesting. Counterpoint: silence forever.","Too Many Men, Not Enough Bullets"],["You know what? Maybe I CAN kill them all.","I Can’t Kill Them All. Actually, Maybe I Can"]]},
+  {q:"How would your friends describe you during a crisis?",a:[["Alarmingly calm.","I’ve Killed Them All. Now What?"],["The only competent person present.","Do I Have to Kill Them All Myself?"],["Funny, but in a concerning way.","Why Aren’t You Dead Yet?"],["Quietly capable of murder.","Too Many Men, Not Enough Bullets"]]},
+  {q:"You are trapped in a group project with three useless men. What happens next?",a:[["You do all the work while muttering darkly.","Am I the Only One Killing Them?"],["You achieve success but lose all faith in humanity.","I’ve Killed Them All. Now What?"],["You fantasise about fleeing the country.","One Last Killing? Go On Then…"],["You begin to feel murder-adjacent.","Too Many Men, Not Enough Bullets"]]},
+  {q:"What is your relationship with politeness?",a:[["It’s the glue holding society together.","One Last Killing? Go On Then…"],["It’s why women eventually snap.","Too Many Men, Not Enough Bullets"],["It’s becoming increasingly optional.","I Can’t Kill Them All. Actually, Maybe I Can"],["I’m polite externally. Internally, absolutely not.","Why Aren’t You Dead Yet?"]]},
+  {q:"Which phrase speaks to your soul?",a:[["“I’ll just do it myself.”","Do I Have to Kill Them All Myself?"],["“This could have been an email.”","Why Aren’t You Dead Yet?"],["“I have HAD IT.”","Too Many Men, Not Enough Bullets"],["“Well… this escalated quickly.”","I Can’t Kill Them All. Actually, Maybe I Can"]]}
+];
+let currentQuestion=0, scores={};
+function track(eventName, params={}){ if(typeof fbq==="function"){ fbq("trackCustom", eventName, params); } }
+function startQuiz(){currentQuestion=0; scores={}; track("QuizStart",{quiz:"female_rage_title"}); document.getElementById("start-screen").style.display="none"; document.getElementById("quiz-screen").classList.add("active"); renderQuestion();}
+function renderQuestion(){const q=questions[currentQuestion]; document.getElementById("question-text").textContent=q.q; document.getElementById("progress-bar").style.width=`${(currentQuestion/questions.length)*100}%`; const answersDiv=document.getElementById("answers"); answersDiv.innerHTML=""; q.a.forEach(([text,archetype])=>{const btn=document.createElement("button"); btn.className="answer"; btn.textContent=text; btn.addEventListener("click",()=>chooseAnswer(archetype)); answersDiv.appendChild(btn);});}
+function chooseAnswer(archetype){scores[archetype]=(scores[archetype]||0)+1; currentQuestion++; if(currentQuestion>=questions.length){showResult();}else{renderQuestion();}}
+function showResult(){const result=Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0]; document.getElementById("quiz-screen").classList.remove("active"); document.getElementById("result-title").textContent=result; document.getElementById("result-copy").textContent=archetypes[result]; document.getElementById("result-screen").classList.add("active"); track("QuizComplete",{quiz:"female_rage_title",result:result}); track("ResultViewed",{quiz:"female_rage_title",result:result}); window.scrollTo({top:0,behavior:"smooth"});}
+document.getElementById("start-button").addEventListener("click",startQuiz);
+document.getElementById("go-signup").addEventListener("click",()=>{track("MagnetOfferViewed",{magnet:"meandmybigmouth"}); document.getElementById("result-screen").classList.remove("active"); document.getElementById("signup-screen").classList.add("active"); window.scrollTo({top:0,behavior:"smooth"});});
+document.getElementById("restart").addEventListener("click",()=>{document.getElementById("result-screen").classList.remove("active"); startQuiz();});
+document.getElementById("aweber-form").addEventListener("submit",function(e){e.preventDefault(); track("Lead",{content_name:"Me and My Big Mouth",source:"female_rage_quiz"}); track("MagnetClick",{magnet:"meandmybigmouth"}); setTimeout(()=>{e.target.submit();},350);});
+</script>
+</body>
+</html>
