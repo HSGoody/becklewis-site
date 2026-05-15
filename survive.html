@@ -396,7 +396,9 @@ body:before{
     <p>Would you trust him?</p>
   </div>
   <p>Join the Beck Lewis reader list and we’ll send you the free story link. You’ll also be taken straight to BookFunnel to download it now.</p>
-
+<div class="magnet-cover">
+  <img src="https://becklewis.com/ManBear.jpg?v=1" alt="Man or Bear cover">
+</div>
   <form id="aweber-form" method="post" action="https://www.aweber.com/scripts/addlead.pl">
     <input type="hidden" name="listname" value="awlist6936435">
     <input type="hidden" name="redirect" value="https://dl.bookfunnel.com/9eez85m3s3">
@@ -567,6 +569,16 @@ function chooseAnswer(archetype) {
   } else {
     renderQuestion();
   }
+}
+.magnet-cover{
+  text-align:center;
+  margin:24px 0;
+}
+
+.magnet-cover img{
+  width:min(260px, 70%);
+  border-radius:12px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.45);
 }
 
 function showResult() {
