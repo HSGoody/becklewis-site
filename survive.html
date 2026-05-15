@@ -89,14 +89,14 @@ input:focus{outline:none;border-color:var(--gold);}
   <div>
     <span class="badge">Beck Lewis psychological thriller quiz</span>
     <h1>Could You Survive a Psychological Thriller?</h1>
-    <p class="lede">Most people think they’d notice the danger.</p>
+    <p class="lede">Most people think they would notice the danger.</p>
     <p class="lede"><strong>Most people are wrong.</strong></p>
     <p>This quiz analyses how you behave under uncertainty. Would you trust your instincts? Ignore the warning signs? Talk yourself into danger? Become obsessed?</p>
-    <p class="muted">At the end, you’ll be invited to join the Beck Lewis reader list and get the free psychological thriller story <strong>Man or Bear</strong>.</p>
+    <p class="muted">At the end, you will be invited to join the Beck Lewis reader list and get the free psychological thriller story <strong>Man or Bear</strong>.</p>
     <button class="button" id="start-button">Start the quiz</button>
   </div>
   <div class="cover-crop-panel" aria-label="Psychological thriller cover crop">
-    <img src="https://becklewis.com/cover-crop.jpg?v=3" alt="">
+    <img src="https://becklewis.com/cover-crop.jpg?v=4" alt="">
   </div>
 </section>
 
@@ -121,9 +121,9 @@ input:focus{outline:none;border-color:var(--gold);}
     <p><strong>A woman stranded alone. One isolated house. One man.</strong></p>
     <p>Would you trust him?</p>
   </div>
-  <p>Join the Beck Lewis reader list and we’ll send you the free story link. You’ll also be taken straight to BookFunnel to download it now.</p>
+  <p>Join the Beck Lewis reader list and we will send you the free story link. You will also be taken straight to BookFunnel to download it now.</p>
   <div class="magnet-cover">
-    <img src="https://becklewis.com/ManBear.jpg?v=2" alt="Man or Bear cover">
+    <img src="https://becklewis.com/ManBear.jpg?v=3" alt="Man or Bear cover">
   </div>
   <form id="aweber-form" method="post" action="https://www.aweber.com/scripts/addlead.pl">
     <input type="hidden" name="listname" value="awlist6936435">
@@ -133,37 +133,121 @@ input:focus{outline:none;border-color:var(--gold);}
     <input type="text" name="name" placeholder="Name (optional)">
     <input type="email" name="email" placeholder="Email" required>
     <button class="button" type="submit">Send me the story</button>
-    <p class="small">You’ll be joining the Beck Lewis reader list. Unsubscribe any time.<br><a href="privacy.html">Privacy Policy</a></p>
+    <p class="small">You will be joining the Beck Lewis reader list. Unsubscribe any time.<br><a href="privacy.html">Privacy Policy</a></p>
   </form>
 </section>
 </div>
 
 <script>
 const archetypes = {
-  "The Peacemaker": {subtitle: "You talk yourself into danger.", copy: "You don’t like conflict. You worry about overreacting. You try to see the best in people, even when your instincts are quietly trying to kick the door down. You would survive surprisingly long in a psychological thriller. Unfortunately, that’s because you’d stay in dangerous situations longer than most people."},
-  "The Watcher": {subtitle: "You notice things other people miss.", copy: "You read rooms. You spot patterns. You notice tension before anyone says a word. People probably underestimate how observant you are. You’d survive longer than most people in a psychological thriller. The problem is that once something feels wrong, you struggle to let it go."},
-  "The Doubter": {subtitle: "You stop trusting yourself first.", copy: "You question your own instincts constantly. If somebody confidently tells you that you’re overreacting, part of you immediately wonders if they’re right. You are thoughtful, empathetic and socially aware. Unfortunately, psychological thrillers are full of people who know how to weaponise exactly those qualities."},
-  "The Fixer": {subtitle: "You think you can control the situation.", copy: "When things go wrong, you step in. You organise. You manage. You believe competence can solve most problems. And honestly? Sometimes it can. But psychological thrillers punish people who believe they can handle danger alone. You would absolutely investigate the creepy noise."},
-  "The Obsessive": {subtitle: "You can’t let things go.", copy: "Once something feels wrong, it lives in your brain rent-free. You replay conversations. You revisit details. You investigate. You would probably survive a psychological thriller. Emotionally? That’s a separate question."},
-  "The Performer": {subtitle: "You know how to seem fine.", copy: "You adapt quickly. You know how to stay calm in uncomfortable situations. You understand social dynamics. You know how to mask fear. In a psychological thriller, this makes you difficult to read. Which is useful. But it also means nobody realises how much pressure you’re actually under."}
+  "The Peacemaker": {
+    subtitle: "You talk yourself into danger.",
+    copy: "You do not like conflict. You worry about overreacting. You try to see the best in people, even when your instincts are quietly trying to kick the door down. You would survive surprisingly long in a psychological thriller. Unfortunately, that is because you would stay in dangerous situations longer than most people."
+  },
+  "The Watcher": {
+    subtitle: "You notice things other people miss.",
+    copy: "You read rooms. You spot patterns. You notice tension before anyone says a word. People probably underestimate how observant you are. You would survive longer than most people in a psychological thriller. The problem is that once something feels wrong, you struggle to let it go."
+  },
+  "The Doubter": {
+    subtitle: "You stop trusting yourself first.",
+    copy: "You question your own instincts constantly. If somebody confidently tells you that you are overreacting, part of you immediately wonders if they are right. You are thoughtful, empathetic and socially aware. Unfortunately, psychological thrillers are full of people who know how to weaponise exactly those qualities."
+  },
+  "The Fixer": {
+    subtitle: "You think you can control the situation.",
+    copy: "When things go wrong, you step in. You organise. You manage. You believe competence can solve most problems. And honestly? Sometimes it can. But psychological thrillers punish people who believe they can handle danger alone. You would absolutely investigate the creepy noise."
+  },
+  "The Obsessive": {
+    subtitle: "You cannot let things go.",
+    copy: "Once something feels wrong, it lives in your brain rent-free. You replay conversations. You revisit details. You investigate. You would probably survive a psychological thriller. Emotionally? That is a separate question."
+  },
+  "The Performer": {
+    subtitle: "You know how to seem fine.",
+    copy: "You adapt quickly. You know how to stay calm in uncomfortable situations. You understand social dynamics. You know how to mask fear. In a psychological thriller, this makes you difficult to read. Which is useful. But it also means nobody realises how much pressure you are actually under."
+  }
 };
 
 const questions = [
-  {q:"You’re walking home alone and suddenly think somebody might be following you.",a:[["You immediately change route.","The Watcher"],["You tell yourself you’re imagining it.","The Doubter"],["You subtly start tracking exits and people nearby.","The Obsessive"],["You keep walking normally because you don’t want to look paranoid.","The Peacemaker"]]},
-  {q:"A friend tells you: “You’re overthinking this.”",a:[["You instantly start doubting yourself.","The Doubter"],["You become more convinced you’re right.","The Watcher"],["You replay the entire situation mentally.","The Obsessive"],["You smile and pretend to agree.","The Performer"]]},
-  {q:"You witness something disturbing in public. Nobody else reacts.",a:[["You assume you misread it.","The Doubter"],["You keep watching carefully.","The Watcher"],["You intervene.","The Fixer"],["You secretly record details.","The Obsessive"]]},
-  {q:"Which scares you most?",a:[["Realising the danger too late.","The Watcher"],["Not being believed.","The Doubter"],["Being manipulated.","The Obsessive"],["Public embarrassment.","The Peacemaker"]]},
-  {q:"Someone gives you a bad feeling… but they’re charming.",a:[["You trust your instincts.","The Watcher"],["You feel guilty for judging them.","The Peacemaker"],["You investigate quietly.","The Obsessive"],["You stay socially polite but emotionally cautious.","The Performer"]]},
-  {q:"A person keeps crossing small boundaries in conversation.",a:[["You shut it down immediately.","The Fixer"],["You wonder if you’re overreacting.","The Doubter"],["You become hyper-aware.","The Watcher"],["You try to smooth the interaction over.","The Peacemaker"]]},
-  {q:"What would most likely get you into trouble in a thriller?",a:[["Curiosity.","The Obsessive"],["Politeness.","The Peacemaker"],["Trying to look fine.","The Performer"],["Overconfidence.","The Fixer"]]},
-  {q:"You hear a strange noise in a place that should be empty.",a:[["You leave. Immediately.","The Watcher"],["You call out, because apparently this is who you are.","The Peacemaker"],["You go and check, but carefully.","The Fixer"],["You stand still and listen until you’ve made it worse in your head.","The Obsessive"]]}
+  {
+    q: "You are walking home alone and suddenly think somebody might be following you.",
+    a: [
+      ["You immediately change route.", "The Watcher"],
+      ["You tell yourself you are imagining it.", "The Doubter"],
+      ["You subtly start tracking exits and people nearby.", "The Obsessive"],
+      ["You keep walking normally because you do not want to look paranoid.", "The Peacemaker"]
+    ]
+  },
+  {
+    q: "A friend tells you: You are overthinking this.",
+    a: [
+      ["You instantly start doubting yourself.", "The Doubter"],
+      ["You become more convinced you are right.", "The Watcher"],
+      ["You replay the entire situation mentally.", "The Obsessive"],
+      ["You smile and pretend to agree.", "The Performer"]
+    ]
+  },
+  {
+    q: "You witness something disturbing in public. Nobody else reacts.",
+    a: [
+      ["You assume you misread it.", "The Doubter"],
+      ["You keep watching carefully.", "The Watcher"],
+      ["You intervene.", "The Fixer"],
+      ["You secretly record details.", "The Obsessive"]
+    ]
+  },
+  {
+    q: "Which scares you most?",
+    a: [
+      ["Realising the danger too late.", "The Watcher"],
+      ["Not being believed.", "The Doubter"],
+      ["Being manipulated.", "The Obsessive"],
+      ["Public embarrassment.", "The Peacemaker"]
+    ]
+  },
+  {
+    q: "Someone gives you a bad feeling, but they are charming.",
+    a: [
+      ["You trust your instincts.", "The Watcher"],
+      ["You feel guilty for judging them.", "The Peacemaker"],
+      ["You investigate quietly.", "The Obsessive"],
+      ["You stay socially polite but emotionally cautious.", "The Performer"]
+    ]
+  },
+  {
+    q: "A person keeps crossing small boundaries in conversation.",
+    a: [
+      ["You shut it down immediately.", "The Fixer"],
+      ["You wonder if you are overreacting.", "The Doubter"],
+      ["You become hyper-aware.", "The Watcher"],
+      ["You try to smooth the interaction over.", "The Peacemaker"]
+    ]
+  },
+  {
+    q: "What would most likely get you into trouble in a thriller?",
+    a: [
+      ["Curiosity.", "The Obsessive"],
+      ["Politeness.", "The Peacemaker"],
+      ["Trying to look fine.", "The Performer"],
+      ["Overconfidence.", "The Fixer"]
+    ]
+  },
+  {
+    q: "You hear a strange noise in a place that should be empty.",
+    a: [
+      ["You leave. Immediately.", "The Watcher"],
+      ["You call out, because apparently this is who you are.", "The Peacemaker"],
+      ["You go and check, but carefully.", "The Fixer"],
+      ["You stand still and listen until you have made it worse in your head.", "The Obsessive"]
+    ]
+  }
 ];
 
 let currentQuestion = 0;
 let scores = {};
 
 function track(eventName, params = {}) {
-  if (typeof fbq === "function") fbq("trackCustom", eventName, params);
+  if (typeof fbq === "function") {
+    fbq("trackCustom", eventName, params);
+  }
 }
 
 function startQuiz() {
@@ -181,14 +265,20 @@ function startQuiz() {
 function renderQuestion() {
   const q = questions[currentQuestion];
   document.getElementById("question-text").textContent = q.q;
-  document.getElementById("progress-bar").style.width = `${(currentQuestion / questions.length) * 100}%`;
+  document.getElementById("progress-bar").style.width = ((currentQuestion / questions.length) * 100) + "%";
+
   const answersDiv = document.getElementById("answers");
   answersDiv.innerHTML = "";
-  q.a.forEach(([text, archetype]) => {
+
+  q.a.forEach(function(item) {
+    const text = item[0];
+    const archetype = item[1];
     const btn = document.createElement("button");
     btn.className = "answer";
     btn.textContent = text;
-    btn.addEventListener("click", () => chooseAnswer(archetype));
+    btn.addEventListener("click", function() {
+      chooseAnswer(archetype);
+    });
     answersDiv.appendChild(btn);
   });
 }
@@ -196,37 +286,50 @@ function renderQuestion() {
 function chooseAnswer(archetype) {
   scores[archetype] = (scores[archetype] || 0) + 1;
   currentQuestion++;
-  if (currentQuestion >= questions.length) showResult();
-  else renderQuestion();
+
+  if (currentQuestion >= questions.length) {
+    showResult();
+  } else {
+    renderQuestion();
+  }
 }
 
 function showResult() {
-  const result = Object.entries(scores).sort((a,b) => b[1] - a[1])[0][0];
+  const result = Object.entries(scores).sort(function(a, b) {
+    return b[1] - a[1];
+  })[0][0];
+
   document.getElementById("quiz-screen").classList.remove("active");
   document.getElementById("result-title").textContent = result;
   document.getElementById("result-subtitle").textContent = archetypes[result].subtitle;
   document.getElementById("result-copy").textContent = archetypes[result].copy;
   document.getElementById("result-screen").classList.add("active");
+
   track("QuizComplete", {quiz: "survive_psychological_thriller", result: result});
   track("ResultViewed", {quiz: "survive_psychological_thriller", result: result});
   window.scrollTo({top: 0, behavior: "smooth"});
 }
 
 document.getElementById("start-button").addEventListener("click", startQuiz);
-document.getElementById("restart").addEventListener("click", () => {
+
+document.getElementById("restart").addEventListener("click", function() {
   document.getElementById("result-screen").classList.remove("active");
   startQuiz();
 });
-document.getElementById("go-signup").addEventListener("click", () => {
+
+document.getElementById("go-signup").addEventListener("click", function() {
   track("SignupViewed", {magnet: "manorbear", source: "psychthrillerquiz"});
   document.getElementById("result-screen").classList.remove("active");
   document.getElementById("signup-screen").classList.add("active");
   window.scrollTo({top: 0, behavior: "smooth"});
 });
+
 document.getElementById("aweber-form").addEventListener("submit", function(e) {
   e.preventDefault();
   track("Lead", {content_name: "Man or Bear", source: "psychthrillerquiz"});
-  setTimeout(() => e.target.submit(), 350);
+  setTimeout(function() {
+    e.target.submit();
+  }, 350);
 });
 </script>
 </body>
