@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tile Draw Visualiser</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --panel: #ffffff;
+      --ink: #1f2933;
+      --muted: #667085;
+      --line: #d0d5dd;
+      --accent: #334155;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    main {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 20px 40px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+      padding: 20px;
+      margin-top: 18px;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      align-items: end;
+    }
+    label {
+      display: block;
+      font-weight: 650;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 1rem;
+    }
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-weight: 750;
+      font-size: 1rem;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+    }
+    button:hover { filter: brightness(1.08); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #fbfcfe;
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.6rem;
+      margin-top: 4px;
+    }
+    canvas {
+      width: 100%;
+      height: 460px;
+      display: block;
+    }
+    .legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .key {
+      display: inline-block;
+      width: 18px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+    .barKey { background: #94a3b8; }
+    .curveKey { background: #111827; height: 3px; }
+    .note { font-size: 0.92rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tile Draw Visualiser</h1>
+    <p>
+      Simulates drawing from 32 tiles: 8 blue, 8 green, 8 orange, and 8 pink. Each run stops when the eighth tile of any one colour appears.
+    </p>
+
+    <section class="card">
+      <div class="controls">
+        <div>
+          <label for="runs">Number of simulations</label>
+          <input id="runs" type="number" min="10" max="1000000" step="100" value="10000" />
+        </div>
+        <div>
+          <label for="speed">Animation delay, ms</label>
+          <input id="speed" type="number" min="0" max="1000" step="10" value="0" />
+        </div>
+        <button id="runBtn">Run simulation</button>
+      </div>
+      <div class="stats">
+        <div class="stat">Mean<strong id="mean">–</strong></div>
+        <div class="stat">Median<strong id="median">–</strong></div>
+        <div class="stat">Mode<strong id="mode">–</strong></div>
+        <div class="stat">Std dev<strong id="sd">–</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <canvas id="chart" width="1100" height="460"></canvas>
+      <div class="legend">
+        <span><span class="key barKey"></span>Simulation histogram</span>
+        <span><span class="key curveKey"></span>Normal curve using simulated mean and standard deviation</span>
+      </div>
+      <p class="note">
+        The real distribution is discrete and slightly bounded, so the black curve is only a visual comparison, not a claim that the process is perfectly normal.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const COLOURS = ["blue", "green", "orange", "pink"];
+    const TILES_PER_COLOUR = 8;
+    const TOTAL_TILES = COLOURS.length * TILES_PER_COLOUR;
+
+    const canvas = document.getElementById("chart");
+    const ctx = canvas.getContext("2d");
+    const runBtn = document.getElementById("runBtn");
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function singleRun() {
+      const bag = [];
+      for (const colour of COLOURS) {
+        for (let i = 0; i < TILES_PER_COLOUR; i++) bag.push(colour);
+      }
+      shuffle(bag);
+      const counts = Object.fromEntries(COLOURS.map(c => [c, 0]));
+
+      for (let i = 0; i < bag.length; i++) {
+        counts[bag[i]]++;
+        if (counts[bag[i]] === TILES_PER_COLOUR) return i + 1;
+      }
+      return TOTAL_TILES;
+    }
+
+    function mean(values) {
+      return values.reduce((a, b) => a + b, 0) / values.length;
+    }
+
+    function standardDeviation(values, m) {
+      const variance = values.reduce((sum, x) => sum + Math.pow(x - m, 2), 0) / values.length;
+      return Math.sqrt(variance);
+    }
+
+    function median(values) {
+      const sorted = [...values].sort((a, b) => a - b);
+      const mid = Math.floor(sorted.length / 2);
+      return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+    }
+
+    function modeFromHistogram(hist) {
+      let bestX = null;
+      let bestY = -1;
+      for (const [x, y] of hist.entries()) {
+        if (y > bestY) {
+          bestX = x;
+          bestY = y;
+        }
+      }
+      return bestX;
+    }
+
+    function normalPdf(x, m, sd) {
+      return (1 / (sd * Math.sqrt(2 * Math.PI))) * Math.exp(-0.5 * Math.pow((x - m) / sd, 2));
+    }
+
+    function drawChart(hist, results, m, sd) {
+      const dpr = window.devicePixelRatio || 1;
+      const cssWidth = canvas.clientWidth;
+      const cssHeight = canvas.clientHeight;
+      canvas.width = cssWidth * dpr;
+      canvas.height = cssHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+
+      const pad = { left: 56, right: 24, top: 28, bottom: 52 };
+      const w = cssWidth - pad.left - pad.right;
+      const h = cssHeight - pad.top - pad.bottom;
+      const minX = 8;
+      const maxX = 32;
+      const xs = [];
+      for (let x = minX; x <= maxX; x++) xs.push(x);
+      const maxHist = Math.max(...xs.map(x => hist.get(x) || 0));
+      const normalMax = Math.max(...xs.map(x => normalPdf(x, m, sd) * results.length));
+      const maxY = Math.max(maxHist, normalMax) * 1.12;
+
+      const xScale = x => pad.left + ((x - minX) / (maxX - minX)) * w;
+      const yScale = y => pad.top + h - (y / maxY) * h;
+
+      ctx.strokeStyle = "#d0d5dd";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(pad.left, pad.top);
+      ctx.lineTo(pad.left, pad.top + h);
+      ctx.lineTo(pad.left + w, pad.top + h);
+      ctx.stroke();
+
+      ctx.fillStyle = "#667085";
+      ctx.font = "12px system-ui";
+      ctx.textAlign = "center";
+      for (let x = minX; x <= maxX; x += 2) {
+        const px = xScale(x);
+        ctx.fillText(x, px, pad.top + h + 24);
+        ctx.strokeStyle = "#eef2f7";
+        ctx.beginPath();
+        ctx.moveTo(px, pad.top);
+        ctx.lineTo(px, pad.top + h);
+        ctx.stroke();
+      }
+      ctx.fillText("Tiles drawn when first colour reaches 8", pad.left + w / 2, cssHeight - 10);
+
+      ctx.save();
+      ctx.translate(16, pad.top + h / 2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillText("Frequency", 0, 0);
+      ctx.restore();
+
+      const barWidth = w / (maxX - minX + 1) * 0.72;
+      ctx.fillStyle = "#94a3b8";
+      for (const x of xs) {
+        const freq = hist.get(x) || 0;
+        const px = xScale(x) - barWidth / 2;
+        const py = yScale(freq);
+        ctx.fillRect(px, py, barWidth, pad.top + h - py);
+      }
+
+      ctx.strokeStyle = "#111827";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      for (let i = 0; i <= 500; i++) {
+        const x = minX + (i / 500) * (maxX - minX);
+        const y = normalPdf(x, m, sd) * results.length;
+        const px = xScale(x);
+        const py = yScale(y);
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+    }
+
+    async function runSimulation() {
+      runBtn.disabled = true;
+      runBtn.textContent = "Running…";
+
+      const runs = Math.max(10, Math.min(1000000, Number(document.getElementById("runs").value) || 10000));
+      const delay = Math.max(0, Number(document.getElementById("speed").value) || 0);
+      const results = [];
+      const hist = new Map();
+
+      const chunk = delay > 0 ? 1 : 1000;
+      for (let i = 0; i < runs; i++) {
+        const result = singleRun();
+        results.push(result);
+        hist.set(result, (hist.get(result) || 0) + 1);
+
+        if ((i + 1) % chunk === 0 || i === runs - 1) {
+          const m = mean(results);
+          const sd = standardDeviation(results, m);
+          updateStats(results, hist, m, sd);
+          drawChart(hist, results, m, sd);
+          if (delay > 0) await new Promise(resolve => setTimeout(resolve, delay));
+          else await new Promise(resolve => requestAnimationFrame(resolve));
+        }
+      }
+
+      runBtn.disabled = false;
+      runBtn.textContent = "Run simulation";
+    }
+
+    function updateStats(results, hist, m, sd) {
+      document.getElementById("mean").textContent = m.toFixed(2);
+      document.getElementById("median").textContent = median(results).toFixed(1).replace(".0", "");
+      document.getElementById("mode").textContent = modeFromHistogram(hist);
+      document.getElementById("sd").textContent = sd.toFixed(2);
+    }
+
+    runBtn.addEventListener("click", runSimulation);
+    window.addEventListener("resize", () => runSimulation());
+    runSimulation();
+  </script>
+</body>
+</html>
