@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beck Lewis | Dead Ends Psychological Thrillers</title>
+  <meta name="description" content="Dead Ends: dark, character-driven psychological thrillers by Beck Lewis. Explore Double Take, Open Wound, Safe Space, Cold Trail and the free story Man or Bear.">
+  <link rel="canonical" href="https://becklewis.com/dead-ends.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beck Lewis | Dead Ends Psychological Thrillers">
+  <meta property="og:description" content="Lies. Perception. Consequence. Explore the Dead Ends psychological thriller series.">
+  <meta property="og:url" content="https://becklewis.com/dead-ends.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beck Lewis | Dead Ends Psychological Thrillers">
+  <meta name="twitter:description" content="Lies. Perception. Consequence. Explore the Dead Ends psychological thriller series.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://becklewis.com/#beck-lewis",
+    "name": "Beck Lewis",
+    "url": "https://becklewis.com/index.html",
+    "nationality": "British",
+    "jobTitle": "Author",
+    "description": "British psychological thriller author. Writes dark, character-driven crime fiction.",
+    "genre": ["Psychological Thriller", "Crime Fiction"],
+    "sameAs": [
+      "https://www.instagram.com/becklewiswrites/",
+      "https://www.youtube.com/@BeckLewisWrites",
+      "https://www.tiktok.com/@becklewis5",
+      "https://www.facebook.com/profile.php?id=61576679982271"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
+      --bl-pink: #EC008C;
+      --bl-border: rgba(110,123,133,0.22);
+      --bl-shadow: rgba(0,0,0,0.40);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--bl-offwhite);
+      min-height: 100vh;
+      background:
+        radial-gradient(1100px 700px at 50% -10%, var(--bl-midnight-2), var(--bl-midnight));
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+      padding: 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.38);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(19, 42, 58, 0.35);
+      position: relative;
+    }
+
+    .top-nav a:hover {
+      background-color: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+    }
+
+    .top-nav a[aria-current="page"]{
+      border-color: rgba(232, 92, 13, 0.70);
+      background: rgba(232, 92, 13, 0.10);
+      box-shadow: 0 0 0 3px rgba(232, 92, 13, 0.10);
+    }
+
+    .case-header {
+      border: 1px solid var(--bl-border);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(5,8,12,0.84), rgba(19,42,58,0.62)),
+        radial-gradient(500px 240px at 10% 10%, rgba(232,92,13,0.18), transparent 70%);
+      box-shadow: 0 20px 60px var(--bl-shadow);
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .breadcrumb {
+      margin: 0 0 14px 0;
+      font-size: 0.92rem;
+      color: rgba(237,239,242,0.75);
+    }
+
+    .breadcrumb a {
+      color: rgba(237,239,242,0.92);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(232,92,13,0.65);
+    }
+
+    .case-topline {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 22px;
+      align-items: end;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 0.95;
+      font-weight: 900;
+      margin: 0 0 12px 0;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .case-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      border: 1px solid rgba(242,183,5,0.55);
+      color: var(--bl-gold);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin: 0;
+      max-width: 70ch;
+      color: color-mix(in srgb, var(--bl-offwhite) 82%, var(--bl-concrete));
+    }
+
+    .case-switcher {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .mini-file {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      background: rgba(5,8,12,0.35);
+      border-radius: 14px;
+      padding: 14px;
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.08s, border-color 0.2s, background 0.2s;
+    }
+
+    .mini-file:hover { border-color: rgba(232,92,13,0.65); background: rgba(232,92,13,0.10); }
+    .mini-file:active { transform: translateY(1px); }
+    .mini-file.current { border-color: rgba(232,92,13,0.72); background: rgba(232,92,13,0.14); }
+    .mini-file .small { font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.78; font-weight: 800; }
+    .mini-file .name { font-size: 1.1rem; font-weight: 900; margin-top: 10px; }
+    .mini-file.rage { border-color: rgba(236,0,140,0.35); }
+    .mini-file.rage:hover { border-color: rgba(236,0,140,0.75); background: rgba(236,0,140,0.10); }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 4px 0 22px 0;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 1.55rem;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .section-title::after {
+      content: "";
+      height: 2px;
+      flex: 1;
+      background: rgba(232, 92, 13, 0.85);
+      border-radius: 999px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      justify-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--bl-border);
+      border-radius: 14px;
+      background: rgba(19, 42, 58, 0.38);
+      box-shadow: 0 18px 48px var(--bl-shadow);
+    }
+
+    .card:hover{
+      border-color: rgba(232, 92, 13, 0.25);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.55);
+    }
+
+    .cover {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background: rgba(5,8,12,0.25);
+      border-bottom: 1px solid rgba(110,123,133,0.22);
+      image-rendering: auto;
+    }
+
+    .free-card-visual {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 26px;
+      background:
+        linear-gradient(135deg, rgba(242,183,5,0.16), rgba(232,92,13,0.09)),
+        radial-gradient(260px 220px at 50% 30%, rgba(237,239,242,0.08), transparent 70%),
+        rgba(5,8,12,0.34);
+      border-bottom: 1px solid rgba(110,123,133,0.22);
+    }
+
+    .free-paper {
+      width: 100%;
+      max-width: 250px;
+      min-height: 330px;
+      padding: 26px 22px;
+      color: #111;
+      background: #e7d2a4;
+      border-radius: 4px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.42);
+      transform: rotate(-2deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .free-paper::before {
+      content: "FREE CASE FILE";
+      display: block;
+      border: 3px solid rgba(175,30,30,0.78);
+      color: rgba(175,30,30,0.9);
+      font-family: Georgia, serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      padding: 8px;
+      margin-bottom: 24px;
+      transform: rotate(1deg);
+    }
+
+    .free-paper strong {
+      font-family: Georgia, serif;
+      font-size: 2.1rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .free-paper span {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .card-body {
+      padding: 14px 14px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .book-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: var(--bl-offwhite);
+    }
+
+    .byline{
+      margin: 2px 0 0 0;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: color-mix(in srgb, var(--bl-offwhite) 86%, var(--bl-concrete));
+    }
+
+    .tag {
+      border: 1px solid rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.10);
+      color: var(--bl-offwhite);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .tag.free { border-color: rgba(242,183,5,0.55); background: rgba(242,183,5,0.12); }
+
+    .blurb {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: color-mix(in srgb, var(--bl-offwhite) 84%, var(--bl-concrete));
+    }
+
+    .blurb p { margin: 0 0 10px 0; }
+    .blurb p:last-child { margin-bottom: 0; }
+
+    .blurb-more {
+      display: none;
+      margin-top: 6px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(110,123,133,0.22);
+    }
+
+    .blurb-toggle {
+      margin-top: 8px;
+      padding: 0;
+      border: none;
+      background: none;
+      color: rgba(237,239,242,0.92);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+    }
+
+    .blurb-toggle::after{
+      content: "›";
+      font-size: 1.2rem;
+      line-height: 1;
+      transform: translateY(-1px);
+      opacity: 0.9;
+      transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+
+    .blurb-toggle:hover { color: var(--bl-orange); }
+    .blurb-toggle:hover::after { transform: translate(2px,-1px); opacity: 1; }
+
+    .buy-row{ margin-top: 10px; }
+
+    .buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(242, 183, 5, 0.55);
+      background: rgba(242, 183, 5, 0.12);
+      color: rgba(237,239,242,0.96);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 800;
+      transition: transform 0.08s, background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .buy-button:hover{
+      background: rgba(232, 92, 13, 0.12);
+      border-color: rgba(232, 92, 13, 0.65);
+      color: rgba(237,239,242,0.98);
+    }
+
+    .buy-button.free-button{
+      border-color: rgba(232, 92, 13, 0.60);
+      background: rgba(232, 92, 13, 0.13);
+    }
+
+    .social-links {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid var(--bl-border);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.25);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(19, 42, 58, 0.25);
+    }
+
+    .social-links a:hover {
+      color: var(--bl-orange);
+      border-color: rgba(232, 92, 13, 0.55);
+      background: rgba(232, 92, 13, 0.08);
+    }
+
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .case-topline { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      body { padding: 24px 14px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { max-width: 420px; }
+      .case-switcher { grid-template-columns: 1fr; }
+      .case-header { padding: 18px; }
+      .top-nav a { flex: 1 1 auto; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#cases" aria-current="page">The Cases</a>
+      <a href="about.html">About</a>
+      <a href="free-reads.html">Free Reads</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <header class="case-header">
+      <p class="breadcrumb"><a href="index.html#cases">← Back to all cases</a></p>
+      <div class="case-topline">
+        <div>
+          <span class="case-label">Case file: Dead Ends</span>
+          <h1>Dead Ends</h1>
+          <p class="intro">
+            Dark, character-driven psychological thrillers where damaged people, impossible choices and buried secrets collide.
+          </p>
+        </div>
+
+        <div class="case-switcher" aria-label="Case switcher">
+          <a class="mini-file current" href="dead-ends.html" aria-current="page">
+            <span class="small">Current case</span>
+            <span class="name">Dead Ends</span>
+          </a>
+          <a class="mini-file rage" href="female-rage.html">
+            <span class="small">Open another case</span>
+            <span class="name">Female Rage</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="section-title"><h2>Books and free reads</h2></div>
+
+    <section class="grid" aria-label="Dead Ends books and free reads">
+
+      <article class="card">
+        <img class="cover" src="DOUBLETAKE.jpg" alt="Cover of Double Take by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Double Take</h2>
+            <span class="tag">Dead Ends 1</span>
+          </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
+          <div class="blurb">
+            <p>When what you saw was impossible, is honesty always the best option?</p>
+            <div class="blurb-more">
+              <p>When Esther Butler sees a man with a gun following a woman in the dark city streets, she doesn’t hesitate to call the police.</p>
+              <p>Minutes later in an empty building site, the man is dead. The police fired the shot. But when the smoke clears, there’s no weapon to be found.</p>
+              <p>Esther knows what she saw. Yet as her story begins to unravel, she’s forced to question not just her memory, but her own safety.</p>
+              <p>DC Josie Kaminski – assigned to the police team with the worst reputation in Leicester – is put on the case. But the deeper they dig, the more they find evidence linking Esther to the dead man and compelling reasons why she would want him dead.</p>
+              <p>As truth and lies blur, the team must decide who to believe.<br>And Esther stands to lose more than she ever bargained for.</p>
+            </div>
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button" href="https://readerlinks.com/l/5502137" target="_blank" rel="noopener noreferrer" aria-label="Buy Double Take on Amazon">
+              <i class="fa-brands fa-amazon" aria-hidden="true"></i> Buy on Amazon
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="cover" src="OPENWOUND.jpg" alt="Cover of Open Wound by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Open Wound</h2>
+            <span class="tag">Dead Ends 2</span>
+          </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
+          <div class="blurb">
+            <p>Can saving someone be the biggest mistake of your life?</p>
+            <div class="blurb-more">
+              <p>PR consultant Hannah Douglas-Jones makes her living managing other people’s reputations. But she finds herself involved in a story like no other when she stops at the scene of a house fire and pulls a young woman from the flames.</p>
+              <p>Fire victim Natasha – calm, capable and self-assured – is now homeless. Hannah offers her a place to stay and a job. Natasha is exactly the person Hannah needs to rebuild her struggling business and help with a hectic home life. But as Hannah’s fortunes rise, she starts to doubt who this woman really is – and what she wants.</p>
+              <p>DC ‘Walker’ Smith is part of the investigation into the fire. Six people died, locked in the cellar. As the investigation grows, Walker realises that this crime has links to shameful secrets in his own past – and that Natasha is the key to unlocking everything.</p>
+              <p>One fire. No accident. Everyone’s playing with fire.</p>
+            </div>
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button" href="https://readerlinks.com/l/5502138" target="_blank" rel="noopener noreferrer" aria-label="Buy Open Wound on Amazon">
+              <i class="fa-brands fa-amazon" aria-hidden="true"></i> Buy on Amazon
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="cover" src="SAFESPACE.jpg" alt="Cover of Safe Space by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Safe Space</h2>
+            <span class="tag">Dead Ends 3</span>
+          </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
+          <div class="blurb">
+            <p>When your memories are missing, how do you know you’re not the one to blame?</p>
+            <div class="blurb-more">
+              <p>A year after a carbon monoxide accident left five people dead, Cassie O’Donnell wakes from a coma to find her life erased. She’s homeless, unemployed, and her mind is filled with shadowy memories she can’t trust.</p>
+              <p>Desperate for answers, Cassie joins a support group run by the survivors - a safe space where they can grieve and heal together. But then one member of the group dies of an apparent drugs overdose…</p>
+              <p>An ex-girlfriend begs DS Rob Joseph to investigate this latest death and he secretly joins the support group. But he soon discovers that the survivors are all carrying secrets.</p>
+              <p>Both Cassie and Rob begin to suspect that someone inside the group knows what really happened in that house on the night of the accident - and is willing to kill to keep the truth buried.</p>
+              <p>One tragedy. Five survivors. No one is safe.</p>
+            </div>
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button" href="https://readerlinks.com/l/5502139" target="_blank" rel="noopener noreferrer" aria-label="Buy Safe Space on Amazon">
+              <i class="fa-brands fa-amazon" aria-hidden="true"></i> Buy on Amazon
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="cover" src="COLDTRAIL.jpg" alt="Cover of Cold Trail by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Cold Trail</h2>
+            <span class="tag">Dead Ends 4</span>
+          </div>
+          <p class="byline">A psychological thriller by Beck Lewis</p>
+          <div class="blurb">
+            <p>Can the past ever stay buried?</p>
+            <div class="blurb-more">
+              <p>Fifteen years after her sister was murdered by their abusive father, Bibi Cotton has built a new life as a librarian in a close-knit village in the ancient Charnwood Forest.</p>
+              <p>Then her boyfriend, Callum, makes a confession - as a teenager, he killed a man suspected of being involved in her sister’s abuse. He shows Bibi the place near a local beauty spot where he says the body is buried.</p>
+              <p>Detective Constable ‘Walker’ Smith remembers the original case. A murdered girl. A missing suspect who was never found. A place steeped in fairy legends and unresolved mysteries.</p>
+              <p>When questioned by police, Callum claims the murder confession was a lie. But as Bibi follows the trail back into her family’s tragic past, it becomes clear someone is once again willing to kill to keep the past buried.</p>
+              <p>A confession. A hidden story. No one wants to know the truth.</p>
+            </div>
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button" href="https://readerlinks.com/l/5502157" target="_blank" rel="noopener noreferrer" aria-label="Buy Cold Trail on Amazon">
+              <i class="fa-brands fa-amazon" aria-hidden="true"></i> Buy on Amazon
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="free-card-visual" aria-hidden="true">
+          <div class="free-paper">
+            <strong>Man<br>or<br>Bear</strong>
+            <span>A free Dead Ends story</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Man or Bear</h2>
+            <span class="tag free">Free read</span>
+          </div>
+          <p class="byline">A free story from the Dead Ends world</p>
+          <div class="blurb">
+            <p>Start with a short, sharp Beck Lewis case file before you open the novels.</p>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button free-button" href="https://becklewis.com/landing-page.html" aria-label="Get Man or Bear free">
+              <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Get the free story
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.blurb-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const more = button.previousElementSibling;
+        const expanded = more.style.display === 'block';
+        more.style.display = expanded ? 'none' : 'block';
+        button.textContent = expanded ? 'Read more' : 'Read less';
+      });
+    });
+  </script>
+</body>
+</html>
