@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beck Lewis | Female Rage Thrillers</title>
+  <meta name="description" content="Female Rage: darkly funny revenge thrillers by Beck Lewis. Explore If I Don't Kill Them, Who Will? and the free story Me and My Big Mouth.">
+  <link rel="canonical" href="https://becklewis.com/female-rage.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beck Lewis | Female Rage Thrillers">
+  <meta property="og:description" content="Darkly funny. Furious. Revenge is only the beginning.">
+  <meta property="og:url" content="https://becklewis.com/female-rage.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beck Lewis | Female Rage Thrillers">
+  <meta name="twitter:description" content="Darkly funny. Furious. Revenge is only the beginning.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://becklewis.com/#beck-lewis",
+    "name": "Beck Lewis",
+    "url": "https://becklewis.com/index.html",
+    "nationality": "British",
+    "jobTitle": "Author",
+    "description": "British psychological thriller author. Writes dark, character-driven crime fiction and revenge thrillers.",
+    "genre": ["Psychological Thriller", "Crime Fiction", "Revenge Thriller"],
+    "sameAs": [
+      "https://www.instagram.com/becklewiswrites/",
+      "https://www.youtube.com/@BeckLewisWrites",
+      "https://www.tiktok.com/@becklewis5",
+      "https://www.facebook.com/profile.php?id=61576679982271"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --bl-midnight: #0B1C2D;
+      --bl-midnight-2: #132A3A;
+      --bl-ink: #05080C;
+      --bl-offwhite: #EDEFF2;
+      --bl-concrete: #6E7B85;
+      --bl-orange: #E85C0D;
+      --bl-gold: #F2B705;
+      --fr-pink: #EC008C;
+      --fr-yellow: #FFE600;
+      --fr-red: #EF3D4A;
+      --bl-border: rgba(236,0,140,0.24);
+      --bl-shadow: rgba(0,0,0,0.40);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--bl-offwhite);
+      min-height: 100vh;
+      background:
+        radial-gradient(900px 520px at 15% -10%, rgba(236,0,140,0.25), transparent 70%),
+        radial-gradient(900px 520px at 90% 5%, rgba(255,230,0,0.10), transparent 70%),
+        linear-gradient(135deg, #09060b, #0c1018 60%, #05080C);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .page { width: 100%; max-width: 1100px; }
+
+    .top-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+      padding: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.48);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      padding: 9px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.08s;
+      background: rgba(5, 8, 12, 0.38);
+      position: relative;
+    }
+
+    .top-nav a:hover {
+      background-color: rgba(236, 0, 140, 0.12);
+      border-color: rgba(236, 0, 140, 0.70);
+    }
+
+    .top-nav a[aria-current="page"]{
+      border-color: rgba(236, 0, 140, 0.78);
+      background: rgba(236, 0, 140, 0.12);
+      box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.10);
+    }
+
+    .case-header {
+      border: 1px solid rgba(236,0,140,0.26);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(5,8,12,0.88), rgba(28,11,24,0.72)),
+        radial-gradient(500px 240px at 10% 10%, rgba(236,0,140,0.22), transparent 70%),
+        radial-gradient(480px 240px at 92% 10%, rgba(255,230,0,0.11), transparent 70%);
+      box-shadow: 0 20px 60px var(--bl-shadow);
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .breadcrumb { margin: 0 0 14px 0; font-size: 0.92rem; color: rgba(237,239,242,0.75); }
+    .breadcrumb a { color: rgba(237,239,242,0.92); text-decoration: none; border-bottom: 1px solid rgba(236,0,140,0.72); }
+
+    .case-topline { display: grid; grid-template-columns: 1.3fr 1fr; gap: 22px; align-items: end; }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 0.95;
+      font-weight: 900;
+      margin: 0 0 12px 0;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .case-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255,230,0,0.72);
+      color: var(--fr-yellow);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin: 0;
+      max-width: 70ch;
+      color: rgba(237,239,242,0.84);
+    }
+
+    .case-switcher { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .mini-file {
+      text-decoration: none;
+      color: var(--bl-offwhite);
+      border: 1px solid rgba(237,239,242,0.18);
+      background: rgba(5,8,12,0.35);
+      border-radius: 14px;
+      padding: 14px;
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.08s, border-color 0.2s, background 0.2s;
+    }
+
+    .mini-file:hover { border-color: rgba(236,0,140,0.75); background: rgba(236,0,140,0.10); }
+    .mini-file:active { transform: translateY(1px); }
+    .mini-file.current { border-color: rgba(236,0,140,0.78); background: rgba(236,0,140,0.14); }
+    .mini-file .small { font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.78; font-weight: 800; }
+    .mini-file .name { font-size: 1.1rem; font-weight: 900; margin-top: 10px; }
+    .mini-file.dead { border-color: rgba(232,92,13,0.35); }
+    .mini-file.dead:hover { border-color: rgba(232,92,13,0.75); background: rgba(232,92,13,0.10); }
+
+    .section-title { display: flex; align-items: center; gap: 14px; margin: 4px 0 22px 0; }
+    .section-title h2 { margin: 0; font-size: 1.55rem; line-height: 1; text-transform: uppercase; letter-spacing: 0.04em; }
+    .section-title::after { content: ""; height: 2px; flex: 1; background: var(--fr-pink); border-radius: 999px; box-shadow: 0 0 18px rgba(236,0,140,0.25); }
+
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); gap: 22px; justify-content: center; align-items: start; }
+
+    .card {
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(236,0,140,0.25);
+      border-radius: 14px;
+      background: rgba(13, 10, 15, 0.72);
+      box-shadow: 0 18px 48px var(--bl-shadow);
+    }
+
+    .card:hover { border-color: rgba(236, 0, 140, 0.45); box-shadow: 0 22px 60px rgba(0,0,0,0.55); }
+
+    .cover { width: 100%; height: auto; display: block; object-fit: contain; background: rgba(5,8,12,0.25); border-bottom: 1px solid rgba(236,0,140,0.18); image-rendering: auto; }
+
+    .card-body { padding: 14px 14px 16px 14px; display: flex; flex-direction: column; gap: 8px; }
+
+    .title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .book-title { font-size: 1.08rem; font-weight: 800; margin: 0; line-height: 1.25; letter-spacing: 0.2px; color: var(--bl-offwhite); }
+    .byline{ margin: 2px 0 0 0; font-size: 0.88rem; font-weight: 700; color: rgba(237,239,242,0.82); }
+
+    .tag { border: 1px solid rgba(236, 0, 140, 0.62); background: rgba(236, 0, 140, 0.13); color: var(--bl-offwhite); border-radius: 999px; padding: 4px 10px; font-size: 0.78rem; white-space: nowrap; }
+    .tag.free { border-color: rgba(255,230,0,0.58); background: rgba(255,230,0,0.12); }
+
+    .blurb { font-size: 0.95rem; line-height: 1.55; color: rgba(237,239,242,0.84); }
+    .blurb p { margin: 0 0 10px 0; }
+    .blurb p:last-child { margin-bottom: 0; }
+
+    .blurb-more { display: none; margin-top: 6px; padding-top: 10px; border-top: 1px solid rgba(236,0,140,0.22); }
+
+    .blurb-toggle {
+      margin-top: 8px;
+      padding: 0;
+      border: none;
+      background: none;
+      color: rgba(237,239,242,0.92);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+    }
+
+    .blurb-toggle::after { content: "›"; font-size: 1.2rem; line-height: 1; transform: translateY(-1px); opacity: 0.9; transition: transform 0.12s ease, opacity 0.12s ease; }
+    .blurb-toggle:hover { color: var(--fr-pink); }
+    .blurb-toggle:hover::after { transform: translate(2px,-1px); opacity: 1; }
+
+    .buy-row{ margin-top: 10px; }
+
+    .buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,230,0,0.58);
+      background: rgba(255,230,0,0.12);
+      color: rgba(237,239,242,0.96);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 800;
+      transition: transform 0.08s, background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .buy-button:hover { background: rgba(236, 0, 140, 0.13); border-color: rgba(236, 0, 140, 0.72); color: rgba(237,239,242,0.98); }
+    .buy-button.free-button { border-color: rgba(236, 0, 140, 0.64); background: rgba(236, 0, 140, 0.14); }
+
+    .social-links {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 10px;
+      border: 1px solid rgba(236,0,140,0.22);
+      border-radius: 12px;
+      background: rgba(5, 8, 12, 0.32);
+      box-shadow: 0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a {
+      color: rgba(237,239,242,0.90);
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.08s, background 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(237,239,242,0.14);
+      background: rgba(5, 8, 12, 0.30);
+    }
+
+    .social-links a:hover { color: var(--fr-pink); border-color: rgba(236,0,140,0.55); background: rgba(236,0,140,0.08); }
+
+    @media (max-width: 960px) { .case-topline { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    @media (max-width: 620px) {
+      body { padding: 24px 14px; }
+      .card { max-width: 420px; }
+      .case-switcher { grid-template-columns: 1fr; }
+      .case-header { padding: 18px; }
+      .top-nav a { flex: 1 1 auto; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#cases" aria-current="page">The Cases</a>
+      <a href="about.html">About</a>
+      <a href="free-reads.html">Free Reads</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <header class="case-header">
+      <p class="breadcrumb"><a href="index.html#cases">← Back to all cases</a></p>
+      <div class="case-topline">
+        <div>
+          <span class="case-label">Case file: Female Rage</span>
+          <h1>Female Rage</h1>
+          <p class="intro">
+            Darkly funny revenge thrillers about women who have been underestimated for far too long.
+          </p>
+        </div>
+
+        <div class="case-switcher" aria-label="Case switcher">
+          <a class="mini-file dead" href="dead-ends.html">
+            <span class="small">Open another case</span>
+            <span class="name">Dead Ends</span>
+          </a>
+          <a class="mini-file current" href="female-rage.html" aria-current="page">
+            <span class="small">Current case</span>
+            <span class="name">Female Rage</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="section-title"><h2>Books and free reads</h2></div>
+
+    <section class="grid" aria-label="Female Rage books and free reads">
+
+      <article class="card">
+        <img class="cover" src="IFIDONTKILLTHEM.jpg" alt="Cover of If I Don't Kill Them, Who Will? by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">If I Don’t Kill Them, Who Will?</h2>
+            <span class="tag">Novel</span>
+          </div>
+          <p class="byline">A revenge thriller by Beck Lewis</p>
+          <div class="blurb">
+            <p>I’m starting to think killing them all might be the only reasonable response.</p>
+            <div class="blurb-more">
+              <p>I thought a corporate weekend away in Wales was going to involve too much wine, awkward nostalgia and listening to Daniel Bartlesham talk about himself.</p>
+              <p>I didn’t expect to discover that most of my friends are apparently fine with revenge porn, suicide and corporate cover-ups – just as long as nobody’s bonus is affected.</p>
+              <p>My friend Eve is dead because Daniel uploaded that video of her. And everyone at Bartlesham wants to call the whole thing an unfortunate misunderstanding and move on with their lives.</p>
+              <p>I’m not having that. Which is probably why I’m currently locked in the boot of a car. Daniel’s mate in the driving seat is going to murder me when we stop.</p>
+              <p>But now that I’ve realised how many terrible men are protected by money, power and people willing to look the other way… I’m starting to think killing them all might be the only reasonable response.</p>
+              <p>I mean, if I don’t kill them… who will?</p>
+            </div>
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button" href="https://readerlinks.com/l/5502158" target="_blank" rel="noopener noreferrer" aria-label="Buy If I Don't Kill Them, Who Will? on Amazon">
+              <i class="fa-brands fa-amazon" aria-hidden="true"></i> Buy on Amazon
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="cover" src="me-and-my-big-mouth-cover.jpg" alt="Cover of Me and My Big Mouth by Beck Lewis">
+        <div class="card-body">
+          <div class="title-row">
+            <h2 class="book-title">Me and My Big Mouth</h2>
+            <span class="tag free">Free read</span>
+          </div>
+          <p class="byline">A free story from the Female Rage world</p>
+          <div class="blurb">
+            <p>At first, it was funny.</p>
+            <p>Then it wasn't.</p>
+            <div class="blurb-more">
+              <p>I was alone in a soulless hotel restaurant with a gin, a Kindle and nothing better to do.</p>
+              <p>Then I spotted the perfect distraction: a nervous woman on a first date with a smug blond man in an expensive shirt.</p>
+              <p>At first, it was funny.</p>
+              <p>Then it wasn't.</p>
+            </div>
+            <button class="blurb-toggle" type="button">Read more</button>
+          </div>
+          <div class="buy-row">
+            <a class="buy-button free-button" href="https://becklewis.com/me-and-my-big-mouth-landing-page.html" aria-label="Get Me and My Big Mouth free">
+              <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Get the free story
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.blurb-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const more = button.previousElementSibling;
+        const expanded = more.style.display === 'block';
+        more.style.display = expanded ? 'none' : 'block';
+        button.textContent = expanded ? 'Read more' : 'Read less';
+      });
+    });
+  </script>
+</body>
+</html>
