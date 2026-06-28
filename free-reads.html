@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Reads & Extras | Beck Lewis</title>
+  <meta name="description" content="Free Beck Lewis stories, quizzes and extras, including Man or Bear, Me and My Big Mouth, The Hoarder and Female Rage colouring pages.">
+  <link rel="canonical" href="https://becklewis.com/free-reads.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Reads & Extras | Beck Lewis">
+  <meta property="og:description" content="Free Beck Lewis stories, quizzes and extras from Dead Ends, Female Rage and domestic suspense.">
+  <meta property="og:url" content="https://becklewis.com/free-reads.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Free Reads & Extras | Beck Lewis">
+  <meta name="twitter:description" content="Free stories, quizzes and extras from Beck Lewis.">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --bl-midnight:#0B1C2D;
+      --bl-midnight-2:#132A3A;
+      --bl-ink:#05080C;
+      --bl-offwhite:#EDEFF2;
+      --bl-concrete:#6E7B85;
+      --bl-orange:#E85C0D;
+      --bl-gold:#F2B705;
+      --bl-pink:#EC008C;
+      --bl-cream:#F3E6CA;
+      --bl-paper:#F7E8C5;
+      --bl-paper-dark:#D3A96A;
+      --bl-border:rgba(110,123,133,.22);
+      --bl-shadow:rgba(0,0,0,.40);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--bl-offwhite);
+      min-height:100vh;
+      background:radial-gradient(1100px 700px at 50% -10%,var(--bl-midnight-2),var(--bl-midnight));
+      display:flex;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .page{width:100%;max-width:1080px}
+
+    .top-nav{
+      display:flex;
+      gap:12px;
+      margin-bottom:32px;
+      flex-wrap:wrap;
+      padding:10px;
+      border:1px solid var(--bl-border);
+      border-radius:12px;
+      background:rgba(5,8,12,.35);
+      backdrop-filter:blur(10px);
+      box-shadow:0 16px 40px var(--bl-shadow);
+    }
+
+    .top-nav a{
+      text-decoration:none;
+      color:var(--bl-offwhite);
+      border:1px solid rgba(237,239,242,.18);
+      padding:9px 16px;
+      font-size:1rem;
+      font-weight:700;
+      border-radius:10px;
+      transition:background-color .2s,color .2s,border-color .2s,transform .08s;
+      background:rgba(19,42,58,.35);
+      position:relative;
+    }
+
+    .top-nav a:hover{
+      background-color:rgba(232,92,13,.12);
+      border-color:rgba(232,92,13,.65);
+    }
+
+    .top-nav a:active{transform:translateY(1px)}
+
+    .top-nav a[aria-current="page"]{
+      border-color:rgba(232,92,13,.70);
+      background:rgba(232,92,13,.10);
+      box-shadow:0 0 0 3px rgba(232,92,13,.10);
+    }
+
+    .top-nav a[aria-current="page"]::after{
+      content:"";
+      position:absolute;
+      left:12px;
+      right:12px;
+      bottom:-8px;
+      height:2px;
+      background:rgba(232,92,13,.85);
+      border-radius:999px;
+      box-shadow:0 6px 18px rgba(232,92,13,.18);
+    }
+
+    .page-header{
+      border:1px solid var(--bl-border);
+      border-radius:18px;
+      background:linear-gradient(135deg,rgba(5,8,12,.86),rgba(19,42,58,.62)),radial-gradient(600px 260px at 8% 5%,rgba(242,183,5,.15),transparent 70%);
+      box-shadow:0 18px 48px var(--bl-shadow);
+      padding:26px;
+      margin-bottom:26px;
+    }
+
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:rgba(242,183,5,.92);
+      font-weight:900;
+      font-size:.78rem;
+      margin:0 0 8px;
+    }
+
+    h1{
+      font-size:clamp(2rem,5vw,3.4rem);
+      line-height:1;
+      margin:0 0 12px;
+      font-weight:900;
+    }
+
+    .intro{
+      max-width:72ch;
+      color:rgba(237,239,242,.84);
+      font-size:1.05rem;
+      line-height:1.65;
+      margin:0;
+    }
+
+    .section{
+      margin:0 0 28px;
+      border:1px solid var(--bl-border);
+      border-radius:18px;
+      background:rgba(5,8,12,.28);
+      box-shadow:0 18px 48px var(--bl-shadow);
+      padding:22px;
+    }
+
+    .section-heading{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin:0 0 16px;
+      padding-bottom:12px;
+      border-bottom:1px solid rgba(110,123,133,.22);
+    }
+
+    .section-heading .icon{
+      width:42px;
+      height:42px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      border:1px solid rgba(242,183,5,.35);
+      background:rgba(242,183,5,.08);
+      font-size:1.15rem;
+      flex:0 0 auto;
+    }
+
+    .section h2{
+      margin:0;
+      font-size:1.45rem;
+      letter-spacing:.2px;
+    }
+
+    .resource-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .resource-card{
+      min-height:235px;
+      border:1px solid rgba(92,62,33,.28);
+      border-radius:16px;
+      background:
+        linear-gradient(145deg,rgba(255,246,224,.96),rgba(226,191,140,.95)),
+        radial-gradient(500px 200px at 0% 0%,rgba(255,255,255,.35),transparent 70%);
+      color:#182435;
+      box-shadow:0 16px 42px rgba(0,0,0,.34);
+      padding:16px;
+      overflow:hidden;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .resource-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:5px;
+      background:rgba(232,92,13,.78);
+    }
+
+    .resource-card.female::before{background:rgba(236,0,140,.86)}
+    .resource-card.dead::before{background:rgba(232,92,13,.78)}
+    .resource-card.domestic::before{background:rgba(94,74,126,.78)}
+
+    .resource-main{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .thumb-wrap{
+      width:110px;
+      flex:0 0 110px;
+      position:relative;
+      transform:rotate(-1.5deg);
+      filter:drop-shadow(0 10px 12px rgba(0,0,0,.28));
+    }
+
+    .thumb-wrap::before{
+      content:"";
+      position:absolute;
+      width:17px;
+      height:17px;
+      border-radius:50%;
+      top:-8px;
+      left:50%;
+      transform:translateX(-50%);
+      background:radial-gradient(circle at 35% 35%,#fff7ca,#c21e30 35%,#7c0710 70%);
+      box-shadow:0 3px 6px rgba(0,0,0,.35);
+      z-index:3;
+    }
+
+    .resource-card.female .thumb-wrap{transform:rotate(1.25deg)}
+    .resource-card.domestic .thumb-wrap{transform:rotate(-.75deg)}
+
+    .cover-thumb{
+      width:100%;
+      display:block;
+      border-radius:4px;
+      border:4px solid rgba(255,255,255,.72);
+      background:#111;
+    }
+
+    .icon-thumb{
+      width:98px;
+      height:118px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto;
+      border-radius:8px;
+      border:4px solid rgba(255,255,255,.75);
+      background:linear-gradient(160deg,rgba(11,28,45,.92),rgba(19,42,58,.78));
+      color:rgba(242,183,5,.92);
+      font-size:2.6rem;
+    }
+
+    .resource-card.female .icon-thumb{
+      background:linear-gradient(160deg,rgba(45,5,31,.94),rgba(236,0,140,.30));
+      color:rgba(255,255,255,.94);
+    }
+
+    .resource-text{min-width:0;flex:1}
+
+    .resource-type{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:fit-content;
+      border:1px solid rgba(11,28,45,.18);
+      background:rgba(255,255,255,.42);
+      color:#263244;
+      border-radius:999px;
+      padding:5px 10px;
+      font-size:.78rem;
+      font-weight:900;
+      margin-bottom:10px;
+    }
+
+    .resource-card h3{
+      margin:0 0 8px;
+      font-size:1.23rem;
+      line-height:1.18;
+      color:#101923;
+    }
+
+    .resource-card p{
+      margin:0 0 14px;
+      color:rgba(16,25,35,.78);
+      line-height:1.5;
+      font-size:.97rem;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      width:100%;
+      margin-top:16px;
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid rgba(11,28,45,.22);
+      background:rgba(11,28,45,.92);
+      color:rgba(255,255,255,.96);
+      font-size:.96rem;
+      font-weight:900;
+      text-decoration:none;
+      transition:transform .08s,background .2s,border-color .2s,color .2s;
+    }
+
+    .button:hover{
+      background:rgba(232,92,13,.96);
+      border-color:rgba(232,92,13,.96);
+    }
+
+    .resource-card.female .button:hover{
+      background:rgba(236,0,140,.96);
+      border-color:rgba(236,0,140,.96);
+    }
+
+    .resource-card.domestic .button:hover{
+      background:rgba(94,74,126,.96);
+      border-color:rgba(94,74,126,.96);
+    }
+
+    .button:active{transform:translateY(1px)}
+
+    .social-links{
+      margin-top:34px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+      padding:12px 10px;
+      border:1px solid var(--bl-border);
+      border-radius:12px;
+      background:rgba(5,8,12,.25);
+      box-shadow:0 16px 40px var(--bl-shadow);
+    }
+
+    .social-links a{
+      color:rgba(237,239,242,.90);
+      font-size:1.35rem;
+      transition:color .2s,transform .08s,background .2s,border-color .2s;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px;
+      height:40px;
+      border-radius:10px;
+      border:1px solid rgba(237,239,242,.14);
+      background:rgba(19,42,58,.25);
+    }
+
+    .social-links a:hover{
+      color:var(--bl-orange);
+      border-color:rgba(232,92,13,.55);
+      background:rgba(232,92,13,.08);
+    }
+
+    @media(max-width:860px){
+      .resource-grid{grid-template-columns:1fr}
+    }
+
+    @media(max-width:560px){
+      body{padding:24px 14px}
+      .top-nav a{flex:1 1 auto;text-align:center}
+      .section{padding:18px}
+      .page-header{padding:22px}
+      .resource-main{gap:13px}
+      .thumb-wrap{width:86px;flex-basis:86px}
+      .icon-thumb{width:82px;height:100px;font-size:2.2rem}
+      .resource-card{padding:14px;min-height:0}
+      .resource-card h3{font-size:1.12rem}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#cases">The Cases</a>
+      <a href="about.html">About</a>
+      <a href="free-reads.html" aria-current="page">Free Reads</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <header class="page-header">
+      <p class="eyebrow">Free evidence</p>
+      <h1>Free Reads & Extras</h1>
+      <p class="intro">
+        Free stories, quizzes and printable extras from the Beck Lewis crime worlds. Choose a case file and start with whatever tempts you most.
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="dead-ends-free">
+      <div class="section-heading">
+        <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <h2 id="dead-ends-free">Dead Ends</h2>
+      </div>
+
+      <div class="resource-grid">
+        <article class="resource-card dead">
+          <div class="resource-main">
+            <div class="thumb-wrap">
+              <img class="cover-thumb" src="ManBear.jpg" alt="Cover of Man or Bear by Beck Lewis">
+            </div>
+            <div class="resource-text">
+              <span class="resource-type"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Free Story</span>
+              <h3>Man or Bear</h3>
+              <p>A free psychological thriller short story from the Dead Ends world.</p>
+            </div>
+          </div>
+          <a class="button" href="https://becklewis.com/landing-page.html">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download Free
+          </a>
+        </article>
+
+        <article class="resource-card dead">
+          <div class="resource-main">
+            <div class="thumb-wrap" aria-hidden="true">
+              <div class="icon-thumb"><i class="fa-solid fa-circle-question"></i></div>
+            </div>
+            <div class="resource-text">
+              <span class="resource-type"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Quiz</span>
+              <h3>Would You Survive a Psychological Thriller?</h3>
+              <p>Take the quiz and find out whether your instincts would save you or sink you.</p>
+            </div>
+          </div>
+          <a class="button" href="https://becklewis.com/survive.html">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Start Quiz
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="female-rage-free">
+      <div class="section-heading">
+        <span class="icon" aria-hidden="true"><i class="fa-solid fa-heart-crack"></i></span>
+        <h2 id="female-rage-free">Female Rage</h2>
+      </div>
+
+      <div class="resource-grid">
+        <article class="resource-card female">
+          <div class="resource-main">
+            <div class="thumb-wrap">
+              <img class="cover-thumb" src="me-and-my-big-mouth-cover.jpg" alt="Cover of Me and My Big Mouth by Beck Lewis">
+            </div>
+            <div class="resource-text">
+              <span class="resource-type"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Free Story</span>
+              <h3>Me and My Big Mouth</h3>
+              <p>A free revenge thriller short story. At first, it was funny. Then it wasn’t.</p>
+            </div>
+          </div>
+          <a class="button" href="https://becklewis.com/me-and-my-big-mouth-landing-page.html">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download Free
+          </a>
+        </article>
+
+        <article class="resource-card female">
+          <div class="resource-main">
+            <div class="thumb-wrap" aria-hidden="true">
+              <div class="icon-thumb"><i class="fa-solid fa-palette"></i></div>
+            </div>
+            <div class="resource-text">
+              <span class="resource-type"><i class="fa-solid fa-palette" aria-hidden="true"></i> Printable</span>
+              <h3>Female Rage Colouring Pages</h3>
+              <p>Printable colouring pages for readers who like their relaxation with a sharper edge.</p>
+            </div>
+          </div>
+          <a class="button" href="https://becklewis.com/female-rage-colouring.html">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download
+          </a>
+        </article>
+
+        <article class="resource-card female">
+          <div class="resource-main">
+            <div class="thumb-wrap" aria-hidden="true">
+              <div class="icon-thumb"><i class="fa-solid fa-clipboard-question"></i></div>
+            </div>
+            <div class="resource-text">
+              <span class="resource-type"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Quiz</span>
+              <h3>Which Female Rage Heroine Are You?</h3>
+              <p>Take the quiz and discover your revenge-thriller alter ego.</p>
+            </div>
+          </div>
+          <a class="button" href="https://becklewis.com/female-rage-quiz.html">
+            <i class="fa-solid fa-play" aria-hidden="true"></i> Start Quiz
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="domestic-suspense-free">
+      <div class="section-heading">
+        <span class="icon" aria-hidden="true"><i class="fa-solid fa-box-archive"></i></span>
+        <h2 id="domestic-suspense-free">Domestic Suspense</h2>
+      </div>
+
+      <div class="resource-grid">
+        <article class="resource-card domestic">
+          <div class="resource-main">
+            <div class="thumb-wrap">
+              <img class="cover-thumb" src="the-hoarder-cover.jpg" alt="Cover of The Hoarder by Beck Lewis">
+            </div>
+            <div class="resource-text">
+              <span class="resource-type"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Free Story</span>
+              <h3>The Hoarder</h3>
+              <p>A free domestic suspense short story for readers who like secrets stacked high.</p>
+            </div>
+          </div>
+          <a class="button" href="https://becklewis.com/the-hoarder-landing-page.html">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download Free
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@BeckLewisWrites" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/becklewiswrites/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576679982271" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@becklewis5" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</body>
+</html>
