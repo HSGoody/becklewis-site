@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>If I Don't Kill Them, Who Will? by Beck Lewis</title>
+  <meta name="description" content="A darkly funny psychological thriller about justice, rage, and one woman who has finally had enough." />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '941033298595755');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=941033298595755&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --ink: #190812;
+      --plum: #331122;
+      --berry: #7B1746;
+      --hot: #E01B72;
+      --rose: #FF6AA2;
+      --cream: #FFF3E8;
+      --paper: #FFE6D9;
+      --white: #FFFFFF;
+      --muted: #F8C6D8;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(224, 27, 114, 0.55) 0%, rgba(224, 27, 114, 0.06) 35%, transparent 58%),
+        radial-gradient(circle at top right, rgba(255, 106, 162, 0.30) 0%, rgba(255, 106, 162, 0.05) 34%, transparent 55%),
+        linear-gradient(160deg, #130711 0%, #2A0E1E 45%, #050306 100%);
+      color: var(--cream);
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 20px 44px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(220px, 330px) 1fr;
+      gap: 42px;
+      align-items: center;
+      padding: 28px 0 36px;
+    }
+
+    .cover {
+      width: min(76vw, 330px);
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 24px 65px var(--shadow);
+      border-radius: 4px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5.8rem);
+      line-height: 0.86;
+      margin: 0 0 18px;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: -0.045em;
+    }
+
+    .headline {
+      font-size: clamp(1.4rem, 4vw, 2.15rem);
+      line-height: 1.08;
+      margin: 0 0 10px;
+      font-weight: 800;
+      color: var(--rose);
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 2.6vw, 1.25rem);
+      line-height: 1.45;
+      margin: 0 0 24px;
+      color: #F9DCE7;
+      max-width: 620px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--hot);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+      padding: 18px 28px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      box-shadow: 0 14px 35px rgba(224, 27, 114, 0.32);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: #FF2B86;
+      transform: translateY(-1px);
+    }
+
+    .button.full { width: 100%; text-align: center; }
+
+    .small {
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin: 13px 0 0;
+      color: #ECC5D5;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(4px);
+      margin: 20px 0;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 4.5vw, 2.45rem);
+      line-height: 1;
+      margin: 0 0 16px;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      font-size: 1.04rem;
+      line-height: 1.58;
+      margin: 0 0 14px;
+    }
+
+    .quote {
+      font-size: 1.18rem;
+      line-height: 1.35;
+      font-weight: bold;
+      color: var(--paper);
+      border-left: 5px solid var(--hot);
+      padding-left: 16px;
+      margin: 6px 0 0;
+    }
+
+    .ticks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 11px;
+    }
+
+    .ticks li {
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 12px;
+      padding: 12px 13px 12px 42px;
+      position: relative;
+      line-height: 1.35;
+      font-weight: bold;
+      color: #FFEAF2;
+    }
+
+    .ticks li::before {
+      content: "✓";
+      position: absolute;
+      left: 14px;
+      top: 10px;
+      color: var(--rose);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .comps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .comp {
+      background: var(--cream);
+      color: var(--ink);
+      border-radius: 16px;
+      padding: 18px 14px;
+      text-align: center;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .comp span {
+      display: block;
+      font-size: 0.78rem;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--berry);
+      margin-bottom: 5px;
+    }
+
+    .footer-cta {
+      text-align: center;
+      padding: 32px 0 12px;
+    }
+
+    .footer-cta .button {
+      min-width: min(100%, 360px);
+    }
+
+    .author {
+      color: #F8D8E4;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { padding: 20px 16px 34px; }
+
+      .hero,
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .hero { text-align: center; padding-top: 12px; }
+      .tagline { margin-left: auto; margin-right: auto; }
+      .button { width: 100%; text-align: center; }
+      .panel { padding: 21px; border-radius: 18px; }
+      .comps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <!-- Replace this image filename with your actual cover image path -->
+      <img class="cover" src="IFIDONTKILLTHEM.jpg" alt="If I Don't Kill Them, Who Will? by Beck Lewis book cover" />
+
+      <div>
+        <p class="eyebrow">A darkly funny psychological thriller</p>
+        <h1>If I Don't Kill Them, Who Will?</h1>
+        <p class="headline">She wasn't looking for revenge. She was looking for justice.</p>
+        <p class="tagline">The trouble is, sometimes they look exactly the same.</p>
+
+        <a
+          class="button"
+          href="https://readerlinks.com/l/5504362"
+          target="_blank"
+          rel="noopener"
+          onclick="trackAmazonClick(event)"
+        >
+          Read on Amazon
+        </a>
+        <p class="small">Available for Kindle, paperback and Kindle Unlimited.</p>
+      </div>
+    </section>
+
+    <section class="panel intro">
+      <div>
+        <h2>When the worst has already happened, what is left to be afraid of?</h2>
+        <p>Nicole Varkonyi thought she had survived.</p>
+        <p>Now the men who hurt her friend are about to learn the power of female rage.</p>
+        <p class="quote">A sharp, furious thriller for anyone who has ever wondered what would happen if a woman finally stopped being reasonable.</p>
+      </div>
+
+      <div>
+        <h2>Is this for you?</h2>
+        <ul class="ticks">
+          <li>Darkly funny psychological thrillers</li>
+          <li>Female rage and revenge</li>
+          <li>Morally complicated heroines</li>
+          <li>Ordinary women pushed to extraordinary limits</li>
+          <li>Readers of Bella Mackie and C. J. Skuse</li>
+          <li>Fans of Killing Eve</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Think dark wit, sharp edges, and consequences</h2>
+      <p>If you enjoy the savage humour of Bella Mackie, the unapologetic bite of C. J. Skuse, and the cat-and-mouse energy of <em>Killing Eve</em>, this is your kind of thriller.</p>
+
+      <div class="comps" aria-label="Comparable authors and shows">
+        <div class="comp"><div><span>For readers of</span>Bella Mackie</div></div>
+        <div class="comp"><div><span>For readers of</span>C. J. Skuse</div></div>
+        <div class="comp"><div><span>For fans of</span>Killing Eve</div></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>About the book</h2>
+      <p><strong>If I Don't Kill Them, Who Will?</strong> is a standalone psychological thriller from Beck Lewis, author of the Dead Ends series.</p>
+      <p>It is for readers who like their thrillers tense, emotional, viciously funny, and just a little bit too satisfying when the wrong people start getting exactly what they deserve.</p>
+    </section>
+
+    <section class="footer-cta">
+      <a
+        class="button"
+        href="https://readerlinks.com/l/5504362"
+        target="_blank"
+        rel="noopener"
+        onclick="trackAmazonClick(event)"
+      >
+        Read on Amazon
+      </a>
+      <p class="small">Clicking the button will take you to the book's Amazon page.</p>
+      <p class="author">Beck Lewis writes gripping, immersive thrillers with teeth.</p>
+    </section>
+  </main>
+
+  <script>
+    function trackAmazonClick(event) {
+      event.preventDefault();
+
+      fbq('trackCustom', 'AmazonClick', {
+        book: 'IfIDontKillThemWhoWill'
+      });
+
+      setTimeout(function () {
+        window.open('https://readerlinks.com/l/5504362', '_blank', 'noopener');
+      }, 300);
+    }
+  </script>
+</body>
+</html>
