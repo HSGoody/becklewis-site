@@ -66,44 +66,11 @@ body{
   align-items:center;
 }
 
-.cover-placeholder{
+.cover{
   width:100%;
   max-width:280px;
-  aspect-ratio:2 / 3;
   border-radius:8px;
-  border:1px solid rgba(255,255,255,0.22);
   box-shadow:0 20px 60px rgba(0,0,0,0.45);
-  background:
-    linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.4)),
-    linear-gradient(145deg, #53636c, #1a2227 65%);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:24px;
-}
-
-.cover-placeholder .title{
-  font-size:2em;
-  line-height:1;
-  font-weight:bold;
-  letter-spacing:0.04em;
-  text-transform:uppercase;
-}
-
-.cover-placeholder .author{
-  margin-top:18px;
-  font-size:1em;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--muted);
-}
-
-.cover-placeholder .note{
-  margin-top:24px;
-  font-size:0.8em;
-  color:#c3c9c9;
 }
 
 h1{
@@ -174,7 +141,7 @@ button:hover{
 @media (max-width:720px){
   body{padding:24px 16px;}
   .hero{display:block;}
-  .cover-placeholder{margin:0 auto 24px;max-width:230px;}
+  .cover{display:block;margin:0 auto 24px;max-width:230px;}
   h1{font-size:2em;}
 }
 </style>
@@ -185,14 +152,7 @@ button:hover{
 <div class="container">
 
   <div class="hero">
-    <!-- Replace this placeholder with:
     <img class="cover" src="rock-solid-cover.jpg" alt="Rock Solid by Beck Lewis ebook cover">
-    and add the .cover styling used in the other landing pages. -->
-    <div class="cover-placeholder" role="img" aria-label="Placeholder cover for Rock Solid by Beck Lewis">
-      <div class="title">Rock Solid</div>
-      <div class="author">Beck Lewis</div>
-      <div class="note">Cover coming soon</div>
-    </div>
 
     <div>
       <h1>A free West Mercia crime story.</h1>
