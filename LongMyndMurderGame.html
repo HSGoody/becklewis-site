@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Murder on the Long Mynd</title>
+<style>
+    :root {
+        --bg: #d8d0bf;
+        --panel: #f4efe4;
+        --paper: #fffaf0;
+        --ink: #25221d;
+        --muted: #6c6254;
+        --accent: #713b2d;
+        --accent-dark: #3d211a;
+        --line: #b9a98f;
+        --note: #fff7c8;
+        --green: #2f5942;
+        --shadow: rgba(38, 28, 16, 0.24);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+            radial-gradient(circle at top left, rgba(255,255,255,.28), transparent 35%),
+            linear-gradient(135deg, #cfc5b1, var(--bg));
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+        padding: 22px 30px 18px;
+        border-bottom: 4px solid var(--accent-dark);
+        background: #1f211f;
+        color: #f7efe0;
+        box-shadow: 0 4px 18px var(--shadow);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 4rem);
+        letter-spacing: .04em;
+        text-transform: uppercase;
+    }
+
+    header p {
+        margin: 6px 0 0;
+        color: #d5c8af;
+        font-size: 1.25rem;
+    }
+
+    .game {
+        display: grid;
+        grid-template-columns: minmax(420px, 1.35fr) minmax(250px, .55fr) minmax(310px, .75fr);
+        gap: 18px;
+        padding: 22px;
+        height: calc(100vh - 118px);
+    }
+
+    .panel {
+        background: var(--panel);
+        border: 2px solid var(--line);
+        border-radius: 14px;
+        box-shadow: 0 8px 22px var(--shadow);
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .story-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .story-head {
+        padding: 18px 22px;
+        background: #e6ddca;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .story-head .section {
+        font-size: .85rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        margin-bottom: 5px;
+    }
+
+    .story-head h2 {
+        margin: 0;
+        font-size: 1.85rem;
+        color: var(--accent-dark);
+    }
+
+    #storyText {
+        padding: 24px 30px 36px;
+        overflow-y: auto;
+        font-size: 1.15rem;
+        line-height: 1.62;
+        background: linear-gradient(90deg, rgba(255,255,255,.45), transparent 18%), var(--paper);
+        flex: 1;
+    }
+
+    #storyText p {
+        margin: 0 0 1em;
+    }
+
+    #storyText p:last-child {
+        margin-bottom: 0;
+    }
+
+    .side-panel {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .panel-title {
+        padding: 14px 16px;
+        background: #2b2e2b;
+        color: #f7efe0;
+        font-weight: bold;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        font-size: .9rem;
+    }
+
+    .avenues-intro {
+        padding: 13px 15px;
+        font-size: .95rem;
+        line-height: 1.35;
+        color: var(--muted);
+        border-bottom: 1px solid var(--line);
+        background: #ece4d4;
+    }
+
+    #avenues {
+        padding: 12px;
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .avenue {
+        width: 100%;
+        border: 1px solid #9e8c72;
+        background: #fff8e8;
+        color: var(--ink);
+        text-align: left;
+        padding: 12px 13px;
+        margin: 0 0 9px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: .98rem;
+        line-height: 1.25;
+        box-shadow: 0 2px 0 rgba(0,0,0,.08);
+        transition: transform .08s ease, background .12s ease;
+    }
+
+    .avenue:hover {
+        transform: translateY(-1px);
+        background: #fff1cf;
+        border-color: var(--accent);
+    }
+
+    .avenue .num {
+        display: inline-block;
+        font-weight: bold;
+        color: var(--accent);
+        margin-right: 6px;
+    }
+
+    .empty {
+        color: var(--muted);
+        padding: 12px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    .notepad-panel {
+        display: flex;
+        flex-direction: column;
+        background: #f6efcf;
+    }
+
+    #notepad {
+        position: relative;
+        padding: 14px 18px 30px 38px;
+        overflow-y: auto;
+        flex: 1;
+        background:
+            repeating-linear-gradient(
+                to bottom,
+                var(--note) 0px,
+                var(--note) 29px,
+                #eadf9e 30px
+            );
+        border-left: 4px solid #d55d4b;
+        font-family: "Courier New", monospace;
+        font-size: .92rem;
+        line-height: 30px;
+    }
+
+    #notepad::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 24px;
+        border-left: 1px solid rgba(190, 52, 52, .45);
+    }
+
+    .note-item {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 0;
+        line-height: 30px;
+    }
+
+    .note-item span {
+        color: #8c2e20;
+        font-weight: bold;
+    }
+
+    .footer-tools {
+        padding: 12px;
+        border-top: 1px solid var(--line);
+        background: #e6ddca;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .tool-btn {
+        border: 0;
+        border-radius: 9px;
+        padding: 9px 12px;
+        background: var(--accent);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-size: .85rem;
+    }
+
+    .tool-btn.secondary {
+        background: #5b6258;
+    }
+
+    .solved {
+        border: 3px solid #315b41;
+        background: #e5f4df;
+        padding: 15px;
+        margin: 0 0 18px;
+        border-radius: 12px;
+        font-family: Arial, sans-serif;
+        line-height: 1.45;
+    }
+
+    .solved strong {
+        color: #21462e;
+    }
+
+    @media (max-width: 1050px) {
+        .game {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+        .panel {
+            min-height: 360px;
+        }
+        #storyText, #avenues, #notepad {
+            max-height: 60vh;
+        }
+    }
+
+    #scoreBar {
+        margin-top: 10px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        font-family: Arial, sans-serif;
+        font-size: .95rem;
+        color: #f2e8d8;
+    }
+
+    #scoreBar span span {
+        font-weight: bold;
+    }
+
+    .profile {
+        position: fixed;
+        top: 18px;
+        right: 22px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 280px;
+        max-width: 340px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 2px solid rgba(255,255,255,.55);
+        box-shadow: 0 8px 22px rgba(0,0,0,.32);
+        color: white;
+        font-family: Arial, sans-serif;
+        transition: background .25s ease, transform .18s ease, border-color .25s ease;
+    }
+
+    .profile.flash {
+        transform: scale(1.04);
+    }
+
+    .profile.inspired {
+        background: linear-gradient(135deg, #0b4f9c, #1f83d1);
+    }
+
+    .profile.maverick {
+        background: linear-gradient(135deg, #126b3a, #26a269);
+    }
+
+    .profile.thorough {
+        background: linear-gradient(135deg, #8a4f00, #d4891c);
+    }
+
+    .profile-icon {
+        font-size: 2.5rem;
+        line-height: 1;
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        background: rgba(255,255,255,.18);
+        border-radius: 50%;
+    }
+
+    .profile-kicker {
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: .68rem;
+        opacity: .88;
+        margin-bottom: 3px;
+    }
+
+    .profile-title {
+        font-size: 1.15rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .profile-line {
+        font-size: .83rem;
+        opacity: .95;
+        margin-top: 2px;
+    }
+
+    @media (max-width: 1050px) {
+        .profile {
+            position: static;
+            margin-top: 14px;
+            max-width: none;
+        }
+    }
+
+
+    /* Rock Solid promotion */
+    .rock-solid-promo {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 30;
+        width: 390px;
+        display:grid;
+        grid-template-columns:120px 1fr;
+        gap:18px;
+        align-items:center;
+        padding:18px;
+        background:rgba(31,33,31,.88);
+        backdrop-filter: blur(3px);
+        color:#f7efe0;
+        border:2px solid #d5bb86;
+        border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,.45);
+        text-decoration:none;
+        transition:.15s;
+        font-family:Arial,sans-serif;
+    }
+    .rock-solid-promo:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.55);}
+    .rock-solid-promo img{width:120px;height:180px;object-fit:cover;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,.45);}
+    .rock-solid-promo-kicker{margin:0;color:#e7cf9f;font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;}
+    .rock-solid-promo-title{margin:.2rem 0;font:700 1.7rem Georgia,serif;color:#fff;line-height:1.05;}
+    .rock-solid-promo-copy{margin:.5rem 0;color:#ece3d5;line-height:1.4;font-size:.95rem;}
+    .rock-solid-btn{display:inline-block;margin-top:10px;padding:10px 18px;background:#d2b06a;color:#231a12;border-radius:8px;font-weight:700;text-decoration:none;}
+    @media(max-width:1050px){
+      .rock-solid-promo{width:min(420px,calc(100vw - 20px));grid-template-columns:90px 1fr;padding:14px}
+      .rock-solid-promo img{width:90px;height:135px}
+      .rock-solid-promo-title{font-size:1.35rem}
+    }
+
+</style>
+</head>
+<body>
+
+<a class="rock-solid-promo" href="https://becklewis.com/rock-solid-landing-page.html" aria-label="Download Rock Solid free">
+<img src="rock-solid-cover.jpg" alt="Rock Solid cover">
+<div>
+<p class="rock-solid-promo-kicker">Ready for your next case?</p>
+<div class="rock-solid-promo-title">Rock Solid</div>
+<p class="rock-solid-promo-copy">Meet the detectives of Mercia in a complete, free crime novel.</p>
+<span class="rock-solid-btn">Download Free</span>
+</div>
+</a>
+
+<header>
+    <h1>Murder on the Long Mynd</h1>
+    <p>Can you solve the mystery?</p><div id="scoreBar">
+        <span><strong>Thorough Detective:</strong> <span id="thoroughnessPct">0%</span></span>
+        <span><strong>Inspired Detective:</strong> <span id="inspiredPct">100%</span></span>
+        <span><strong>Maverick Detective:</strong> <span id="maverickPct">0%</span></span>
+    </div>
+    <div id="profileBadge" class="profile inspired">
+        <div class="profile-icon" id="profileIcon">🔎</div>
+        <div>
+            <div class="profile-kicker">Detective Profile</div>
+            <div class="profile-title" id="profileTitle">Inspired Detective</div>
+            <div class="profile-line" id="profileLine">You spot the pattern quickly.</div>
+        </div>
+    </div>
+</header>
+
+<main class="game">
+    <section class="panel story-panel">
+        <div class="story-head">
+            <div class="section" id="sectionNum">Section 1</div>
+            <h2 id="sectionTitle">Start</h2>
+        </div>
+        <article id="storyText"></article>
+    </section>
+
+    <aside class="panel side-panel">
+        <div class="panel-title">Available avenues</div>
+        <div class="avenues-intro">
+            Leads appear here as you discover them. New avenues are added at the bottom.
+        </div>
+        <div id="avenues"></div>
+        <div class="footer-tools">
+            <button class="tool-btn secondary" onclick="restartGame()">Restart case</button>
+        </div>
+    </aside>
+
+    <aside class="panel notepad-panel">
+        <div class="panel-title">Police notepad</div>
+        <div id="notepad"></div>
+    </aside>
+</main>
+
+<script>
+const EVENTS = {"1": {"id": 1, "label": "1 - START", "title": "Start", "summary": "Section 1: Initial arrival at the crime scene on a grassy hillside in Shropshire, where a burnt human body is discovered near a campfire.", "text": "You stand on the grassy hillside of the Long Mynd in Shropshire.\nIn front of you is the crime scene.\nThere is a campfire, or rather the remains of a campfire. In front of it, blackened and burned, is a human body.\nThe face is too burned for anyone to recognise.\nYou can see twisted, melted plastic from the victim's coat.\nThe wind and soft rain have taken away any smell from the burnt corpse. Thank goodness.\nDI Maggie Shaw turns to you.\n\"Walkers found this person this morning,\" she says. \"Called it in just after nine o'clock. Could be accidental. Perhaps otherwise. I'm sure forensics and the pathologist will have an opinion on that.\"\nWhat do you do?", "note": "Victim's face too burnt to identify", "leads": [{"id": 2, "label": "2 - CAUSE OF DEATH?", "title": "Cause Of Death?"}, {"id": 3, "label": "3 - SEARCH THE CORPSE", "title": "Search The Corpse"}, {"id": 7, "label": "7 - SEARCH THE AREA AROUND BODY", "title": "Search The Area Around Body"}, {"id": 39, "label": "39 - TALK TO THE LOCAL POLICE", "title": "Talk To The Local Police"}]}, "2": {"id": 2, "label": "2 - CAUSE OF DEATH?", "title": "Cause Of Death?", "summary": "Section 2: Pathologist Dr. Olivia Bronsky arrives and observes marks on the victim’s wrists, suggesting they may have been tied up.", "text": "Dr Olivia Vronsky comes up the hillside in her bright red wellies, her doctor's bag in her hand as though she is about to treat a patient.\nShe spends some time crouched beside the corpse while CSI photographs the scene.\n\"Clearly this person has been burnt,\" she says. \"Whether the burning fire is the cause of death, we'll have to see.\"\nShe glances around the scene.\n\"I'm sure forensics will agree with me that an accelerant has been used here. Petrol. Lighter fluid. Something.\"\nShe pauses.\n\"Perhaps we'll get something when we do a tox report. But look here.\"\nDr Vronsky beckons you closer.\nShe points at the exposed wrist of the victim. The hands are unburned, pale pink.\n\"See these marks?\" she says.\nTight lines circle both wrists.\n\"Perhaps this person was tied up at some point.\"", "note": "Victim may have been tied up", "leads": [{"id": 5, "label": "5 - ASK FOR POST-MORTEM TOX REPORT", "title": "Ask For Post-Mortem Tox Report"}, {"id": 14, "label": "14 - LOOK AT MARKS ON VICTIM's WRISTS", "title": "Look At Marks On Victim's Wrists"}]}, "3": {"id": 3, "label": "3 - SEARCH THE CORPSE", "title": "Search The Corpse", "summary": "Section 3: Forensic discovery of a wallet and a Post-it note on the victim; it is noted that the victim's walking boots were unusually untied.", "text": "You ask forensics whether they have searched the body.\nA number of things have been found.\nThe victim has a wallet in an inside coat pocket.\nThe victim is male.\nThere is also a Post-it note tucked into one of his pockets.\nAs you inspect the body more closely, something else catches your attention.\nThe victim's walking boots are untied. Worn very loosely. The tongues hang out from beneath the laces.\nFor someone who might have been out on the hillside during the night, this seems rather unusual.", "note": "Wallet, note and untied boots found near body", "leads": [{"id": 6, "label": "6 - LOOK IN VICTIM's WALLET", "title": "Look In Victim's Wallet"}, {"id": 9, "label": "9 - LOOK AT NOTE ON BODY", "title": "Look At Note On Body"}]}, "4": {"id": 4, "label": "4 - TRACE VICTIM's FINAL JOURNEY", "title": "Trace Victim's Final Journey", "summary": "", "text": "You try to picture the victim's final journey.\nThe body is high on the hillside, but there are only so many ways someone could have reached this place, especially at night.\nThe most likely route is up from Church Stretton through Carding Mill Valley and onto the Long Mynd.\nIf the victim came this way, or if someone brought him this way, somebody in the village may have seen something.\nThere are cottages near the lower track.\nThere are roads, car parks, and places where a vehicle might briefly stop.\nThis body did not simply appear here.\nSomeone made a journey to bring it to this hillside.", "note": "Somebody brought the victim here", "leads": [{"id": 10, "label": "10 - TALK TO THE COTTAGES BELOW THE HILL", "title": "Did Anyone At The White Cottage See Anything?"}, {"id": 11, "label": "11 - ASK AROUND IN THE VILLAGE", "title": "Ask Around In The Village"}]}, "5": {"id": 5, "label": "5 - ASK FOR POST-MORTEM TOX REPORT", "title": "Ask For Post-Mortem Tox Report", "summary": "Section 5: Discussion with the pathologist regarding the need for a toxicology screening to check for poison or sedatives.", "text": "\"Talk to me about the tox report,\" you say to Dr Vronsky.\n\"That will have to wait,\" she replies. \"We'll need to get the body down the hillside and into pathology. Nearest place is probably Telford.\"\nShe shrugs.\n\"Could be a while before you get the toxicology screening back. Then we'll see whether there's any poison in the body.\"", "note": "Was he poisoned?", "leads": []}, "6": {"id": 6, "label": "6 - LOOK IN VICTIM's WALLET", "title": "Look In Victim's Wallet", "summary": "Section 6: Inspection of the wallet identifies the victim as Algernon Chambers.", "text": "You open the wallet.\nInside is fifteen pounds in cash and a couple of bank cards.\nOne of the cards bears a name.\nAlgernon Chambers.\nThe name means nothing to you.\n\"At least we know who it is,\" you say to DI Shaw.", "note": "Victim's wallet names him as Algernon Chambers", "leads": [{"id": 12, "label": "12 - CHECK VICTIM's POLICE RECORD", "title": "Check Victim's Police Record"}, {"id": 13, "label": "13 - CONTACT VICTIM's HOME ADDRESS", "title": "Contact Victim's Home Address"}]}, "7": {"id": 7, "label": "7 - SEARCH THE AREA AROUND BODY", "title": "Search The Area Around Body", "summary": "Section 7: A search of the local area conducted by police officers.", "text": "Local police officers spread out around the fire site.\nA careful search of the immediate area turns up several items of interest.\nThe hip flask.\nThe blue rope.\nThe footprints.\nEach is photographed and marked.\nAlfie Dodman points to one impression in the soft ground.\n\"That's a big footprint,\" he says.\nYou look down.\nHe is right. The print is large. Much larger than yours.\nWhatever happened here, it did not happen by accident.", "note": "Some large footprints near the fire", "leads": [{"id": 14, "label": "14 - LOOK AT MARKS ON VICTIM's WRISTS", "title": "Look At Marks On Victim's Wrists"}, {"id": 15, "label": "15 - LOOK IN HIP FLASK", "title": "Look In Hip Flask"}]}, "9": {"id": 9, "label": "9 - LOOK AT NOTE ON BODY", "title": "Look At Note On Body", "summary": "Section 9: Analysis of the Post-it note, which contains the address for the Fairfax Guest House.", "text": "The Post-it note contains an address.\nFairfax Guest House\nMain Street\nChurch Stretton\nA guest house.\nDoes the victim know someone there?\nWas he staying there?", "note": "Post-it note points to Fairfax Guest House", "leads": [{"id": 17, "label": "17 - VISIT THE GUESTHOUSE", "title": "Visit The Guesthouse"}]}, "10": {"id": 10, "label": "10 - TALK TO THE COTTAGES BELOW THE HILL", "title": "Did Anyone At The White Cottage See Anything?", "summary": "Section 10: An interview with a witness in a white cottage who saw a person in an orange hoodie walking toward the hills on the night of the incident.", "text": "You walk down to where the track from the hillside meets the main road.\nA white cottage stands on the corner.\nWorth a gamble.\nYou knock on the door.\nA man answers.\nYou show him your identification.\n\"West Mercia Police. I wonder if you saw anything unusual last night?\"\nThe man strokes his chin.\n\"I did see someone,\" he says eventually. \"Walking up towards the Long Mynd. Up the track past Carding Mill Valley.\"\n\"Can you describe them?\"\n\"Not really. Hood was up.\"\nHe thinks for a moment.\n\"Orange hoodie. Very bright orange.\"\n\"Orange?\" you say.\nThe victim's waterproof was green.\n\"Definitely orange,\" says the man.", "note": "Man in orange hoodie seen", "leads": [{"id": 18, "label": "18 - LOOK FOR THE ORANGE HOODIE MAN IN THE VILLAGE", "title": "Look For The Orange Hoodie Man In The Village"}, {"id": 26, "label": "26 - MAKE PUBLIC APPEAL FOR ORANGE HOODIE MAN", "title": "Make Public Appeal For Orange Hoodie Man"}]}, "11": {"id": 11, "label": "11 - ASK AROUND IN THE VILLAGE", "title": "Ask Around In The Village", "summary": "Section 11: Observations of a large burnt-out building in town and local police conducting door-to-door inquiries.", "text": "You walk through Church Stretton.\nYou pass a large burnt-out building. Security fencing and construction fencing surround it.\nWhat happened there?\nFurther into town, police officers are making enquiries door to door.\nOne of them approaches you.\n\"I thought you should know,\" she says. \"Janice at the Fairfax Guest House has reported that one of her guests didn't come in last night.\"\n\"Is that right?\"\nMaybe it's connected to the dead body on the hillside.\nMaybe it isn't.", "note": "Guest missing from Fairfax Guest House", "leads": [{"id": 19, "label": "19 - ASK ABOUT THE B&B GUEST", "title": "Ask About The B&B Guest"}]}, "12": {"id": 12, "label": "12 - CHECK VICTIM's POLICE RECORD", "title": "Check Victim's Police Record", "summary": "Section 12: Verification of Algernon Chambers' criminal record, revealing he was imprisoned for abuse at a care home called Chessington Lodge.", "text": "You contact police headquarters and ask whether Algernon Chambers has a record.\nYou're surprised to discover that he does.\nAlgernon Chambers served a prison sentence for physical and emotional abuse carried out at a residential care home in Church Stretton.\nThe home was called Chessington Lodge.\nHe was released from prison only three weeks ago.\nSounds like the man has a connection to the area, although he hasn't actually been here for some time.\nHe spent the last two years behind bars.", "note": "Algernon Chambers linked to care home abuse", "leads": [{"id": 20, "label": "20 - LOOK AT CHESSINGTON LODGE", "title": "Look At Chessington Lodge"}, {"id": 21, "label": "21 - RESEARCH THE CHESSINGTON LODGE STORY", "title": "Research The Chessington Lodge Story"}]}, "13": {"id": 13, "label": "13 - CONTACT VICTIM's HOME ADDRESS", "title": "Contact Victim's Home Address", "summary": "Section 13: Investigation of a Chester address linked to the victim; a current resident confirms Chambers previously lived there and went to prison.", "text": "The address linked to the bank card in Chambers' wallet is in Chester.\nYou obtain the phone number and call it.\nA woman answers.\n\"No, I've never heard of Algernon Chambers,\" she says. \"I've lived here for four years.\"\nThen she pauses.\n\"Algernon Chambers?\"\nSomething has clicked.\n\"Oh. Yes. That was the man who lived here before us.\"\nAnother pause.\n\"Didn't he go to prison?\"", "note": "Chambers' former address found", "leads": [{"id": 12, "label": "12 - CHECK VICTIM's POLICE RECORD", "title": "Check Victim's Police Record"}]}, "14": {"id": 14, "label": "14 - LOOK AT MARKS ON VICTIM's WRISTS", "title": "Look At Marks On Victim's Wrists", "summary": "Section 14: Examination of the blue rope, which matches the marks on the victim’s wrists, leading the pathologist to conclude the death was not an accident.", "text": "You show the blue rope to Dr Vronsky and Alfie Dodman.\nBoth study it carefully.\n\"This could match the marks on his wrists,\" says Vronsky.\nYou look again at the ligature marks circling the victim's pale skin.\n\"So he was tied up?\"\n\"Possibly before he was brought here. Possibly after.\"\nVronsky straightens up.\n\"This is certainly no accident.\"", "note": "Rope matches victim's wrist marks", "leads": []}, "15": {"id": 15, "label": "15 - LOOK IN HIP FLASK", "title": "Look In Hip Flask", "summary": "Section 15: Inspection of the hip flask reveals a mysterious white powdery residue on the rim.", "text": "You pick up the hip flask.\nThere is still a small amount of liquid inside.\nMore interesting is the white residue around the rim.\nPowdery.\nYou reach out with a gloved finger.\nAlfie Dodman immediately tutts.\n\"Let's get that tested,\" he says.\n\"Work out what it is.\"", "note": "Mysterious white residue in hip flask", "leads": []}, "17": {"id": 17, "label": "17 - VISIT THE GUESTHOUSE", "title": "Visit The Guesthouse", "summary": "Section 17: A visit to the Fairfax Guest House where the housekeeper, Janice, confirms Chambers was a guest who never returned.", "text": "The Fairfax Guest House is a tall Victorian villa three doors down from the pub.\nYou notice the CCTV camera above the front door as you approach.\nYou ring the bell.\nA woman answers.\n\"Hello.\"\n\"Excuse me,\" you say. \"Do you have a guest called Algernon Chambers staying here?\"\n\"No,\" she says.\nThen she thinks again.\n\"But I do have a Mr Swaledale staying here.\"\n\"Is he in?\"\n\"No,\" she replies. \"He went out last night and we haven't seen him since.\"\n\"I see,\" you say darkly.", "note": "Missing guest house guest is Mr Swaledale", "leads": [{"id": 19, "label": "19 - ASK ABOUT THE B&B GUEST", "title": "Ask About The B&B Guest"}, {"id": 22, "label": "22 - LOOK AT GUESTHOUSE CCTV", "title": "Look At Guesthouse Cctv"}]}, "18": {"id": 18, "label": "18 - LOOK FOR THE ORANGE HOODIE MAN IN THE VILLAGE", "title": "Look For The Orange Hoodie Man In The Village", "summary": "Section 18: Review of CCTV footage from outside the guest house showing Chambers talking to another man.", "text": "Police officers in town have already begun making enquiries.\nOne of them approaches.\n\"There's CCTV from outside the Fairfax Guest House,\" she says. \"Apparently one of their guests didn't come home last night.\"\nPerhaps that is worth a look.\nJanice at the guest house seems very keen to help.", "note": "Two men seen talking on CCTV", "leads": [{"id": 22, "label": "22 - LOOK AT GUESTHOUSE CCTV", "title": "Look At Guesthouse Cctv"}]}, "19": {"id": 19, "label": "19 - ASK ABOUT THE B&B GUEST", "title": "Ask About The B&B Guest", "summary": "Section 19: Further confirmation from the guest house owner that Chambers' car is still in the car park.", "text": "You speak further with Janice, the owner of the Fairfax Guest House.\n\"Mr Swaledale?\" she says. \"Yes, of course.\"\nShe gives you a curious look.\n\"He was staying here, but he didn't come home last night.\"\n\"I was thinking of notifying the police if he hadn't turned up by this evening.\"\nYou ask about his room.\nJanice looks towards the stairs.\n\"There's not much in there,\" she says. \"But you can have a look if you need to.\"", "note": "Swaledale has been missing since yesterday", "leads": [{"id": 23, "label": "23 - SEARCH MR SWALEDALE's ROOM", "title": "Search Mr Swaledale's Room"}]}, "20": {"id": 20, "label": "20 - LOOK AT CHESSINGTON LODGE", "title": "Look At Chessington Lodge", "summary": "Section 20: Description of Chessington Lodge as a boarded-up, burnt-out house with a dark history.", "text": "You drive out to Chessington Lodge.\nThe former care home stands on the edge of town.\nIt is a tall, grand house, but now it is boarded up.\nBlack marks stain the windows.\nThe scars of a recent fire.\nThe place feels abandoned.\nSomething bad happened here.\nVery bad.", "note": "Chessington Lodge destroyed by fire", "leads": [{"id": 21, "label": "21 - RESEARCH THE CHESSINGTON LODGE STORY", "title": "Research The Chessington Lodge Story"}]}, "21": {"id": 21, "label": "21 - RESEARCH THE CHESSINGTON LODGE STORY", "title": "Research The Chessington Lodge Story", "summary": "Section 21: Internet research reveals the history of Chessington Lodge, including the staff's use of a mythical figure called \"Sackman\" to frighten residents.", "text": "A quick search on the internet brings up a surprising amount of information.\nA few years ago there had been allegations of mistreatment at Chessington Lodge.\nThe residents were vulnerable adults.\nAccording to newspaper reports, members of staff bullied and intimidated them.\nOne detail appears again and again.\nThe staff frightened residents with stories about a mythical figure called Sackman.\nThe articles describe Sackman as a bogeyman invented to keep residents under control.\nAlgernon Chambers, identified as one of the principal abusers, was eventually prosecuted and imprisoned.\nThe home closed shortly afterwards.\nThe residents were relocated elsewhere.\nPerhaps some of them can still be found.", "note": "Residents terrorised by 'Sackman'", "leads": [{"id": 24, "label": "24 - WHO RAN CHESSINGTON LODGE?", "title": "Who Ran Chessington Lodge?"}, {"id": 25, "label": "25 - LOOK FOR FORMER RESIDENTS OF CHESSINGTON LODGE", "title": "Look for Former Residents of Chessington Lodge"}, {"id": 35, "label": "35 - ASK TRISTAN ABOUT CHESSINGTON LODGE", "title": "Ask Tristan About Chessington Lodge"}]}, "22": {"id": 22, "label": "22 - LOOK AT GUESTHOUSE CCTV", "title": "Look At Guesthouse Cctv", "summary": "Section 22: Detailed viewing of the guest house CCTV with Janice.", "text": "\"That CCTV camera outside your front door works, does it?\" you ask Janice.\n\"Of course it does,\" she replies. \"No point having it if it doesn't work.\"\nShe leads you into her small office and opens the recording software.\nYou spend some time reviewing footage from the previous evening.\nEventually you find what you're looking for.\nTwo men are standing outside the guest house talking.\nOne of them is wearing a green waterproof that looks very much like the one recovered from the body on the hillside.\nThe second man is harder to identify.\nThe image quality isn't great.\nBut the conversation appears friendly.\nWhatever happened later, these two men left together.", "note": "Victim appears friendly with second man", "leads": [{"id": 26, "label": "26 - MAKE PUBLIC APPEAL FOR ORANGE HOODIE MAN", "title": "Make Public Appeal For Orange Hoodie Man"}]}, "23": {"id": 23, "label": "23 - SEARCH MR SWALEDALE's ROOM", "title": "Search Mr Swaledale's Room", "summary": "Section 23: A search of Chambers' guest room uncovers a mobile phone hidden behind a headboard and a foil strip of medication.", "text": "Janice takes you upstairs.\n\"This was his room.\"\nThe room is sparse.\nA suitcase.\nA handful of clothes.\nThe signs of somebody who intended only a brief stay.\nMore interestingly, the bed does not appear to have been slept in.\nYou begin a search.\nTucked behind the headboard you discover a mobile phone.\nIt might have been hidden there.\nIt might simply have fallen.\nEither way, it shouldn't be there.\nIn the top drawer of the bedside cabinet you find something else.\nA foil strip of medication.\nThe printing is difficult to read.\n\"Any chance these were already here?\" you ask Janice.\nShe shakes her head.\n\"No.\"", "note": "Hidden phone and medication discovered", "leads": [{"id": 27, "label": "27 - INVESTIGATE SWALEDALE's PHONE", "title": "Investigate Swaledale's Phone"}, {"id": 28, "label": "28 - LOOK AT SWALEDALE's MEDICATION", "title": "Look At Swaledale's Medication"}]}, "24": {"id": 24, "label": "24 - WHO RAN CHESSINGTON LODGE?", "title": "Who Ran Chessington Lodge?", "summary": "Section 24: Identification of Tristan Price as the owner of Chessington Lodge.", "text": "Records identify the owner of Chessington Lodge as a man called Tristan Price.\nHe still lives locally.\nAccording to local officers, his house is only a short distance away.\nA four-bedroom semi-detached property on a quiet residential street.\nPerhaps it's time to pay him a visit.", "note": "Tristan Price owned Chessington Lodge", "leads": [{"id": 29, "label": "29 - VISIT TRISTAN PRICE", "title": "Visit Tristan Price"}]}, "25": {"id": 25, "label": "25 - LOOK FOR FORMER RESIDENTS OF CHESSINGTON LODGE", "title": "Look for Former Residents of Chessington Lodge", "summary": "Section 25: Confrontation with Brian Jundine, a former resident of the lodge, who attempts to flee from the police.", "text": "One of the former residents of Chessington Lodge still lives locally.\nBrian Jesmond lives in a small house tucked behind a garage not far from the high street.\nYou knock on the door.\nMovement stirs behind the curtains.\nThrough the lounge window you can see photographs scattered across a table inside.\nThen you hear a door.\nA gate.\nHe's running.\nYou sprint around the side of the property.\nA podgy brown-haired man in his thirties is attempting to climb over the rear garden gate.\n\"Whoa, whoa!\" you call.\nYou grab hold of him.\nHe makes a weak attempt to swing a punch.\nYou step back.\n\"Brian Jesmond,\" you say. \"I think we need to have a word.\"", "note": "Former resident fled from police", "leads": [{"id": 30, "label": "30 - INTERVIEW BRAIN JESMOND", "title": "Interview Brian Jesmond"}, {"id": 31, "label": "31 - SEARCH BRIAN's HOUSE", "title": "Search Brian's House"}]}, "26": {"id": 26, "label": "26 - MAKE PUBLIC APPEAL FOR ORANGE HOODIE MAN", "title": "Make Public Appeal For Orange Hoodie Man", "summary": "Section 26: Police follow leads regarding the man in the orange hoodie to a nearby petrol station.", "text": "The details of the unknown man in the orange hoodie are circulated amongst local officers.\nIt doesn't take long for somebody to come forward.\nA witness reports seeing a man matching that description at a petrol station two miles outside town.\nThat sounds promising.", "note": "Orange hoodie traced to petrol station", "leads": [{"id": 32, "label": "32 - LOOK AT PETROL STATION CCTV", "title": "Look At Petrol Station Cctv"}]}, "27": {"id": 27, "label": "27 - INVESTIGATE SWALEDALE's PHONE", "title": "Investigate Swaledale's Phone", "summary": "Section 27: Forensics bags the discovered phone to track recent calls and location data.", "text": "You bag the mobile phone for evidence.\nForensics will need time to examine it properly.\nIf they can identify the number, recover call records and establish who the phone has been contacting, it may provide a valuable lead.\nPerhaps it may even reveal where its owner has been.", "note": "Phone data may reveal contacts", "leads": [{"id": 34, "label": "34 - TRACE THE PHONE NUMBER IN SWALEDALE's PHONE", "title": "Trace The Phone Number In Swaledale's Phone"}]}, "28": {"id": 28, "label": "28 - LOOK AT SWALEDALE's MEDICATION", "title": "Look At Swaledale's Medication", "summary": "Section 28: Identification of the medication as Zopicone (a sedative); toxicology confirms the victim died of an overdose of this drug.", "text": "You photograph the foil strip and send the image to Dr Vronsky.\nTwenty minutes later she calls back.\n\"I was going to phone you anyway,\" she says.\n\"The toxicology results have arrived.\"\n\"And?\"\n\"The victim almost certainly died from an overdose.\"\n\"What of?\"\n\"Zopiclone.\"\nYou recognise neither the name nor its significance.\n\"Sleeping tablets,\" says Vronsky. \"Sedatives. Sometimes prescribed for insomnia. Sometimes for anxiety.\"\n\"What about the flask?\"\n\"The residue on the rim matches,\" she says. \"Whisky mixed with crushed Zopiclone. A lot of it.\"\nYou picture the hip flask on the hillside.\n\"So someone made him drink it?\"\n\"That would fit,\" says Vronsky. \"Whether he drank willingly or was forced, I can't tell you yet. But the flask is almost certainly how the drug entered his system.\"\nYou look down at the photograph of the foil strip.\nThe names match.", "note": "Victim poisoned with Zopiclone", "leads": []}, "29": {"id": 29, "label": "29 - VISIT TRISTAN PRICE", "title": "Visit Tristan Price", "summary": "Section 29: Police visit Tristan Price at his home while he is packing a camper van for a trip.", "text": "You drive to Firside Close and locate Tristan Price's address.\nA dark-haired man is loading bags into the back of a camper van.\nHe notices you as you step out of your car.\n\"Going on holiday?\" you ask.\n\"Just for the weekend,\" he replies.\n\"Can I help you?\"\nYou show your warrant card.\n\"I wonder if I could ask you a few questions.\"", "note": "Tristan Price preparing to leave town", "leads": [{"id": 35, "label": "35 - ASK TRISTAN ABOUT CHESSINGTON LODGE", "title": "Ask Tristan About Chessington Lodge"}, {"id": 36, "label": "36 - ASK TRISTAN ABOUT ALGERNON CHAMBERS", "title": "Ask Tristan About Algernon Chambers"}, {"id": 43, "label": "43 - TRISTAN ISN'T WHO HE SAYS HE IS!", "title": "Tristan Isn't Who He Says He Is!"}]}, "30": {"id": 30, "label": "30 - INTERVIEW BRAIN JESMOND", "title": "Interview Brian Jesmond", "summary": "Section 30: The start of a formal police interview with Brian Jundine.", "text": "The tape recorder is running.\nYou place a cup of tea in front of Brian Jesmond.\nHe looks suspiciously at it.\n\"You were a resident at Chessington Lodge,\" you say.\n\"Yeah,\" says Brian.\n\"I wonder if you can help me with my investigation.\"\nBrian says nothing.\nFor a moment he simply stares at you across the table.", "note": "Brian Jesmond agrees to talk", "leads": [{"id": 37, "label": "37 - ASK BRIAN ABOUT THE PHOTOS", "title": "Ask Brian About The Photos"}, {"id": 38, "label": "38 - ASK BRIAN ABOUT CHESSINGTON LODGE", "title": "Ask Brian About Chessington Lodge"}]}, "31": {"id": 31, "label": "31 - SEARCH BRIAN's HOUSE", "title": "Search Brian's House", "summary": "Section 31: A description of Brian Jundine’s home, which is filled with newspapers, drawings, and a massive collection of photographic prints.", "text": "Brian Jesmond's house is an absolute tip.\nA towering stack of saucepans and plates fills the kitchen sink.\nNewspapers cover the dining table.\nIn the front room, a huge pile of photographs sits on the coffee table and spills across the floor.\nThere are proper photographic prints.\nPictures cut from newspapers and magazines.\nDrawings.\nHundreds of faces stare back at you.\nWhatever Brian is doing, he has been doing it for a long time.", "note": "Brian hoards hundreds of photographs", "leads": [{"id": 30, "label": "30 - INTERVIEW BRAIN JESMOND", "title": "Interview Brian Jesmond"}, {"id": 40, "label": "40 - SEARCH THE PILE OF PHOTOS", "title": "Search The Pile Of Photos"}, {"id": 41, "label": "41 - LOOK AT THE DRAWINGS OF SACKMAN", "title": "Look At The Drawings Of Sackman"}]}, "32": {"id": 32, "label": "32 - LOOK AT PETROL STATION CCTV", "title": "Look At Petrol Station Cctv", "summary": "Section 32: CCTV from a Shell station shows the man in the orange hoodie with a camper van and walking shoes identical to those on the victim.", "text": "The Shell petrol station is covered by CCTV cameras.\nIt does not take long to locate footage of the man in the orange hoodie.\nHis face is never clearly seen.\nA camper van is parked nearby, just beyond the main view of the cameras.\nEven so, several details stand out.\nMost importantly, the man's walking boots.\nThey look almost identical to those found on the body.", "note": "Orange hoodie linked to camper van", "leads": [{"id": 33, "label": "33 - THINK ABOUT THE SHOES", "title": "Think About The Shoes"}]}, "33": {"id": 33, "label": "33 - THINK ABOUT THE SHOES", "title": "Think About The Shoes", "summary": "Section 33: Comparison of the footwear on the video and the corpse, suggesting a possible swap of clothing or shoes.", "text": "The dead man was wearing a green waterproof.\nThe man seen on the CCTV footage was wearing an orange hoodie.\nDifferent clothes.\nDifferent appearance.\nYet the walking boots appear to be exactly the same.\nYou think back to the corpse on the hillside.\nThe boots had seemed strangely loose.\nThe laces barely tied.\nThe tongues hanging out.\nHad somebody changed clothes?\nHad somebody changed identities?\nOr had somebody simply changed shoes?", "note": "Victim's boots may not be his", "leads": []}, "34": {"id": 34, "label": "34 - TRACE THE PHONE NUMBER IN SWALEDALE's PHONE", "title": "Trace The Phone Number In Swaledale's Phone", "summary": "Section 34: Phone analysis shows the device found in the guest room was used to call Tristan Price.", "text": "The forensic report arrives.\nThe phone recovered from the guest house room has been used to call a number of people over the past few days.\nRecently, however, it has been contacting only one person.\nThe registered owner of that number is Tristan Price.\nFormer owner of Chessington Lodge.\nLocal resident.", "note": "Phone repeatedly called Tristan Price", "leads": [{"id": 29, "label": "29 - VISIT TRISTAN PRICE", "title": "Visit Tristan Price"}]}, "35": {"id": 35, "label": "35 - ASK TRISTAN ABOUT CHESSINGTON LODGE", "title": "Ask Tristan About Chessington Lodge", "summary": "Section 35: An interview with Tristan Price regarding Chessington Lodge, where he claims he only leased the building to the council and had little involvement in its daily operations.", "text": "\"Can I ask you about Chessington Lodge?\" you say.\nTristan Price rubs his chin.\n\"That's a long time ago for me now.\"\nHe shrugs.\n\"I owned the building. Leased it to the council.\"\nHis tone is casual.\n\"Barely involved in the running of it at all.\"\nHe glances away.\n\"Horribly underfunded place. Terrible what happened there in the end.\"", "note": "Price claims little involvement", "leads": []}, "36": {"id": 36, "label": "36 - ASK TRISTAN ABOUT ALGERNON CHAMBERS", "title": "Ask Tristan About Algernon Chambers", "summary": "Section 36: Price’s reaction to the name Algernon Chambers; he describes Chambers as a \"sick and twisted\" individual who was cruel to residents and \"got what he deserved\".", "text": "\"Can I ask you about Algernon Chambers?\"\nA peculiar look crosses Tristan Price's face.\n\"Algernon Chambers?\"\nHe seems to consider the name carefully.\n\"Yeah, I don't think anybody got to know him particularly well.\"\nHe folds his arms.\n\"They say he was a sick and twisted individual. Cruel to the residents.\"\nA pause.\n\"I didn't say any of that myself.\"\nAnother pause.\n\"But I suppose he got what he deserved.\"", "note": "Price reacts strangely to Chambers", "leads": []}, "37": {"id": 37, "label": "37 - ASK BRIAN ABOUT THE PHOTOS", "title": "Ask Brian About The Photos", "summary": "Section 37: Brian Jundine explains his photo collection, stating that \"faces keep us safe\".", "text": "You gesture towards the photographs.\n\"What's with all the pictures?\"\nBrian looks at you strangely.\nFor a moment he seems surprised that you don't understand.\n\"Faces keep us safe,\" he says.\n\"What do you mean?\"\n\"Faces keep us safe.\"\nThe troubled look in his eyes suggests that, to him at least, the statement makes perfect sense.", "note": "Brian says faces keep people safe", "leads": []}, "38": {"id": 38, "label": "38 - ASK BRIAN ABOUT CHESSINGTON LODGE", "title": "Ask Brian About Chessington Lodge", "summary": "Section 38: Brian describes his traumatic time at Chessington Lodge and the abusive behavior of the carers.", "text": "Tell us about your time at Chessington Lodge.\nBrian is slow to answer.\nFor a moment he looks confused, as though he cannot remember what you are talking about.\nThen the memories begin to surface.\n\"I was sent there when I was eighteen.\"\nHe stares at the table.\n\"I got into trouble at school. Things weren't going well. I just wasn't right in the head.\"\nHe shrugs.\n\"It was supposed to be a place where I could find some peace. Learn some skills. Then move on to assisted living.\"\nHe laughs bitterly.\n\"Didn't really happen.\"\nYou wait.\n\"I hated it there.\"\n\"The carers?\"\n\"They weren't kind.\"\nHe shakes his head.\n\"They smiled. But they weren't smiles for us.\"\nA silence.\nThen:\n\"And at night, Sackman would come for us.\"\n\"What do you mean, come for you?\"\nBrian looks down at his hands.\n\"He wore the hood. Long coat. No face. He'd come into rooms after dark. Stand there. Sometimes he wouldn't even say anything. Sometimes he'd whisper your name like he was trying it on.\"\nBrian swallows.\n\"We were told if we looked at him, he'd take our faces. If we told anyone, no one would know us afterwards.\"\nHe looks up at you.\n\"That's why you had to remember faces.\"", "note": "Sackman entered rooms wearing a hood", "leads": [{"id": 44, "label": "44 - ASK BRIAN ABOUT SACKMAN", "title": "Ask Brian About Sackman"}, {"id": 45, "label": "45 - ASK BRIAN ABOUT ALGERNON", "title": "Ask Brian About Algernon"}]}, "39": {"id": 39, "label": "39 - TALK TO THE LOCAL POLICE", "title": "Talk To The Local Police", "summary": "Section 39: Local police discuss a string of unusual burglaries where family photos were stolen.", "text": "We don't get stuff like this around here very often,\" says PC Gleeb.\n\"Got enough on our plate as it is.\"\nHe sighs.\n\"String of burglaries recently. Very irritating.\"\n\"Burglaries?\"\n\"Person breaks in. Hardly anything taken.\"\nThat seems odd.\n\"What do they steal?\"\nGleeb shrugs.\n\"Occasionally family photographs.\"\nYou stare at him.\n\"Family photographs?\"\n\"Told you it was odd.\"\nYou change the subject.\n\"Any idea how somebody might have got a body up onto the Long Mynd?\"\n\"The easiest route is up Carding Mill Valley,\" he says. \"Anyone heading to the top would probably come through Church Stretton first.\"", "note": "Photographs stolen in local burglaries", "leads": [{"id": 46, "label": "46 - ASK PC GLEBE ABOUT THE BURGLARIES", "title": "Ask Pc Glebe About The Burglaries"}, {"id": 4, "label": "4 - TRACE VICTIM's FINAL JOURNEY", "title": "Trace Victim's Final Journey"}]}, "40": {"id": 40, "label": "40 - SEARCH THE PILE OF PHOTOS", "title": "Search The Pile Of Photos", "summary": "Section 40: Brian Jundine examines a staff photo and reveals a major identity discrepancy: he identifies the man seen on the CCTV as the real Tristan Price, not Algernon Chambers.", "text": "You begin looking through the photographs in Brian Jesmond's front room.\nOne catches your attention immediately.\nIt appears to show a group of staff and residents gathered in a dining hall.\nPerhaps Chessington Lodge.\nYou hand it to Brian.\n\"Do you know these people?\"\n\"That's me,\" says Brian, pointing to a younger version of himself.\nYour finger moves elsewhere on the image.\n\"What about this man?\"\nThe man is familiar.\nYou've seen him before.\nYou can't immediately place where.\nOutside the guest house.\n\"Algernon Chambers?\" you ask.\nBrian looks puzzled.\n\"That's not Algy.\"\nYou blink.\n\"What?\"\n\"That's Mr Price.\"\n\"Mr Price?\"\n\"Tristan Price.\"\nBrian points at the photograph again.\n\"That's Tristan.\"", "note": "Brian identifies man as Tristan Price", "leads": [{"id": 47, "label": "47 - SHOW THE PHOTOGRAPH TO BRIAN", "title": "Show The Photograph To Brian"}]}, "41": {"id": 41, "label": "41 - LOOK AT THE DRAWINGS OF SACKMAN", "title": "Look At The Drawings Of Sackman", "summary": "", "text": "You pick up one of the drawings from the pile on Brian Jesmond's floor.\nIt has been done in thick black pencil.\nAt first glance it appears to show a man.\nThen you realise there is no face.\nThe face has not been crossed out.\nIt has not been scribbled over.\nInstead it is hidden beneath a hood.\nThe figure wears a long dark coat.\nYou are put in mind of an executioner from centuries ago.\nThe hood hangs low over the face.\nNothing can be seen beneath it.\nNo eyes.\nNo mouth.\nNo features at all.\nJust darkness.\n\"Sackman?\" you ask.\nBrian nods.\n\"Sackman.\"", "note": "Sackman shown as faceless figure", "leads": [{"id": 44, "label": "44 - ASK BRIAN ABOUT SACKMAN", "title": "Ask Brian About Sackman"}]}, "43": {"id": 43, "label": "43 - TRISTAN ISN'T WHO HE SAYS HE IS!", "title": "Tristan Isn't Who He Says He Is!", "summary": "Section 43: The realization that the individual the police have been interacting with as Tristan Price does not match the person in the historical photographs.", "text": "You study the photograph again.\nThen you think about the man you met at Firside Close.\nThe man loading bags into the camper van.\nThe man who introduced himself as Tristan Price.\nYou compare the two faces in your mind.\nThey are not the same person.\nNot even close.\nThe man in the photograph is Tristan Price.\nThe man you met is someone else.\nSomehow, somewhere, the identities have become confused.\nUnless...\nUnless they have been confused deliberately.", "note": "'Tristan' does not match photographs", "leads": [{"id": 48, "label": "48 - MAKE YOUR ACCUSATION", "title": "Make Your Accusation"}]}, "44": {"id": 44, "label": "44 - ASK BRIAN ABOUT SACKMAN", "title": "Ask Brian About Sackman", "summary": "Section 44: Brian provides details on the \"Sackman\" myth, claiming the figure would \"steal your face\".", "text": "\"Sackman,\" you say. \"Who's that?\"\nBrian looks surprised.\nEveryone knows about Sackman.\nOr at least everyone at Chessington Lodge did.\n\"He'd come and get you if you looked too long in the mirror.\"\nYou wait.\n\"Sackman patrolled the halls after dark.\"\nBrian's voice becomes quieter.\n\"We never left our rooms.\"\n\"Why not?\"\n\"If Sackman got you...\"\nHe swallows.\n\"...he'd steal your face.\"", "note": "Sackman was said to steal faces", "leads": []}, "45": {"id": 45, "label": "45 - ASK BRIAN ABOUT ALGERNON", "title": "Ask Brian About Algernon", "summary": "Section 45: Brian reflects on Algernon Chambers, remembering him as \"Algae\" and noting his large feet.", "text": "\"What about Algernon Chambers?\"\n\"Algy?\" says Brian.\nHe smiles faintly.\n\"Yeah. He worked there.\"\n\"Did he hurt you?\"\nBrian looks genuinely confused.\n\"No.\"\n\"The carers?\"\n\"They weren't all right. Most of them didn't care.\"\nHe shakes his head.\n\"It wasn't Algy you had to worry about.\"\n\"Who was it then?\"\n\"Sackman.\"\nA pause.\nThen:\n\"Algy used to play football with us.\"\nBrian smiles at the memory.\n\"He had huge feet. Size twelves.\"", "note": "Brian remembers Algy's huge feet", "leads": []}, "46": {"id": 46, "label": "46 - ASK PC GLEBE ABOUT THE BURGLARIES", "title": "Ask Pc Glebe About The Burglaries", "summary": "", "text": "Tell me more about these burglaries.\nPC Gleeb shrugs.\n\"Not much to tell.\"\n\"People breaking in?\"\n\"Yeah.\"\n\"What gets taken?\"\n\"Usually nothing valuable.\"\n\"No money?\"\n\"No.\"\n\"No jewellery?\"\n\"No.\"\nHe thinks for a moment.\n\"Mostly photographs.\"\n\"Photographs?\"\n\"Family albums. Pictures off walls. Boxes of old photos.\"\nYou stare at him.\n\"That's bizarre.\"\n\"Tell me about it.\"\n\"Any suspects?\"\nGleeb shakes his head.\n\"None.\"", "note": "Burglar steals only photographs", "leads": []}, "47": {"id": 47, "label": "47 - SHOW THE PHOTOGRAPH TO BRIAN", "title": "Show The Photograph To Brian", "summary": "", "text": "You place the old Chessington Lodge photograph in front of Brian.\n\"Let's do this properly.\"\nBefore Brian answers, PC Gleeb looks over your shoulder.\n\"I've seen that picture before,\" he says.\n\"Where?\"\n\"In the local paper. Back when all this came out. That was the photo they kept using. Staff and residents at Chessington Lodge.\"\nYou point at the man you believe to be Algernon Chambers.\n\"Who is that?\"\nBrian barely glances at the picture.\n\"Mr Price.\"\n\"Tristan Price?\"\n\"Yeah.\"\nYou move your finger elsewhere.\n\"And Algernon Chambers?\"\nBrian studies the image.\nThen taps another figure.\n\"There.\"\nThe man is taller than you expected.\nBroader.\nHeavy-footed.\nNothing like the person you met at Firside Close.\nYou look again at the man Brian identified as Tristan Price.\nThe same man appears in the old newspaper photograph.\nThe same man appears on the petrol station CCTV in the orange hoodie.\nBut he is not the man you met at Firside Close.\n\"You sure?\"\nBrian looks offended.\n\"Course I am.\"\nHe taps Tristan again.\n\"That's Mr Price.\"\nThen Algernon.\n\"That's Algy.\"\nThere is no hesitation whatsoever.", "note": "Brian identifies both men in photo", "leads": [{"id": 43, "label": "43 - TRISTAN ISN'T WHO HE SAYS HE IS!", "title": "TRISTAN ISN'T WHO HE SAYS HE IS!"}]}, "48": {"id": 48, "label": "48 - MAKE YOUR ACCUSATION", "title": "Make Your Accusation", "summary": "Section 48: Police intercept the camper van and confront the driver, who is revealed to be the real Algernon Chambers. It is discovered that Chambers was wrongly imprisoned for crimes committed by the true \"Sackman\" (the real Tristan Price). Chambers admits to drugging Price and taking him to the hillside to kill him as retribution for what was done to the residents and himself.", "text": "You race back towards Firside Close.\nThe camper van is already moving.\nYou swing your vehicle across the road and block its path.\nThe van brakes sharply.\nThe driver leans out of the window.\n\"Can I help you?\"\n\"Tristan Price,\" you say.\nThe man says nothing.\n\"Except it isn't Tristan Price, is it?\"\nA flicker crosses his face.\nYou continue.\n\"Algernon Chambers.\"\nStill silence.\n\"You had us fooled for a while.\"\nThe man grips the steering wheel.\n\"The body on the hillside wasn't Algernon Chambers.\"\nYou take a step closer.\n\"It was Tristan Price.\"\nThe driver's shoulders slump.\n\"You were never Sackman, were you?\"\nNo answer.\n\"You went to prison for crimes you didn't commit.\"\nThe man's eyes close.\n\"For once, a prisoner wasn't lying.\"\nYou glance down.\n\"Algy had big feet. Brian remembered that. Size twelves. The footprints at the fire were huge. The boots on the corpse were loose because they weren't Tristan Price's boots.\"\nThe man says nothing.\n\"And the man in the orange hoodie on the petrol station CCTV was the real Tristan Price. He filled up his camper van. Later, you took it.\"\nYou take another step forward.\n\"I think you came back to Church Stretton after your release. You stayed at the Fairfax Guest House under the name Swaledale. You confronted Tristan Price.\"\nNothing.\n\"You drugged him with Zopiclone. Whisky in a hip flask, mixed with crushed tablets.\"\nThe man's head drops.\n\"You took him up onto the Long Mynd.\"\nStill silence.\n\"And you killed him.\"\nFor a moment you think he might deny everything.\nInstead, a small, sad smile appears.\n\"He had to pay,\" he says quietly.\nA pause.\n\"For what he did to them.\"\nAnother pause.\n\"And to me.\"", "note": "Chambers admits killing Tristan Price", "leads": [{"id": 49, "label": "49 - WAS ALGERNON SACKMAN?", "title": "Was Algernon Sackman?"}]}, "49": {"id": 49, "label": "49 - WAS ALGERNON SACKMAN?", "title": "Was Algernon Sackman?", "summary": "", "text": "You think back over everything you have learned.\nThe wallet said Algernon Chambers.\nThe bank cards said Algernon Chambers.\nThe body was too badly burned to recognise.\nThat was the first lie.\nThe man at the guest house called himself Mr Swaledale.\nThe man at Firside Close called himself Tristan Price.\nThat was the second lie.\nBrian Jesmond remembered the faces.\nHe looked at the old photograph and knew at once who was who.\nThe man everyone thought was Algernon Chambers was Tristan Price.\nThe man everyone thought was Tristan Price was Algernon Chambers.\nAlgy had big feet.\nBrian remembered that.\nThe footprints near the fire were huge.\nThe boots on the corpse were worn loose, with the tongues hanging out, because they did not belong to the dead man.\nThe phone in Swaledale's room led to Tristan Price.\nThe petrol station CCTV showed the real Tristan Price in the orange hoodie, filling up his camper van.\nThe residue in the hip flask was whisky mixed with crushed Zopiclone.\nThe toxicology report matched it.\nThe stories of Sackman were not just stories.\nTristan wore the hood.\nTristan entered their rooms at night.\nTristan stole faces.\nBrian had been stealing photographs because faces keep people safe.\nAlgernon Chambers was not Sackman.\nHe was the man everyone blamed.\nThe man everyone remembered.\nThe convenient villain.\nThe real Sackman was Tristan Price.\nThe respectable businessman.\nThe owner of Chessington Lodge.\nThe man who survived the scandal untouched.\nUntil Algernon Chambers came back to Church Stretton and made certain that he did not survive it forever.", "note": "Evidence suggests Price was Sackman", "leads": []}};
+
+let current = 1;
+let visited = new Set();
+let available = [];
+let notes = [];
+let noteSet = new Set();
+let solved = false;
+
+function prettyTitle(lead) {
+    return lead.title
+        .replace(/\bB&B\b/g, "B&B")
+        .replace(/\bCctv\b/g, "CCTV")
+        .replace(/\bPc\b/g, "PC")
+        .replace(/\bDi\b/g, "DI");
+}
+
+function addNote(event) {
+    if (!event.note || noteSet.has(event.id)) return;
+    notes.push({
+        id: event.id,
+        text: event.note,
+        value: CLUE_VALUE[event.id] || 0
+    });
+    noteSet.add(event.id);
+
+    notes.sort((a,b) => b.value - a.value || a.id - b.id);
+    if (notes.length > 10) {
+        notes = notes.slice(0,10);
+    }
+}
+
+function shouldGate43() {
+    // 43 is the identity-reveal moment. It should not unlock from one thin clue.
+    // Require a key identity contradiction plus at least one supporting contradiction.
+    const keyIdentity = visited.has(40) || visited.has(47);
+    const support = visited.has(33) || visited.has(34) || visited.has(36) || visited.has(45) || visited.has(32);
+    return !(keyIdentity && support);
+}
+
+function leadAllowed(id) {
+    if (id === 43 && shouldGate43()) return false;
+    if (id === 35 && !visited.has(29)) return false;
+    if (id === 36 && !visited.has(29)) return false;
+    if (id === 49 && !visited.has(48)) return false;
+    return true;
+}
+
+function addLeads(event) {
+    for (const lead of event.leads) {
+        if (!EVENTS[lead.id]) continue;
+        if (visited.has(lead.id)) continue;
+        if (available.some(x => x.id === lead.id)) continue;
+        if (!leadAllowed(lead.id)) continue;
+        available.push(lead);
+    }
+    checkDelayedUnlocks();
+
+    if (visited.has(29)) {
+        const needed = [35,36];
+        for (const nid of needed) {
+            if (EVENTS[nid] && !visited.has(nid) && !available.some(x => x.id === nid)) {
+                available.push({id:nid,label:EVENTS[nid].label,title:EVENTS[nid].title});
+            }
+        }
+    }
+}
+
+function checkDelayedUnlocks() {
+    // If 43 was previously blocked, add it once the evidence threshold is met.
+    if (!EVENTS[43] || visited.has(43) || available.some(x => x.id === 43)) return;
+    if (!shouldGate43()) {
+        available.push({ id: 43, label: EVENTS[43].label, title: EVENTS[43].title });
+    }
+}
+
+function renderStory(event) {
+    document.getElementById("sectionNum").textContent = "Section " + event.id;
+    document.getElementById("sectionTitle").textContent = event.title;
+
+    const story = document.getElementById("storyText");
+    const paras = event.text
+        .split(/\n+/)
+        .map(x => x.trim())
+        .filter(Boolean)
+        .map(x => "<p>" + escapeHtml(x) + "</p>")
+        .join("");
+
+    let solvedBlock = "";
+    if (event.id === 48) {
+        solved = true;
+        solvedBlock = `<div class="solved"><strong>Case solved.</strong><br>You have arrested Algernon Chambers for the murder of Tristan Price.</div>`;
+    }
+
+    story.innerHTML = solvedBlock + paras;
+}
+
+function renderAvenues() {
+    const box = document.getElementById("avenues");
+    if (available.length === 0) {
+        box.innerHTML = `<div class="empty">No fresh avenues currently available. Review the notes, or restart the case.</div>`;
+        return;
+    }
+
+    box.innerHTML = available.map(lead => `
+        <button class="avenue" onclick="goTo(${lead.id})">
+            ${escapeHtml(prettyTitle(lead))}
+        </button>
+    `).join("");
+}
+
+function renderNotes() {
+    const pad = document.getElementById("notepad");
+    if (notes.length === 0) {
+        pad.innerHTML = `<div class="empty">No notes yet.</div>`;
+        return;
+    }
+    pad.innerHTML = notes.map(n => `<div class="note-item">${escapeHtml(n.text)}</div>`).join("");
+    pad.scrollTop = pad.scrollHeight;
+}
+
+function goTo(id) {
+    const event = EVENTS[id];
+    if (!event) return;
+
+    current = id;
+    visited.add(id);
+    available = available.filter(x => x.id !== id);
+
+    addNote(event);
+    addLeads(event);
+    checkDelayedUnlocks();
+
+    renderStory(event);
+    renderAvenues();
+    renderNotes();
+    const thorough = Math.min(100, Math.round((visited.size / 45) * 100));
+    let inspired = 100;
+    if (visited.size > 25) {
+        inspired = Math.max(0, Math.round(100 - ((visited.size - 25) * 5)));
+    }
+    let maverickPoints = 0;
+    for (const id of visited) {
+        if (MAVERICK_WEIGHTS[id]) {
+            maverickPoints += MAVERICK_WEIGHTS[id];
+        }
+    }
+    const maverick = Math.round((maverickPoints / MAVERICK_MAX) * 100);
+
+    const t=document.getElementById("thoroughnessPct");
+    const i=document.getElementById("inspiredPct");
+    const m=document.getElementById("maverickPct");
+    if(t) t.textContent = thorough + "%";
+    if(i) i.textContent = inspired + "%";
+    if(m) m.textContent = maverick + "%";
+
+    const profile = detectiveProfile(thorough, inspired, maverick);
+    const badge = document.getElementById("profileBadge");
+    const title = document.getElementById("profileTitle");
+    const icon = document.getElementById("profileIcon");
+    const line = document.getElementById("profileLine");
+
+    if (badge && title && icon && line) {
+        badge.classList.remove("inspired", "maverick", "thorough");
+        badge.classList.add(profile.key);
+        title.textContent = profile.label;
+        icon.textContent = profile.icon;
+        line.textContent = profile.line;
+
+        if (profile.key !== currentProfileKey) {
+            currentProfileKey = profile.key;
+            badge.classList.add("flash");
+            setTimeout(() => badge.classList.remove("flash"), 450);
+        }
+    }
+}
+
+
+const MAVERICK_WEIGHTS = {
+45: 20,
+34: 12,
+47: 12,
+37: 10,
+38: 10,
+44: 10,
+33: 8,
+28: 6,
+27: 6,
+41: 6
+};
+const MAVERICK_MAX = Object.values(MAVERICK_WEIGHTS).reduce((a,b)=>a+b,0);
+
+function detectiveProfile(thorough, inspired, maverick) {
+    const scores = [
+        { key: "maverick", label: "Maverick Detective", icon: "🟢", line: "You follow clues others ignore.", score: maverick },
+        { key: "inspired", label: "Inspired Detective", icon: "🔎", line: "You spot the pattern quickly.", score: inspired },
+        { key: "thorough", label: "Thorough Detective", icon: "📋", line: "No clue escapes your attention.", score: thorough }
+    ];
+    scores.sort((a,b) => b.score - a.score);
+    return scores[0];
+}
+
+let currentProfileKey = "inspired";
+
+const CLUE_VALUE = {
+1:2,2:4,3:3,4:4,5:2,6:5,7:4,9:5,10:4,11:3,12:5,13:2,14:6,15:6,
+17:4,18:5,19:3,20:3,21:5,22:6,23:6,24:5,25:3,26:4,27:4,28:9,
+29:3,30:2,31:4,32:7,33:8,34:8,35:3,36:7,37:5,38:8,39:4,40:10,
+41:4,43:10,44:6,45:8,46:3,47:10,48:10,49:10
+};
+
+function restartGame() {
+    current = 1;
+    visited = new Set();
+    available = [];
+    notes = [];
+    noteSet = new Set();
+    solved = false;
+    goTo(1);
+}
+
+function escapeHtml(str) {
+    return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+restartGame();
+</script>
+</body>
+</html>
