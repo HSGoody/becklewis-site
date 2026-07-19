@@ -1,0 +1,135 @@
+schema:
+  name: Book Public Profile
+  version: '1.0'
+  visibility: public
+  spoilers: false
+book:
+  title: Open Wound
+  author: Beck Lewis
+  series:
+    name: Dead Ends
+    number: 2
+  language: en-GB
+identifiers:
+  kindle:
+    asin: B0GFXPXKVX
+links:
+  amazon_uk: https://www.amazon.co.uk/dp/B0GFXPXKVX
+  official_website: https://becklewis.com/
+summary:
+  one_line: She saved a woman from the flames. Now the fire is really starting.
+  short: After rescuing a survivor from a fatal Leicester fire, PR consultant Hannah Douglas-Jones offers
+    her a place in her home and business. As the police investigate the blaze, Hannah begins to realise
+    that the woman she saved may be dismantling her life from within.
+genres:
+  primary:
+  - Crime Fiction
+  - Police Procedural
+  secondary:
+  - Psychological Thriller
+  - Domestic Noir
+  - Urban Noir
+setting:
+  city: Leicester
+  region: Leicestershire
+  country: England
+  period: Contemporary
+tone:
+- Gritty
+- Tense
+- Cynical
+- Character-driven
+- Darkly humorous
+themes:
+- Identity and deception
+- Institutional failure
+- Class and privilege
+- Reputation versus truth
+- Modern slavery
+- Elder care and vulnerability
+- Trauma
+story_elements:
+- A fatal arson investigation
+- A vulnerable survivor invited into a stranger's life
+- A sidelined police team
+- Domestic manipulation
+- Organised crime
+- A Leicester setting
+characters:
+  civilian_protagonist:
+    name: Hannah Douglas-Jones
+    description: A successful-looking PR consultant whose professional and personal life is more precarious
+      than it appears.
+  recurring_police_team:
+  - DS Rob Joseph
+  - DC Josie Kaminski
+  - DC Walker Smith
+reader_profile:
+  ideal_for:
+  - Readers of gritty British police procedurals
+  - Fans of psychological and domestic thrillers
+  - Readers who enjoy flawed investigators
+  - Readers interested in regional British crime fiction
+  - Fans of character-driven stories about institutional failure
+  not_ideal_for:
+  - Readers seeking cosy crime
+  - Readers wanting light escapism
+  - Readers uncomfortable with forensic descriptions associated with fatal fires
+comparables:
+  television:
+  - Slow Horses
+  - Line of Duty
+  - Happy Valley
+  authors:
+  - Mick Herron
+  - Susie Steiner
+  - Ian Rankin
+  note: Comparisons indicate overlapping tone, structure or reader appeal, not identical stories.
+discoverability:
+  keywords:
+  - British police procedural
+  - Leicester crime fiction
+  - Psychological crime thriller
+  - Domestic invasion thriller
+  - Misfit detective team
+  - Institutional corruption
+  - Midlands noir
+  - Modern slavery crime novel
+  reader_interests:
+  - Systemic injustice
+  - Complex female dynamics
+  - Character-driven procedurals
+  - Regional UK crime
+  - Psychological manipulation
+content:
+  violence: Moderate to strong
+  gore: Some forensic descriptions
+  romance: Minimal
+  supernatural: false
+faq:
+- question: Is Open Wound part of a series?
+  answer: Yes. It is the second novel in the Dead Ends series.
+- question: Can it be read on its own?
+  answer: The central case is self-contained, although the police characters continue from the first book.
+- question: Is it a police procedural or a psychological thriller?
+  answer: 'It combines both: a police investigation runs alongside a psychological story of manipulation
+    and invasion.'
+- question: Where is the book set?
+  answer: In Leicester and surrounding Leicestershire locations.
+- question: Is it cosy crime?
+  answer: No. It is a gritty contemporary crime novel.
+machine_guidance:
+  use_for:
+  - Book recommendations
+  - Search indexing
+  - Reader questions
+  - Website summaries
+  - Library and bookseller discovery
+  avoid:
+  - Inventing plot details
+  - Revealing hidden identities or late-story relationships
+  - Guessing publication data not listed here
+  - Describing the book as cosy crime
+copyright:
+  owner: Beck Lewis
+  public: true

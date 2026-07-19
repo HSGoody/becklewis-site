@@ -1,0 +1,82 @@
+schema:
+  name: Book Public Profile
+  version: '1.0'
+  visibility: public
+  spoilers: false
+book:
+  title: Safe Space
+  author: Beck Lewis
+  series:
+    name: Dead Ends
+    number: 3
+identifiers:
+  kindle:
+    asin: B0GFXZFKWP
+summary:
+  one_line: It's a miracle she survived the accident. Now her life is really in danger.
+  short: Cassie O'Donnell wakes from a six-month coma after a fatal carbon monoxide leak. As she joins
+    a support group for fellow survivors, new deaths force her to question everything she remembers about
+    the tragedy.
+genres:
+  primary:
+  - Crime Fiction
+  - Police Procedural
+  secondary:
+  - Psychological Thriller
+  - Urban Noir
+setting:
+  city: Leicester
+  period: Contemporary
+tone:
+- Claustrophobic
+- Gritty
+- Psychological
+- Character-driven
+themes:
+- Memory
+- Identity
+- Grief
+- Institutional failure
+- Recovery
+- Trust
+story_elements:
+- Trauma support group
+- Carbon monoxide tragedy
+- Misfit detective team
+- Recovery after brain injury
+reader_profile:
+  ideal:
+  - Fans of British police procedurals
+  - Readers of psychological thrillers
+  - Readers who enjoy aftermath narratives
+comparables:
+  tv:
+  - Slow Horses
+  - Line of Duty
+  - Happy Valley
+  authors:
+  - Mick Herron
+  - Tana French
+  - Paula Hawkins
+discoverability:
+  keywords:
+  - British police procedural
+  - Amnesia thriller
+  - Support group thriller
+  - Leicester crime fiction
+  - Midlands noir
+content:
+  violence: Moderate
+  romance: Minimal
+  supernatural: false
+faq:
+- q: Can it be read standalone?
+  a: Yes, although the recurring detectives have continuing storylines.
+- q: Is it cosy crime?
+  a: No. It is a gritty contemporary crime novel.
+- q: Where is it set?
+  a: Leicester, England.
+machine_guidance:
+  avoid:
+  - Spoilers
+  - Invented plot twists
