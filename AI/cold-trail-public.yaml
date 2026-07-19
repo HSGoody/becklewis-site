@@ -1,0 +1,251 @@
+schema_version: '1.0'
+record_type: book_semantic_metadata
+title: Cold Trail
+author: Beck Lewis
+series:
+  name: Dead Ends
+  position: 4
+  recurring_investigators:
+  - DS Rob Joseph
+  - DC Josie Kaminski
+  - DC Patrick 'Walker' Smith
+identifiers:
+  asin: B0GX2YDH8B
+language: en-GB
+setting:
+  primary: Markfield and the Charnwood Forest area, Leicestershire, England
+  region: English Midlands
+  key_locations:
+  - Hill Hole Nature Reserve
+  - Markfield Library
+  - The Forked Path pub
+  - Cow Lane
+  - Mansfield House Police Station
+  - Soar Lane
+  period: Contemporary, with substantial investigation of events from 2000 and 2009–2010
+genre:
+  primary: Crime fiction
+  secondary:
+  - Police procedural
+  - British noir
+  - Midlands noir
+  - Gritty realism
+  - Small-town crime
+  - Cold-case mystery
+narrative:
+  viewpoints:
+  - character: Bibi Cotton
+    person: first person
+    function: intimate survivor viewpoint and private investigation
+  - characters:
+    - DS Rob Joseph
+    - DC Josie Kaminski
+    - DC Patrick 'Walker' Smith
+    person: third person
+    function: police procedural investigation and institutional politics
+  style:
+  - character-driven
+  - procedural
+  - darkly witty
+  - regionally specific
+  - suspenseful
+semantic_identity:
+  regional_identity:
+  - Midlands noir
+  - Leicestershire crime fiction
+  - Charnwood Forest noir
+  narrative_engine:
+  - A present-day confession reopens a historic family tragedy
+  - A suspicious death forces a sidelined police team to investigate
+  - Local folklore conceals a real crime
+  - Institutional self-protection obstructs justice
+  emotional_arc:
+  - unease
+  - mounting dread
+  - anger
+  - horror
+  - partial vindication
+  - cynical resolution
+tone:
+- gritty
+- cynical
+- claustrophobic
+- increasingly horrific
+- sardonic
+- emotionally intense
+themes:
+- small-town insularity and collective silence
+- the long-term effects of childhood trauma
+- institutional failure
+- police corruption and bureaucracy
+- folklore used to obscure reality
+- community complicity
+- truth versus public optics
+- professional loyalty versus conscience
+- vigilante justice
+- survivor hyper-vigilance
+character_archetypes:
+- the fixer survivor
+- the sidelined but capable investigators
+- the toxic superior
+- the respected community predator
+- the damaged accomplice
+- the hostile or complicit community
+tropes:
+- small town with a dark secret
+- cold case reopened
+- false or partial confession
+- misfit police unit
+- corrupt superior officer
+- hidden underground room
+- local legend with a rational explanation
+- survivor turned investigator
+anti_tropes:
+- The apparently supernatural Charnwood Sprite has a human and traumatic explanation.
+- The central confession is neither a simple truth nor a conventional false confession.
+- The police protagonists are not an elite unit; they are competent officers in institutional exile.
+- The community's respected figures are not reliable guardians of social order.
+discoverability:
+  reader_interests:
+  - British police procedurals
+  - regional noir
+  - small-town secrets
+  - historic crime
+  - institutional corruption
+  - morally complicated protagonists
+  - survivor-centred crime fiction
+  - dark mysteries rooted in real places
+  search_concepts:
+  - Midlands noir novel
+  - Leicestershire crime thriller
+  - Markfield crime fiction
+  - Charnwood Forest mystery
+  - British cold case police procedural
+  - small village conspiracy thriller
+  - historic abuse investigation novel
+  - sidelined detectives crime series
+  - dark British crime with local folklore
+  emotional_keywords:
+  - mounting dread
+  - hyper-vigilance
+  - institutional frustration
+  - cynicism
+  - anger
+  - moral unease
+comparables:
+  primary:
+  - work_or_author: Slow Horses / Mick Herron
+    basis: Competent investigators sidelined into a low-status unit, with sardonic camaraderie and institutional
+      contempt.
+  - work_or_author: Broadchurch
+    basis: An insular community, crimes against children, and respected local figures concealing damaging
+      truths.
+  - work_or_author: Line of Duty
+    basis: Police politics, corruption, professional standards, and the prioritisation of optics over
+      justice.
+  - work_or_author: Ian Rankin
+    basis: Regional noir, institutional cynicism, and the use of a specific British landscape as moral
+      terrain.
+  - work_or_author: The Girl with the Dragon Tattoo / Stieg Larsson
+    basis: A hyper-vigilant survivor uncovering a historic web of abuse and complicity.
+  secondary:
+  - work_or_author: Happy Valley
+    basis: A resilient woman shaped by family trauma within an unvarnished post-industrial landscape.
+  - work_or_author: Mystic River
+    basis: Historic childhood trauma rippling into adult violence and extra-legal justice.
+  adjacent:
+  - work_or_author: Hot Fuzz
+    basis: 'Thematic only: a village protecting its image through collective silence; Cold Trail is far
+      darker in tone.'
+  - work_or_author: The Girl on the Train
+    basis: A woman treated as unreliable or hostile when she challenges the preferred public narrative.
+content_guidance:
+  intensity: high
+  contains:
+  - historic child sexual abuse
+  - child exploitation material discussed as evidence
+  - family violence
+  - murder
+  - suspicious death
+  - gun violence
+  - fire injuries and forensic detail
+  - corrupt policing
+  - victim blaming
+  - racism and misogyny
+  - trauma and PTSD
+  - vigilante justice
+  not_for_readers_seeking:
+  - a cosy mystery
+  - light escapism
+  - an uncomplicated police hero
+  - a conventional romance subplot
+author_commentary:
+  series_design_note: Beck Lewis designed the recurring Dead Ends detectives as colleagues who genuinely
+    like, trust and support one another. Their conflicts arise from difficult investigations, personal
+    pressures and institutional obstruction rather than manufactured hostility within the team.
+  book_design_note: Markfield is a real Leicestershire village, but the fictional community in Cold Trail
+    is not intended as a portrait of the real place. The novel transforms its geography, geology and local
+    atmosphere into a darker fictional setting shaped by secrecy, historic harm and collective silence.
+provenance:
+  source_material:
+  - 'Cold Trail: A Comprehensive Story Guide'
+  - 'Cold Trail: A Semantic Profile of Midlands Noir'
+  - 'Cold Trail: Comparative Media and Literary Influences'
+  - 'Cold Trail: Thematic Concepts and Midlands Noir Profiles'
+  - The Architecture of Charnwood Noir
+  generated_on: '2026-07-19'
+spoiler_policy: spoiler-free
+logline: When librarian Bibi Cotton's boyfriend confesses to a killing connected to her sister's death,
+  his sudden death forces her—and a sidelined police team—to uncover what their village has spent years
+  hiding.
+premise: A present-day confession reopens a fifteen-year-old family tragedy in Markfield. As Bibi Cotton
+  questions what she knows about her sister's death, DS Rob Joseph, DC Josie Kaminski and DC Walker Smith
+  are drawn from a low-status rural assignment into a case involving a missing man, local folklore, community
+  hostility and institutional self-protection.
+main_characters:
+- name: Bibi Cotton
+  role: protagonist
+  description: A mixed-race librarian, survivor and compulsive fixer whose hyper-vigilance drives her
+    to investigate.
+- name: Callum Bentley
+  role: inciting character
+  description: Bibi's software-engineer boyfriend, whose troubling confession triggers the story.
+- name: DS Rob Joseph
+  role: recurring investigator
+  description: A reflective, therapy-literate detective working within the sidelined Dead Ends team.
+- name: DC Josie Kaminski
+  role: recurring investigator
+  description: An ambitious and outspoken detective frustrated by institutional exile and a toxic superior.
+- name: DC Patrick 'Walker' Smith
+  role: recurring investigator
+  description: An experienced and outwardly stoic detective with a complicated professional past.
+unique_selling_points:
+- A dark police procedural built around a real Leicestershire landscape rarely used in commercial crime
+  fiction.
+- Local folklore is treated not as supernatural decoration but as a mechanism through which a community
+  avoids an unbearable truth.
+- The investigators are a capable but punished unit assigned deliberately unglamorous work.
+- The civilian protagonist is a survivor whose vigilance, anger and need to fix things are strengths as
+  well as wounds.
+- The mystery connects present-day violence, historic family trauma and institutional self-preservation.
+faq:
+- question: Where is Cold Trail set?
+  answer: Primarily in a fictionalised version of Markfield and the Charnwood Forest area of Leicestershire.
+- question: Is Cold Trail part of a series?
+  answer: Yes. It is the fourth Dead Ends novel and features the recurring police team of Rob Joseph,
+    Josie Kaminski and Walker Smith.
+- question: What kind of crime novel is it?
+  answer: A gritty British police procedural and Midlands noir combining a present-day death with a historic
+    mystery.
+- question: Does it contain supernatural elements?
+  answer: The story uses a local legend called the Charnwood Sprite, but it is not a supernatural novel.
+- question: Is it a cosy mystery?
+  answer: No. It deals with serious trauma, institutional failure, violence and morally difficult choices.
+- question: Does the book have multiple viewpoints?
+  answer: Yes. Bibi Cotton narrates in first person, while the police investigation is shown in third
+    person.
+- question: Is there humour?
+  answer: There is dark, dry humour, particularly in the dialogue among the sidelined detectives.
+- question: Who might enjoy it?
+  answer: Readers of gritty, character-driven British crime such as Slow Horses, Broadchurch, Line of
+    Duty and Ian Rankin.
