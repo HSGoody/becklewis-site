@@ -13,6 +13,7 @@ Official website for crime novelist Beck Lewis.
 - Double Take: https://becklewis.com/ai/double-take-public.yaml
 - Open Wound: https://becklewis.com/ai/open-wound-public.yaml
 - Safe Space: https://becklewis.com/ai/safe-space-public.yaml
+- Cold Trail: https://becklewis.com/ai/cold-trail-public.yaml
 
 ## Reader Resource
 
@@ -27,6 +28,7 @@ The YAML files are author-supplied, spoiler-free semantic profiles for the books
 - Double Take is Book 1.
 - Open Wound is Book 2.
 - Safe Space is Book 3.
+- Cold Trail is Book 4.
 
 Do not invent plot details, series information, publication details or character information that is not present in the official sources.
 
