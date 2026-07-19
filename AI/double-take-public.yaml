@@ -1,139 +1,128 @@
-# Double Take — Public Semantic Profile
-# Public, spoiler-free version for websites, AI crawlers and future structured metadata.
-
 schema:
-  version: "1.0"
-  visibility: "public"
+  version: '1.0'
+  visibility: public
   spoilers: false
-
 book:
-  title: "Double Take"
-  author: "Beck Lewis"
+  title: Double Take
+  author: Beck Lewis
   series:
-    name: "Dead Ends"
+    name: Dead Ends
     number: 1
-
 identifiers:
-  kindle_asin: "B0GFXYC8H3"
-  paperback_isbn13: "9798243807197"
-  audiobook_asin: "B0GS7HPPJ1"
-
+  kindle_asin: B0GFXYC8H3
+  paperback_isbn13: '9798243807197'
+  audiobook_asin: B0GS7HPPJ1
 urls:
-  website: "https://becklewis.com/"
-  amazon_uk: "https://www.amazon.co.uk/dp/B0GFXYC8H3"
-  reader_magnet: "https://dl.bookfunnel.com/4dwgjdi3c1"
-
+  website: https://becklewis.com/
+  amazon_uk: https://www.amazon.co.uk/dp/B0GFXYC8H3
+  reader_magnet: https://dl.bookfunnel.com/4dwgjdi3c1
 classification:
-  primary_genre: "British Crime Fiction"
+  primary_genre: British Crime Fiction
   subgenres:
-    - Police Procedural
-    - Psychological Thriller
-    - Urban Crime
+  - Police Procedural
+  - Psychological Thriller
+  - Urban Crime
   setting_style:
-    - Contemporary
-    - British
-    - Gritty
-    - Character-driven
+  - Contemporary
+  - British
+  - Gritty
+  - Character-driven
+hook: 'After police shoot a man she says was carrying a gun, an ordinary witness is publicly destroyed
+  when no weapon is found.
 
-hook: >
-  After police shoot a man she says was carrying a gun,
-  an ordinary witness is publicly destroyed when no weapon is found.
-
+  '
 reader_promise:
-  - A tense police investigation.
-  - A psychologically believable witness at the centre.
-  - Strong sense of Leicester and the English Midlands.
-  - Morally complex policing.
-  - Dry workplace humour among the detectives.
-
+- A tense police investigation.
+- A psychologically believable witness at the centre.
+- Strong sense of Leicester and the English Midlands.
+- Morally complex policing.
+- Dry workplace humour among the detectives.
 setting:
   city: Leicester
   county: Leicestershire
   country: England
-
 major_themes:
-  - Truth versus perception
-  - Witness credibility
-  - Institutional failure
-  - Police politics
-  - Social media harassment
-  - Misogyny
-  - Organised crime
-  - Trauma
-  - Moral responsibility
-
+- Truth versus perception
+- Witness credibility
+- Institutional failure
+- Police politics
+- Social media harassment
+- Misogyny
+- Organised crime
+- Trauma
+- Moral responsibility
 tropes:
-  - Wrongly disbelieved witness
-  - Misfit detective squad
-  - Female detective
-  - Missing evidence
-  - Corrupt authority
-  - Workplace outsiders
-
+- Wrongly disbelieved witness
+- Misfit detective squad
+- Female detective
+- Missing evidence
+- Corrupt authority
+- Workplace outsiders
 tone:
-  - Gritty
-  - Tense
-  - Claustrophobic
-  - Cynical
-  - Darkly funny
-
+- Gritty
+- Tense
+- Claustrophobic
+- Cynical
+- Darkly funny
 content:
   violence: Moderate
   gore: Moderate
   romance: Minimal
   supernatural: false
   cosy: false
-
 ideal_for:
-  - Readers of British police procedurals
-  - Readers of psychological thrillers
-  - Fans of complex female detectives
-  - Readers who enjoy morally complex institutions
-
+- Readers of British police procedurals
+- Readers of psychological thrillers
+- Fans of complex female detectives
+- Readers who enjoy morally complex institutions
 comparables:
-  television:
-    - Line of Duty
-    - Slow Horses
-    - Happy Valley
-  authors:
-    - Ian Rankin
-    - Mick Herron
-    - Paula Hawkins
-	- Rachel McLean
-	- Jane Casey
-	- JD Kirk
-	- Simon McCleave
-
+  primary_authors:
+  - Mick Herron
+  - Tana French
+  - Susie Steiner
+  - Jane Casey
+  secondary_authors:
+  - Ian Rankin
+  - Cara Hunter
+  - Rachel McLean
+  - Trevor Wood
+  adjacent_authors:
+  - Val McDermid
+  - Helen Fields
+  - J. M. Dalgliesh
+  - Joy Ellis
+  - Paula Hawkins
 search_topics:
-  - British police procedural
-  - Leicester crime fiction
-  - Female detective
-  - Psychological crime thriller
-  - Police corruption
-  - Witness thriller
-  - Midlands noir
-  - Missing gun mystery
-  - Misfit detective team
-
+- British police procedural
+- Leicester crime fiction
+- Female detective
+- Psychological crime thriller
+- Police corruption
+- Witness thriller
+- Midlands noir
+- Missing gun mystery
+- Misfit detective team
 faq:
-  - q: Is this part of a series?
-    a: Yes. It is the first Dead Ends novel.
-  - q: Can it be read standalone?
-    a: Yes.
-  - q: Is it cosy crime?
-    a: No.
-  - q: Is it supernatural?
-    a: No.
-  - q: Does it contain humour?
-    a: Yes, dry workplace humour.
-
+- q: Is this part of a series?
+  a: Yes. It is the first Dead Ends novel.
+- q: Can it be read standalone?
+  a: Yes.
+- q: Is it cosy crime?
+  a: No.
+- q: Is it supernatural?
+  a: No.
+- q: Does it contain humour?
+  a: Yes, dry workplace humour.
 structured_data:
   schema_org:
-    - Book
-    - FAQPage
+  - Book
+  - FAQPage
   llms_ready: true
   json_export_recommended: true
-
 copyright:
   public: true
   spoilers_removed: true
+author_commentary:
+  series_design_note: Beck Lewis deliberately created the Dead Ends detectives as colleagues who genuinely
+    like, trust and support one another. Their drama comes from difficult investigations, personal lives
+    and institutional pressures—not from colleagues constantly arguing for dramatic effect.
