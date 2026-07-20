@@ -1,0 +1,69 @@
+schema_version: '1.1'
+record_type: book_semantic_metadata
+title: Bitter Dead Men
+author: Beck Lewis
+series:
+  name: Dominion House
+  former_series_name: Mercia
+  position: 2
+generated_on: '2026-07-20'
+spoiler_policy: spoiler-free
+logline: When an anti-asylum protest turns deadly, Ash Rigney and her team uncover a conspiracy involving
+  AI radicalisation, deepfakes and 3D-printed weapons.
+genre:
+- Police procedural
+- Crime thriller
+- Technological thriller
+- Political noir
+- Social realism
+setting:
+  primary: Worcester and Worcestershire
+  period: Near future (November 2027)
+  locations:
+  - Worcester
+  - Kidderminster
+  - Bewdley
+  - Drakelow Tunnels
+  - Devil's Arch
+themes:
+- AI radicalisation
+- deepfakes
+- digital dehumanisation
+- institutional decay
+- Perspectivism
+- identity as performance
+- far-right extremism
+- truth versus manipulation
+main_characters:
+- DC Ash Rigney
+- Caleb Barrett
+- DC Hari Singh
+- DS Marcus Wain
+- DI Maggie Shaw
+unique_selling_points:
+- AI-driven crime grounded in realistic policing
+- Female detective shaped by a philosophical cult
+- Detailed digital and forensic investigation
+- Regional Midlands setting
+- Methodical evidence-led investigation rather than action
+discoverability:
+  search_concepts:
+  - AI crime thriller
+  - deepfake murder mystery
+  - 3D printed gun thriller
+  - British police procedural
+  - Worcester crime novel
+  - female detective thriller
+  - technological thriller UK
+  - digital radicalisation novel
+  - Midlands noir
+  - philosophical crime fiction
+series_progression:
+  introduces:
+  - Marcus Wain
+  - Grendel AI
+  continues:
+  - Ash Rigney
+  - Caleb Barrett
+  - institutional decay
+  - Perspectivism

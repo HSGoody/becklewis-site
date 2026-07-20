@@ -1,0 +1,270 @@
+schema_version: '1.0'
+record_type: book_semantic_metadata
+title: Stone Cold Murder
+author: Beck Lewis
+series:
+  name: Dominion House
+  position: 1
+  former_series_name: Mercia
+  recurring_investigators:
+  - DC Ash Rigney
+  - Caleb Barrett
+  - DC Hari Singh
+  - DI Maggie Shaw
+identifiers: {}
+language: en-GB
+setting:
+  primary: Worcester and the surrounding Worcestershire countryside, England
+  region: West Mercia and the English Midlands
+  key_locations:
+  - Worcester
+  - Hagley Woods
+  - Kidderminster
+  - Warndon
+  - Devil's Arch
+  - Wychall Haulage Services
+  - a boarded-up primary school
+  - a derelict riverside factory
+  period: Contemporary, after the 2022 Russian invasion of Ukraine and the COVID-19 pandemic
+genre:
+  primary: Crime fiction
+  secondary:
+  - Police procedural
+  - Crime thriller
+  - British regional crime
+  - Social realism
+  - Psychological crime
+  - Midlands noir
+narrative:
+  viewpoints:
+  - character: DC Ash Rigney
+    person: third-person limited
+    function: detective viewpoint shaped by Perspectivist philosophy
+  - character: Caleb Barrett
+    person: third-person limited
+    function: civilian investigator viewpoint shaped by disgrace, isolation and attempted recovery
+  - character: DC Hari Singh
+    person: third-person limited
+    function: grounded team viewpoint and social connection
+  - character: DI Maggie Shaw
+    person: third-person limited
+    function: managerial viewpoint on an understaffed and deteriorating police service
+  style:
+  - methodical
+  - procedural
+  - forensically detailed
+  - philosophically introspective
+  - socially realistic
+  - regionally specific
+semantic_identity:
+  regional_identity:
+  - Worcestershire crime fiction
+  - West Mercia police procedural
+  - Midlands noir
+  narrative_engine:
+  - A mutilated unidentified body begins a methodical police investigation
+  - Two apparently separate deaths converge through a trafficking network
+  - Occult-looking clues are rationally dismantled
+  - Institutional decay and outsourced public services enable exploitation
+  emotional_arc:
+  - unease
+  - procedural tension
+  - disorientation
+  - cold shock
+  - moral anger
+  - uncertain resolution
+tone:
+- gritty
+- clinical
+- cynical
+- unsettling
+- metaphysically detached
+- darkly observant
+themes:
+- constructed reality versus nihilism
+- the self as performance
+- modern slavery and human trafficking
+- medical exploitation of vulnerable migrants
+- institutional failure and public-service decay
+- the gig economy as criminal infrastructure
+- professional disgrace and incomplete redemption
+- loneliness and isolation
+- bureaucracy versus justice
+- mundane motives behind apparently occult crimes
+character_archetypes:
+- the metaphysical outsider
+- the disgraced professional
+- the weary matriarch
+- the grounded optimist
+- the vulnerable migrant
+- the ordinary-seeming exploiter
+tropes:
+- unidentified mutilated body
+- fallen detective
+- civilian police consultant
+- ritual-murder theory
+- multiple cases converge
+- red-herring suspect
+- understaffed police team
+- human trafficking investigation
+- detective with a secret upbringing
+anti_tropes:
+- The missing hands suggest ritual mutilation but were removed for practical forensic reasons.
+- An apparently ancient tattoo is a World of Warcraft symbol.
+- The disgraced former detective is not rapidly reinstated or fully redeemed.
+- The civilian investigator is constrained by bureaucracy rather than indulged as a loose cannon.
+- The occult framework is repeatedly replaced by mundane greed, prejudice and exploitation.
+discoverability:
+  reader_interests:
+  - gritty British police procedurals
+  - Worcestershire crime fiction
+  - forensic investigation
+  - modern slavery narratives
+  - institutional failure
+  - cult psychology
+  - philosophical crime fiction
+  - damaged investigators
+  - methodical evidence-led mysteries
+  - liminal and abandoned settings
+  search_concepts:
+  - British police procedural set in Worcester
+  - Worcestershire crime thriller
+  - female detective raised in a cult
+  - crime novel about Ukrainian refugees
+  - human trafficking bone marrow thriller
+  - philosophical detective novel
+  - police procedural about institutional decay
+  - murder victim with missing hands novel
+  - West Mercia crime fiction
+  - Midlands noir female detective
+  emotional_keywords:
+  - clinical
+  - cynical
+  - gritty
+  - disorienting
+  - vertiginous
+  - procedurally tense
+  - morally uneasy
+comparables:
+  primary:
+  - work_or_author: Ian Rankin / Inspector Rebus
+    basis: Gritty regional crime, institutional cynicism and the slow procedural grind.
+  - work_or_author: Val McDermid / Tony Hill and Carol Jordan
+    basis: Forensic detail, psychological profiling and disturbing but methodical investigations.
+  - work_or_author: Line of Duty
+    basis: Procedural rigidity, interview detail, institutional friction and evidentiary hooks.
+  - work_or_author: Philip K. Dick
+    basis: A strong thematic concern with constructed reality, unstable perception and the nature of self.
+  secondary:
+  - work_or_author: True Detective, Season 1
+    basis: A philosophically detached investigator confronting ordinary human horror.
+  - work_or_author: Happy Valley
+    basis: British social realism, damaged professionals and messy local crime.
+  - work_or_author: The Fall
+    basis: Chilly procedural observation and the ordinariness of violent offenders.
+  - work_or_author: Stieg Larsson / Millennium
+    basis: Systemic exploitation of vulnerable women and socially engaged crime fiction.
+  adjacent:
+  - work_or_author: Se7en
+    basis: The macabre central image and bleak investigative atmosphere; Stone Cold Murder is more grounded
+      and procedural.
+  - work_or_author: Coma
+    basis: The medical exploitation of human bodies for the benefit of wealthy recipients.
+content_guidance:
+  intensity: high
+  contains:
+  - murder
+  - a corpse with severed hands
+  - clinical crime-scene and autopsy detail
+  - human trafficking
+  - modern slavery
+  - medical exploitation
+  - unsafe bone-marrow extraction
+  - sepsis
+  - xenophobia toward refugees
+  - institutional neglect
+  - cult upbringing
+  - nihilistic philosophy
+  - stalking and obsessive behaviour
+  - confinement in a septic tank
+  not_for_readers_seeking:
+  - a cosy mystery
+  - a heroic action thriller
+  - a fast, lightly detailed investigation
+  - a completely tidy or upbeat resolution
+provenance:
+  source_material:
+  - A Profile of Stone Cold Murder
+  - Stone Cold Murder Reader Companion Guide
+  - 'Stone Cold Murder: A Critical Discovery Profile'
+  - 'Stone Cold Murder: Comparative Media and Thematic Influences'
+  - The Metaphysical Mechanics of Stone Cold Murder
+  generated_on: '2026-07-20'
+spoiler_policy: spoiler-free
+logline: When a woman is found buried in Hagley Woods with her hands missing, a detective raised in a
+  philosophical cult and a disgraced former policeman must identify her before another vulnerable woman
+  disappears into the same hidden system.
+premise: A mutilated and unidentified woman is discovered in a shallow grave near Worcester. DC Ash Rigney,
+  whose unusual childhood taught her to doubt the reality everyone else takes for granted, joins an understaffed
+  West Mercia team alongside civilian investigator Caleb Barrett, a former detective trying to rebuild
+  a life after professional disgrace. Their methodical inquiry moves through forensic evidence, digital
+  traces, abandoned spaces and failures in refugee support, uncovering links between apparently separate
+  crimes.
+main_characters:
+- name: DC Ash Rigney
+  role: lead investigator
+  description: A detective raised in the Perspectivist Fellowship, whose metaphysical outlook makes her
+    both an outsider and a highly distinctive investigator.
+- name: Caleb Barrett
+  role: civilian investigator
+  description: A disgraced former detective sergeant working under strict limitations while trying to
+    recover professional purpose and personal stability.
+- name: DI Maggie Shaw
+  role: team leader
+  description: A weary but committed detective inspector managing an affectionate, understaffed team inside
+    a deteriorating institution.
+- name: DC Hari Singh
+  role: investigator
+  description: A positive and grounded detective who acts as the investigative team's social glue.
+- name: Dr Olivia Vronsky
+  role: pathologist
+  description: A forensic pathologist whose clinical findings are central to identifying the victims and
+    understanding what happened to them.
+unique_selling_points:
+- A female detective raised inside a fictional metaphysical cult brings an existential lens to ordinary
+  police work.
+- A forensic mystery whose apparently occult imagery is repeatedly explained through contemporary culture
+  and pragmatic criminal behaviour.
+- A realistic portrayal of British policing shaped by understaffing, outsourcing, agency labour and bureaucratic
+  constraint.
+- A modern-slavery plot centred on the illegal medical exploitation of vulnerable migrants.
+- Worcester, Hagley Woods, industrial estates and abandoned buildings create a distinctive landscape of
+  Midlands liminal horror.
+- The disgraced former policeman remains a restricted civilian consultant rather than receiving instant
+  redemption.
+faq:
+- question: Where is Stone Cold Murder set?
+  answer: In Worcester and the surrounding Worcestershire and West Mercia area, including Hagley Woods
+    and Kidderminster.
+- question: Is it part of a series?
+  answer: Yes. It is Book 1 of the Dominion House series, originally known as the Mercia series.
+- question: What is the central mystery?
+  answer: The police must identify a woman found in a shallow grave with her hands missing and discover
+    why she was killed.
+- question: Who is the lead detective?
+  answer: DC Ash Rigney, a recent transfer whose childhood in the Perspectivist Fellowship shaped her
+    unusual view of reality.
+- question: Is the book supernatural?
+  answer: No. It discusses ritual, folklore and metaphysical belief, but apparently occult clues receive
+    rational explanations.
+- question: Is it fast-paced?
+  answer: It emphasises the methodical grind of evidence, interviews and data analysis before building
+    to a tense climax.
+- question: Does it deal with social issues?
+  answer: Yes. The novel addresses human trafficking, modern slavery, refugee vulnerability, outsourced
+    services and institutional decay.
+- question: Is it graphic?
+  answer: It contains clinical descriptions of crime scenes, autopsies and physical injury.
+- question: Who might enjoy it?
+  answer: Readers of gritty British procedurals, forensic crime, philosophical mysteries and socially
+    engaged regional noir.
