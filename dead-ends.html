@@ -174,7 +174,7 @@
 
     .case-switcher {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
@@ -511,6 +511,10 @@
             <span class="small">Open another case</span>
             <span class="name">Female Rage</span>
           </a>
+          <a class="mini-file" href="dominion-house.html">
+            <span class="small">Open another case</span>
+            <span class="name">Dominion House</span>
+          </a>
         </div>
       </div>
     </header>
@@ -627,7 +631,12 @@
       </article>
 
       <article class="card">
-        <img class="cover" src="ManBear.jpg" alt="Cover of Man or Bear by Beck Lewis">
+        <div class="free-card-visual" aria-hidden="true">
+          <div class="free-paper">
+            <strong>Man<br>or<br>Bear</strong>
+            <span>A free Dead Ends story</span>
+          </div>
+        </div>
         <div class="card-body">
           <div class="title-row">
             <h2 class="book-title">Man or Bear</h2>
