@@ -1,0 +1,259 @@
+schema_version: '1.0'
+record_type: book_semantic_metadata
+title: "If I Don't Kill Them...Who Will?"
+author: Beck Lewis
+series:
+  name: Female Rage
+  position: 1
+  recurring_characters:
+  - Nicole Varkonyi
+  - Granny Róza
+identifiers: {}
+language: en-GB
+setting:
+  primary: Birmingham, Warwickshire and rural Wales, United Kingdom
+  region: The English Midlands and Wales
+  key_locations:
+  - Eagle's Nook, a remote Welsh mountain lodge
+  - Llanystrad Dam
+  - Hall Green, Birmingham
+  - Solihull
+  - Bartlesham headquarters
+  - Vepperley House, also known as Bartlesham Manor
+  - a disused bowling green clubhouse
+  period: Contemporary mid-2020s, shaped by WhatsApp, deepfakes, GPS tracking, AI, psychographic profiling and data-privacy law
+genre:
+  primary: Feminist revenge thriller
+  secondary:
+  - Vigilante thriller
+  - Contemporary British crime fiction
+  - Corporate noir
+  - Black comedy
+  - Feminist noir
+  - Female-led action thriller
+narrative:
+  viewpoints:
+  - character: Nicole Varkonyi
+    person: first-person
+    function: An intimate, darkly comic account of grief, escalating retaliation and an ordinary woman's discovery of her own dangerous capacity
+  structure:
+  - opens in medias res with Nicole trapped in a car boot
+  - uses flashbacks to reconstruct the crisis
+  - filters reality through Nicole's recurring Dream Dacha metaphor
+  style:
+  - sardonic
+  - conversational
+  - direct-address
+  - propulsive
+  - psychologically subjective
+  - darkly comic
+  - occasionally manic
+semantic_identity:
+  regional_identity:
+  - contemporary Midlands crime
+  - Birmingham corporate noir
+  - rural Welsh thriller
+  narrative_engine:
+  - Nicole discovers that a protected corporate heir has publicly shared an intimate video of her friend
+  - Institutional indifference leaves Nicole convinced that nobody else will stop the men responsible
+  - Granny Róza trains Nicole in weapons, combat and survival under the innocent code name Band Practice
+  - Each confrontation reveals another layer of predatory technology, toxic workplace loyalty and dynastic corruption
+  emotional_arc:
+  - disbelief and violation
+  - grief
+  - righteous anger
+  - tactical awakening
+  - physical terror
+  - lethal competence
+  - cathartic self-possession
+tone:
+- sardonic
+- furious
+- cathartic
+- cynical
+- darkly comic
+- manic
+- mournful
+- violent
+- defiant
+themes:
+- justice versus vengeance
+- systemic failure to protect women
+- revenge porn and digital sexual abuse
+- female agency, anger and survival
+- the moral compromises of vigilante justice
+- corporate toxicity and dynastic power
+- data privacy and predatory psychographic profiling
+- complicity through silence
+- grief as a catalyst for action
+- intergenerational female knowledge
+- mental sanctuary and the Dream Dacha
+- class privilege and immunity from consequences
+character_archetypes:
+- the unlikely vigilante
+- the badass grandmother mentor
+- the entitled corporate prince
+- the clinical fixer
+- the data predator
+- the passive nice-guy bystander
+- the dead friend as moral catalyst
+- the pragmatic female allies
+tropes:
+- female revenge fantasy
+- ordinary woman becomes lethal
+- training montage
+- secret weapons lair
+- revenge list
+- protected rich family
+- corporate cover-up
+- revenge-porn catalyst
+- dead best friend
+- badass elderly mentor
+- stately-home danger
+- hacker ally
+- corporate fixer
+anti_tropes:
+- Nicole's capacity for violence does not erase her humour, sociability or recognisably ordinary working life.
+- Granny Róza is not a fragile dependent but an eighty-year-old former military officer and spy with practical combat knowledge.
+- A flirtatious hacker connection remains secondary rather than rescuing Nicole or turning the book into a romance.
+- The apparently harmless nice man is examined for what his passivity enables, not automatically treated as morally good.
+- Nicole begins as an in-house trainer with no action-hero identity, and her competence is learned.
+- Institutional justice does not arrive conveniently to solve the problem Nicole has identified.
+discoverability:
+  reader_interests:
+  - feminist revenge thrillers
+  - female rage fiction
+  - morally grey women
+  - unrepentant female anti-heroes
+  - British black comedy crime
+  - revenge porn and digital abuse fiction
+  - toxic workplace thrillers
+  - corrupt family dynasties
+  - corporate cover-ups
+  - formidable grandmothers
+  - AI and data exploitation in fiction
+  - vigilante justice
+  - cathartic punishment of entitled men
+  search_concepts:
+  - darkly funny feminist revenge thriller
+  - British female vigilante novel
+  - female rage book about revenge porn
+  - ordinary woman trained to kill by her grandmother
+  - corporate boys club revenge novel
+  - morally grey female anti-hero thriller
+  - Birmingham corporate noir
+  - rich family cover-up crime thriller
+  - Sweetpea and How to Kill Your Family readalike
+  - Promising Young Woman style novel
+  emotional_keywords:
+  - cathartic
+  - furious
+  - sardonic
+  - vengeful
+  - defiant
+  - manic
+  - grieving
+  - righteous
+  - tense
+comparables:
+  primary:
+  - work_or_author: Sweetpea by C. J. Skuse
+    basis: A darkly comic British woman moves between mundane working life, private fury and an increasingly uninhibited relationship with violence.
+  - work_or_author: How to Kill Your Family by Bella Mackie
+    basis: A sardonic female narrator targets a privileged circle while dissecting entitlement, class and the failure of conventional justice.
+  - work_or_author: Promising Young Woman
+    basis: An approachable female surface conceals rage rooted in sexual abuse, male protection and the devastating loss of a friend.
+  - work_or_author: Killing Eve
+    basis: Playfulness, female appetite, eccentric tradecraft and sudden violence combine with an irreverent thriller energy.
+  secondary:
+  - work_or_author: My Sister, the Serial Killer by Oyinkan Braithwaite
+    basis: Female and family loyalty coexist with criminal logistics, black humour and moral ambiguity.
+  - work_or_author: Kill Bill
+    basis: A woman develops formidable skills under an unconventional mentor and directs them towards physically extreme vengeance.
+  - work_or_author: Succession
+    basis: The central corporation is controlled by a wealthy, reputation-obsessed dynasty for whom public image outweighs ordinary morality.
+  - work_or_author: Beef
+    basis: Rage, identity and contemporary technology drive an escalating chain of increasingly dangerous decisions.
+content_guidance:
+  intensity: high
+  contains:
+  - revenge porn and non-consensual intimate imagery
+  - suicide following sexual humiliation
+  - systemic misogyny and workplace harassment
+  - graphic physical violence and injury
+  - deliberate killing
+  - kidnapping and confinement
+  - torture and threatened torture
+  - firearms and close-combat weapons
+  - corpse disposal themes
+  - predatory use of personal and psychographic data
+  - abuse of corporate and legal power
+  - discussion of incel culture and digital grooming
+  not_for_readers_seeking:
+  - a cosy or gentle mystery
+  - a conventionally heroic protagonist
+  - restrained or off-page violence
+  - a romance-led thriller
+  - confidence that police, HR or the courts will deliver justice
+provenance:
+  source_material:
+  - "A Semantic Profile of If I Don't Kill Them...Who Will?"
+  - 'Nicole: Literary and Cinematic Comparisons'
+  - 'The Dream Dacha: Reader FAQ and Story Overview'
+  - 'The Vengeance Blueprint: Analysis of a Vigilante Thriller'
+  - 'The Vigilante Taxonomy: Corporate Noir and Narrative Framework'
+  generated_on: '2026-08-01'
+spoiler_policy: spoiler-free
+logline: When a protected corporate heir destroys her friend and the usual systems refuse to act, cheerful Birmingham trainer Nicole Varkonyi turns to her eighty-year-old former-spy grandmother for the skills to dismantle a toxic boys' club herself.
+premise: >-
+  Nicole Varkonyi is the delightful one at work: a ray of sunshine, an in-house trainer, the woman expected to smooth over everybody else's mess. Privately, she imagines her mind as a Dream Dacha repeatedly invaded by the Shit Shovellers whose entitlement and cruelty she is meant to tolerate. Then a member of the wealthy Bartlesham corporate dynasty shares an intimate video of Nicole's friend, and the consequences are devastating. HR, legal process and ordinary decency prove no match for a family built to protect its own. Nicole reaches an obvious conclusion: if she doesn't stop these men, nobody will. Fortunately, her eighty-year-old Hungarian grandmother is a former military officer and spy. Band Practice begins in a soundproofed clubhouse with concealed weapons, hard lessons and no illusions about what survival costs. As Nicole moves between Birmingham offices, Warwickshire privilege and an isolated Welsh lodge, her targets reveal a wider system of predatory data, compliant bystanders and professional fixers. The cheerful corporate trainer is still present. She has simply stopped confusing pleasantness with powerlessness.
+main_characters:
+- name: Nicole Varkonyi
+  role: protagonist, narrator and Bartlesham corporate trainer
+  description: Known as a cheerful delight at work, Nicole is grieving, observant and increasingly certain that being underestimated may be her most useful weapon.
+- name: Granny Róza
+  role: Nicole's grandmother and combat mentor
+  description: An eighty-year-old former Hungarian military officer and spy whose arsenal, practical wisdom and uncompromising ethics transform Band Practice into something deadly serious.
+- name: Daniel Bartlesham
+  role: entitled corporate heir
+  description: The protected son of a powerful family, convinced that women, colleagues and consequences can all be managed by somebody else.
+- name: Eve
+  role: Nicole's friend and emotional catalyst
+  description: The friend whose violation and loss expose how comprehensively the ordinary systems around Nicole have failed.
+- name: August Frederix
+  role: Bartlesham family lawyer and fixer
+  description: A cold, exact professional who treats human beings as unpalatable corporate situations to be contained.
+- name: Ryan Lau
+  role: data scientist
+  description: A technologist whose use of personal data reveals a calculated new form of predation hidden behind corporate innovation.
+- name: Lewis Wisby
+  role: colleague and bystander
+  description: An outwardly decent conflict-avoider whose passivity forces Nicole to ask how much harm nice men permit by doing nothing.
+- name: Billie-Ann
+  role: Nicole's friend and former colleague
+  description: A spiritual, crystal-loving eccentric within Nicole's unconventional support network.
+- name: Zoe
+  role: Nicole's veterinarian friend
+  description: A pragmatic ally able to bring medical knowledge and tactical calm to a situation spiralling beyond ordinary friendship.
+- name: Boli
+  role: hacker ally
+  description: A flirtatious technical connection whose usefulness never displaces Nicole from the centre of her own story.
+visual_motifs:
+- a brightly dressed, approachable woman carrying concealed fury
+- pink sunglasses and vivid femininity against corporate-noir darkness
+- the Dream Dacha as an orderly mental sanctuary invaded by mess
+- an elderly grandmother calmly handling weapons
+- a bowling-green clubhouse concealing a private arsenal
+- corporate screens, WhatsApp messages, profiles and surveillance data
+- stately-home respectability masking menace
+- food waste, muck and shovels as metaphors for toxic people
+- darkness inside a car boot
+- remote Welsh roads, a dam and an isolated lodge
+marketing_hooks:
+- "If she doesn't stop them, who will?"
+- A ray of sunshine with a kill list
+- Female rage meets corporate revenge
+- Her grandmother taught her to shoot; the men gave her targets
+- The systems failed. Nicole made a new system.
+- Taking out the trash, one protected man at a time
+
