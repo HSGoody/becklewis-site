@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beck Lewis | Psychological Crime Fiction</title>
-  <meta name="description" content="Beck Lewis writes psychological crime fiction, including the Dead Ends series and Female Rage thrillers. Choose your first case.">
+  <meta name="description" content="Beck Lewis writes British crime fiction, including the Dead Ends, Female Rage and Dominion House series. Choose your first case.">
   <link rel="canonical" href="https://becklewis.com/index.html">
   <link rel="icon" type="image/png" href="/favicon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Beck Lewis | Psychological Crime Fiction">
-  <meta property="og:description" content="Choose your first case: Dead Ends or Female Rage.">
+  <meta property="og:description" content="Choose your first case: Dead Ends, Female Rage or Dominion House.">
   <meta property="og:url" content="https://becklewis.com/index.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Beck Lewis | Psychological Crime Fiction">
-  <meta name="twitter:description" content="Choose your first case: Dead Ends or Female Rage.">
+  <meta name="twitter:description" content="Choose your first case: Dead Ends, Female Rage or Dominion House.">
 
   <script type="application/ld+json">
   {
@@ -26,8 +26,8 @@
     "url": "https://becklewis.com/index.html",
     "nationality": "British",
     "jobTitle": "Author",
-    "description": "British author of psychological crime fiction, including the Dead Ends series and Female Rage thrillers.",
-    "genre": ["Psychological Thriller", "Crime Fiction", "Revenge Thriller"],
+    "description": "British author of psychological crime fiction, revenge thrillers and police procedurals, including the Dead Ends, Female Rage and Dominion House series.",
+    "genre": ["Psychological Thriller", "Crime Fiction", "Revenge Thriller", "Police Procedural"],
     "sameAs": [
       "https://www.instagram.com/becklewiswrites/",
       "https://www.youtube.com/@BeckLewisWrites",
@@ -246,6 +246,12 @@
 
     .case-file:nth-child(1) { transform: rotate(-1.2deg); }
     .case-file:nth-child(2) { transform: rotate(1.1deg); }
+    .case-file:nth-child(3) {
+      grid-column: 1 / -1;
+      width: min(100%, 640px);
+      justify-self: center;
+      transform: rotate(-0.7deg);
+    }
 
     .case-file:hover {
       transform: translateY(-5px) rotate(0deg);
@@ -312,6 +318,7 @@
     }
 
     .case-file.rage .open-file { background: rgba(151,16,80,0.95); }
+    .case-file.dominion .open-file { background: rgba(40,76,68,0.98); }
 
     .cover-wrap {
       position: relative;
@@ -325,6 +332,7 @@
     }
 
     .case-file.rage .cover-wrap { transform: rotate(-2deg); }
+    .case-file.dominion .cover-wrap { transform: rotate(1deg); }
 
     .cover-wrap img {
       display: block;
@@ -373,6 +381,7 @@
       .case-grid { grid-template-columns: 1fr; }
       .evidence-board { min-height: unset; }
       .case-file { max-width: 660px; margin: 0 auto; }
+      .case-file:nth-child(3) { grid-column: auto; width: 100%; }
     }
 
     @media (max-width: 580px) {
@@ -411,7 +420,7 @@
       <p class="strapline">Psychological Crime Fiction</p>
       <div class="choice">
         <h2>Choose your first case.</h2>
-        <p>Two very different worlds. One promise: gripping stories about ordinary people facing extraordinary choices.</p>
+        <p>Three very different worlds. One promise: gripping stories about ordinary people facing extraordinary choices.</p>
       </div>
     </header>
 
@@ -441,6 +450,18 @@
             </div>
             <div class="cover-wrap">
               <img src="IFIDONTKILLTHEM.jpg" alt="Cover of If I Don't Kill Them Who Will? by Beck Lewis">
+            </div>
+          </a>
+
+          <a class="case-file dominion" href="dominion-house.html" aria-label="Open the Dominion House case file">
+            <div class="file-copy">
+              <span class="case-kicker">Case File</span>
+              <h3>Dominion House</h3>
+              <p>British police procedurals set in Worcestershire, following Ash Rigney and the Dominion House Major Crimes team.</p>
+              <span class="open-file">Open File <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+            <div class="cover-wrap">
+              <img src="stone-cold-murder-cover.jpg" alt="Cover of Stone Cold Murder by Beck Lewis">
             </div>
           </a>
         </div>
