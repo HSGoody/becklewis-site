@@ -110,6 +110,52 @@
       margin-top: 14px;
       color: #BFC7CF;
     }
+
+    /* Visual-only addition: Dead Ends series showcase */
+    .series-showcase {
+      margin-top: 38px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(215, 221, 227, 0.25);
+    }
+    .series-showcase h2 {
+      color: #F2B705;
+      font-size: clamp(1.25rem, 5vw, 1.65rem);
+      line-height: 1.2;
+      margin: 0 0 10px;
+      letter-spacing: .025em;
+      text-transform: uppercase;
+    }
+    .series-showcase .series-intro {
+      margin: 0 0 19px;
+      color: #D7DDE3;
+      font-size: .94rem;
+      line-height: 1.45;
+    }
+    .series-covers {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      align-items: start;
+    }
+    .series-book img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      box-shadow: 0 7px 16px rgba(0,0,0,.45);
+    }
+    .series-book p {
+      font-size: .78rem;
+      line-height: 1.35;
+      margin: 9px 0 0;
+      color: #EDEFF2;
+    }
+    .series-more {
+      font-size: .85rem;
+      color: #BFC7CF;
+      margin: 19px 0 0;
+    }
   </style>
 </head>
 
@@ -145,6 +191,26 @@ function trackAmazonClick(event) {
 }
 </script>
     <p class="small">Available for Kindle and paperback on Amazon.</p>
+    <section class="series-showcase" aria-labelledby="series-heading">
+      <h2 id="series-heading">Discover the Dead Ends series</h2>
+      <p class="series-intro">Three gripping thrillers. More books in the series to discover.</p>
+      <div class="series-covers">
+        <div class="series-book">
+          <img src="DOUBLETAKE.jpg" alt="Double Take by Beck Lewis cover" loading="lazy" />
+          <p>Book 1<br />Double Take</p>
+        </div>
+        <div class="series-book">
+          <img src="OPENWOUND.jpg" alt="Open Wound by Beck Lewis cover" loading="lazy" />
+          <p>Book 2<br />Open Wound</p>
+        </div>
+        <div class="series-book">
+          <img src="SAFESPACE.jpg" alt="Safe Space by Beck Lewis cover" loading="lazy" />
+          <p>Book 3<br />Safe Space</p>
+        </div>
+      </div>
+      <p class="series-more">The story doesn't stop here.</p>
+    </section>
+
   </main>
 </body>
 </html>
